@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Search</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./script.js"></script>    
+    </head>
+
+    <body>
+        <div id="main">
+            <h1>Search Company</h1>
+            <label>CIF</label>
+            <br>
+            <input type = "text" id="inputCIF">
+            <br><br>
+            <button id="srcBtn">Search</button>
+        </div>
+        <table>
+            <tr id="tableHead">
+                <th>CIF</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>County</th>
+                <th>Phone</th>
+            </tr>
+            <tr id="content">
+                <td id = "tdCIF"></td>
+                <td id = "tdDenumire"></td>
+                <td id = "tdAdresa"></td>
+                <td id = "tdJudet"></td>
+                <td id = "tdTelefon"></td>
+            </tr>
+        </table> 
+    </body>
+</html>
