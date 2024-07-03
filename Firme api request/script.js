@@ -1,18 +1,18 @@
 const API_KEY = "8AxoCqMAn-XYnRyziJPdzKxvda_FBNmnD6RgsZd8GkRZ5pEvxg";
 var CIF;
-var cache = {};
 
 $(document).ready(function () {
   $("table").hide();
   $("#srcBtn").click(function () {
     CIF = $("#inputCIF").val();
-    if (cache[CIF]) {
+    if (localStorage.getItem(CIF)) {
+      let companie = JSON.parse(localStorage.getItem(CIF));
       $("table").show();
-      $("#tdCIF").text(cache[CIF].cif);
-      $("#tdDenumire").text(cache[CIF].denumire);
-      $("#tdAdresa").text(cache[CIF].adresa);
-      $("#tdJudet").text(cache[CIF].judet);
-      $("#tdTelefon").text(cache[CIF].telefon);
+      $("#tdCIF").text(companie.cif);
+      $("#tdDenumire").text(companie.denumire);
+      $("#tdAdresa").text(companie.adresa);
+      $("#tdJudet").text(companie.judet);
+      $("#tdTelefon").text(companie.telefon);
     } else {
       $.ajax({
         url: "https://api.openapi.ro/api/companies/" + CIF,
@@ -21,7 +21,7 @@ $(document).ready(function () {
           xhr.setRequestHeader("x-api-key", API_KEY);
         },
         success: function (data) {
-          cache[CIF] = data;
+          localStorage.setItem(CIF, JSON.stringify(data));
           $("table").show();
           $("#tdCIF").text(data.cif);
           $("#tdDenumire").text(data.denumire);
