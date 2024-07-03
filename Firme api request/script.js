@@ -1,10 +1,9 @@
+import { nextSlide, populateCarousel, prevSlide } from "./script2.js";
 const API_KEY = "8AxoCqMAn-XYnRyziJPdzKxvda_FBNmnD6RgsZd8GkRZ5pEvxg";
-const allData = allStored();
 var CIF;
 
 $(document).ready(function () {
   $("#content").hide();
-
   $("#srcBtn").click(function () {
     CIF = $("#inputCIF").val();
     if (localStorage.getItem(CIF)) {
@@ -39,12 +38,7 @@ $(document).ready(function () {
   });
 
   // carousel
-  let comp = JSON.parse(allData[0]);
-  $("#tdCIFRecent").text(comp.cif);
-  $("#tdDenumireRecent").text(comp.denumire);
-  $("#tdAdresaRecent").text(comp.adresa);
-  $("#tdJudetRecent").text(comp.judet);
-  $("#tdTelefonRecent").text(comp.telefon);
+  populateCarousel();
 
   // next button
   $("#nextBtn").click(function () {
@@ -61,49 +55,3 @@ $(document).ready(function () {
     nextSlide();
   }, 5000);
 });
-
-// function retrievs all data from localStorage
-function allStored() {
-  var values = [];
-  keys = Object.keys(localStorage);
-  noOfKeys = keys.length;
-  while (noOfKeys--) {
-    values[noOfKeys] = localStorage.getItem(keys[noOfKeys]);
-  }
-  return values;
-}
-// next slide
-function nextSlide() {
-  currentIndex = allData.findIndex((element) =>
-    element.includes($("#tdCIFRecent").text())
-  );
-  nextIndex = ++currentIndex;
-  if (nextIndex >= allData.length) {
-    nextIndex = 0;
-  }
-
-  let comp = JSON.parse(allData[nextIndex]);
-  $("#tdCIFRecent").text(comp.cif);
-  $("#tdDenumireRecent").text(comp.denumire);
-  $("#tdAdresaRecent").text(comp.adresa);
-  $("#tdJudetRecent").text(comp.judet);
-  $("#tdTelefonRecent").text(comp.telefon);
-}
-
-//prev slide
-function prevSlide() {
-  currentIndex = allData.findIndex((element) =>
-    element.includes($("#tdCIFRecent").text())
-  );
-  nextIndex = --currentIndex;
-  if (nextIndex < 0) {
-    nextIndex = allData.length - 1;
-  }
-
-  let comp = JSON.parse(allData[nextIndex]);
-  $("#tdCIFRecent").text(comp.cif);
-  $("#tdDenumireRecent").text(comp.denumire);
-  $("#tdAdresaRecent").text(comp.adresa);
-  $("#tdJudetRecent").text(comp.judet);
-  $("#tdTelefonRecent").text(comp.telefon);
-}
