@@ -14,7 +14,7 @@ $(document).ready(function () {
       $("#tdDenumire").text(companie.denumire);
       $("#tdAdresa").text(companie.adresa);
       $("#tdJudet").text(companie.judet);
-      $("#tdTelefon").text(companie.telefon);
+      $("#tdTelefon").text(companie.telefon).hide();
     } else {
       $.ajax({
         url: "https://api.openapi.ro/api/companies/" + CIF,
@@ -38,8 +38,12 @@ $(document).ready(function () {
     }
   });
 
+  $("#togglePhoneVis").click(function () {
+    $("#tdTelefon").toggle();
+  });
+
   // carousel
-  createCarousel("#carousel", createTableHTML(allData), 2000);
+  createCarousel("#carousel", createTableHTML(allData), 5000);
 });
 
 // function retrievs all data from localStorage
