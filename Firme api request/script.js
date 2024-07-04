@@ -1,5 +1,6 @@
-import { nextSlide, populateCarousel, prevSlide } from "./script2.js";
+import { createCarousel } from "./carousel.js";
 const API_KEY = "8AxoCqMAn-XYnRyziJPdzKxvda_FBNmnD6RgsZd8GkRZ5pEvxg";
+const allData = allStored();
 var CIF;
 
 $(document).ready(function () {
@@ -38,20 +39,61 @@ $(document).ready(function () {
   });
 
   // carousel
-  populateCarousel();
-
-  // next button
-  $("#nextBtn").click(function () {
-    nextSlide();
-  });
-
-  // back button
-  $("#backBtn").click(function () {
-    prevSlide();
-  });
-
-  // autoplay
-  setInterval(function () {
-    nextSlide();
-  }, 5000);
+  createCarousel("#carousel", createTableHTML(allData), 2000);
 });
+
+// function retrievs all data from localStorage
+function allStored() {
+  var values = [];
+  var keys = Object.keys(localStorage);
+  var noOfKeys = keys.length;
+  while (noOfKeys--) {
+    values[noOfKeys] = localStorage.getItem(keys[noOfKeys]);
+  }
+  return values;
+}
+
+// create html table code
+function createTableHTML(data) {
+  var htmlTable = [];
+  for (let i = 0; i < data.length; i++) {
+    var JsonData = JSON.parse(data[i]);
+    var CIFTable = JsonData.cif;
+    var DenumireTable = JsonData.denumire;
+    var AdresaTable = JsonData.adresa;
+    var JudetTable = JsonData.judet;
+    var TelefonTable = JsonData.telefon;
+    var htmlTableIter =
+      `
+      <h2>Recent Searches</h2>
+      <table>
+        <tr>
+            <th>CIF</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>County</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td id="CIFTable">` +
+      CIFTable +
+      `</td>
+            <td>` +
+      DenumireTable +
+      `</td>
+            <td>` +
+      AdresaTable +
+      `</td>
+            <td>` +
+      JudetTable +
+      `</td>
+            <td>` +
+      TelefonTable +
+      `</td>
+        </tr>
+    </table> `;
+
+    htmlTable[i] = htmlTableIter;
+  }
+  return htmlTable;
+}
