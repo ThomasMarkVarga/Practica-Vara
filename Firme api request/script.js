@@ -10,11 +10,11 @@ $(document).ready(function () {
     if (localStorage.getItem(CIF)) {
       let companie = JSON.parse(localStorage.getItem(CIF));
       $("#content").show();
-      $("#tdCIF").text(companie.cif);
-      $("#tdDenumire").text(companie.denumire);
-      $("#tdAdresa").text(companie.adresa);
-      $("#tdJudet").text(companie.judet);
-      $("#tdTelefon").text(companie.telefon).hide();
+      $("#tdCIF").text(companie.companyCIF);
+      $("#tdDenumire").text(companie.companyName);
+      $("#tdAdresa").text(companie.companyAddress);
+      $("#tdJudet").text(companie.companyCounty);
+      $("#tdTelefon").text(companie.companyPhone).hide();
     } else {
       $.ajax({
         url: "https://api.openapi.ro/api/companies/" + CIF,
@@ -23,13 +23,20 @@ $(document).ready(function () {
           xhr.setRequestHeader("x-api-key", API_KEY);
         },
         success: function (data) {
-          localStorage.setItem(CIF, JSON.stringify(data));
+          let company = {
+            companyCIF: data.cif,
+            companyName: data.denumire,
+            companyAddress: data.adresa,
+            companyCounty: data.judet,
+            companyPhone: data.telefon,
+          };
+          localStorage.setItem(CIF, JSON.stringify(company));
           $("#content").show();
-          $("#tdCIF").text(data.cif);
-          $("#tdDenumire").text(data.denumire);
-          $("#tdAdresa").text(data.adresa);
-          $("#tdJudet").text(data.judet);
-          $("#tdTelefon").text(data.telefon);
+          $("#tdCIF").text(company.companyCIF);
+          $("#tdDenumire").text(company.companyName);
+          $("#tdAdresa").text(company.companyAddress);
+          $("#tdJudet").text(company.companyCounty);
+          $("#tdTelefon").text(company.companyPhone);
         },
         error: function (err) {
           alert("error: " + err);
@@ -62,11 +69,11 @@ function createTableHTML(data) {
   var htmlTable = [];
   for (let i = 0; i < data.length; i++) {
     var JsonData = JSON.parse(data[i]);
-    var CIFTable = JsonData.cif;
-    var DenumireTable = JsonData.denumire;
-    var AdresaTable = JsonData.adresa;
-    var JudetTable = JsonData.judet;
-    var TelefonTable = JsonData.telefon;
+    var CIFTable = JsonData.companyCIF;
+    var DenumireTable = JsonData.companyName;
+    var AdresaTable = JsonData.companyAddress;
+    var JudetTable = JsonData.companyAddress;
+    var TelefonTable = JsonData.companyPhone;
     var htmlTableIter =
       `
       <h2>Recent Searches</h2>
