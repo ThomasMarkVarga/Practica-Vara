@@ -1,0 +1,15 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\bin\Debug\net6.0\Linq_sandbox.exe
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\bin\Debug\net6.0\Linq_sandbox.deps.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\bin\Debug\net6.0\Linq_sandbox.runtimeconfig.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\bin\Debug\net6.0\Linq_sandbox.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\bin\Debug\net6.0\Linq_sandbox.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\refint\Linq_sandbox.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\Linq_sandbox.genruntimeconfig.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\Linq_sandbox\obj\Debug\net6.0\ref\Linq_sandbox.dll
