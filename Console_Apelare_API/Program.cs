@@ -8,57 +8,15 @@ using System.Configuration;
 
 namespace Console_Apelare_API
 {
-    public class StorageFile
-    {
-        public static string path = ConfigurationManager.AppSettings["path"];
-
-        public static List<Company> ReadCompanies()
-        {
-            List<Company> companies = new List<Company>();
-
-            using (StreamReader r = new StreamReader(path))
-            {
-                string json = r.ReadToEnd();
-                companies = JsonConvert.DeserializeObject<List<Company>>(json);
-            }
-            return companies;
-        }
-
-        public static void WriteCompaniesToFile(List<Company> companies)
-        {
-            string companiesString = JsonConvert.SerializeObject(companies.ToArray());
-            File.WriteAllText(path, companiesString);
-            Console.WriteLine("Wrote to JSON File");
-        }
-    }
-
-    public class Company
-    {
-        public string companyCIF { get; set; }
-        public string companyName { get; set; }
-        public string companyAddress { get; set; }
-        public string companyCounty { get; set; }
-        public string companyPhone { get; set; }
-
-        public override string ToString()
-        {
-            return "{\n" +this.companyCIF + "\n" 
-                + this.companyName + "\n"
-                + this.companyAddress + "\n"
-                + this.companyCounty + "\n"
-                +this.companyPhone + "\n}";
-        }
-    }
-       
     class Program
-    {
-        public static List<Company> companies = new List<Company>();
-
+    { 
         static async Task Main(string[] args)
-        { 
+        {
 
             string url = "https://api.openapi.ro/api/companies/";
             string apiKey = "ucvF8o3CRpMXUxHtrauhHgENHLjQJrPHNF4fWkxdPeXyz8eNLw";
+
+            DataRepository dataLayer = new DataRepository();
 
             int userChoice;
             int userSecondChoice;
@@ -69,7 +27,8 @@ namespace Console_Apelare_API
                     "0 - exit\n" +
                     "1 - search company using CIF\n" +
                     "2 - see previously searched comapnies\n" +
-                    "3 - search company in cache");
+                    "3 - search company in cache\n" +
+                    "4 - manage companies");
                 userChoice = int.Parse(Console.ReadLine());
 
                 switch (userChoice)
@@ -81,22 +40,14 @@ namespace Console_Apelare_API
                         // user introduce CIF
                         Console.WriteLine("Type company CIF:");
                         string CIF = Console.ReadLine();
-                        bool found = false;
-                        // cauta in lista, daca nu gasim face call la api
-                        companies = StorageFile.ReadCompanies();
-                        if (companies != null)
+
+                        Company searchedCompanyByCIF = dataLayer.getCompany(CIF); // cautam prin dataLayer compania
+
+                        if(searchedCompanyByCIF != null)    // daca exista afisam
                         {
-                            foreach (var item in companies)
-                            {
-                                if (item.companyCIF == CIF)
-                                {
-                                    Console.WriteLine(item);
-                                    found = true;
-                                    break;
-                                }
-                            }
+                            Console.WriteLine(searchedCompanyByCIF);
                         }
-                        if (!found)
+                        else if(searchedCompanyByCIF == null)   // daca nu exista facem call la API
                         {
                             JObject json = new JObject();
 
@@ -119,22 +70,19 @@ namespace Console_Apelare_API
                                 Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
                             }
 
-                            Company company = new Company();
-                            company.companyCIF = (string)json["cif"];
-                            company.companyName = (string)json["denumire"];
-                            company.companyAddress = (string)json["adresa"];
-                            company.companyCounty = (string)json["judet"];
-                            company.companyPhone = (string)json["telefon"];
+                            dataLayer.insertCompany(
+                                (string)json["cif"],
+                                (string)json["denumire"],
+                                (string)json["adresa"],
+                                (string)json["judet"],
+                                (string)json["telefon"]);   // introducem datele in dataLayer
 
-                            companies.Add(company);
-                            StorageFile.WriteCompaniesToFile(companies);
-                            Console.WriteLine(company);
-
+                            Console.WriteLine(dataLayer.getCompany(CIF)); // afisam compania introdusa acum 
                         }
                         break;
                     case 2:
-                        // prima implementare - da load la results.json si afiseaza
-                        displayComapnies();
+                        displayCompanies(dataLayer);
+                        exportAsPDF(dataLayer); // afisam toate companiile salvate (un fel de search all?)
                         break;
                     case 3:
                         Console.WriteLine("Seach company by:\n" +
@@ -148,28 +96,69 @@ namespace Console_Apelare_API
                             case 1:
                                 Console.WriteLine("Insert name / part of name:");
                                 string name = Console.ReadLine();
-                                cautareNume(name);  // query pe baza numelui
-                                
+
+                                Company[] compName = dataLayer.searchName(name);  // query pe baza numelui
+                                if(compName.Length == 0)
+                                {
+                                    Console.WriteLine("No company with this name found!");
+                                }
+                                else
+                                {
+                                   foreach(var item in compName)
+                                    {
+                                        Console.WriteLine(item);
+                                    }
+                                }
+
                                 break;
                             case 2:
                                 Console.WriteLine("Insert address / part of address:");
                                 string address = Console.ReadLine();
-                                cautareAdresa(address); // query adresa
+
+                                Company[] compAddress = dataLayer.seachAddress(address);    // query adresa
+                                if(compAddress.Length == 0)
+                                {
+                                    Console.WriteLine("No company with this address found!");
+                                }
+                                else
+                                {
+                                    foreach(var item in compAddress)
+                                    {
+                                        Console.WriteLine(item);
+                                    }
+                                }
+
                                 break;
                             case 3:
                                 Console.WriteLine("Insert city / part of city name:");
                                 string city = Console.ReadLine();
-                                cautareOras(city); // query oras
+
+                                Company[] compCity = dataLayer.searchCity(city); // query oras
+                                if(compCity.Length == 0)
+                                {
+                                    Console.WriteLine("No company found in this city!");
+                                }
+                                else
+                                {
+                                    foreach(var item in compCity)
+                                    {
+                                        Console.WriteLine(item);
+                                    }
+                                }
+
                                 break;
                             case 4:
                                 Console.WriteLine("Insert county:");
                                 string county = Console.ReadLine();
-                                noInJudet(county);  //  query judet
+                                Console.WriteLine("There are {0} companies in this county!", dataLayer.noOfCompInCounty(county));  //  query judet
                                 break;
                             default:
                                 Console.WriteLine("Invalid option");
                                 break;
                         }
+                        break;
+                    case 4:
+                        manageCompanies(dataLayer);
                         break;
                     default:
                         Console.WriteLine("Invalid choice!");
@@ -179,16 +168,20 @@ namespace Console_Apelare_API
             } while (userChoice != 0);
         }
 
-        public static void checkCompaniesList()
+        public static void displayCompanies(DataRepository dataLayer)
         {
-            if (!companies.Any())
+            var comp = dataLayer.getAllCompanies();
+
+            foreach(var company in comp)
             {
-                companies = StorageFile.ReadCompanies();
+                Console.WriteLine(company);
             }
         }
 
-        public static void exportAsPDF()
+        public static void exportAsPDF(DataRepository dataLayer)
         {
+            Company[] companies = dataLayer.getAllCompanies();
+
             Workbook wbJsonToPdf = new Workbook();
 
             Worksheet wsDefault = wbJsonToPdf.Worksheets[0];
@@ -203,7 +196,7 @@ namespace Console_Apelare_API
             JsonUtility.ImportData(jsonInput, wsDefault.Cells, 0, 0, layoutOptions);
 
             Aspose.Cells.Range range;
-            range = wsDefault.Cells.CreateRange("A1", "E" + (companies.Count + 1));
+            range = wsDefault.Cells.CreateRange("A1", "E" + (companies.Length + 1));
             //range.SetOutlineBorders(CellBorderType.Thin, Color.Black);
 
             for (int i = range.FirstRow; i < range.RowCount + range.FirstRow; i++)
@@ -238,77 +231,207 @@ namespace Console_Apelare_API
             Console.WriteLine("Exported as PDF");
         }
 
-        public static void displayComapnies()
+        // implementation based on use case diagram 
+
+        public static void manageCompanies(DataRepository dataLayer)
         {
-            companies = StorageFile.ReadCompanies();
-            if (companies != null)
+            int choice;
+
+            do
             {
-                foreach (var item in companies)
+                Console.WriteLine("What kind of operation do you want to perform?\n" +
+                    "0 - back\n" +
+                    "1 - find company\n" +
+                    "2 - update company\n" +
+                    "3 - remove company\n" +
+                    "4 - add company");
+
+                choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
                 {
-                    Console.WriteLine(item);
+                    case 0:
+                        break;
+                    case 1:
+                        Console.WriteLine("Insert company CIF you want to see:");
+                        string searchCIF = Console.ReadLine();
+                        findCompany(searchCIF, dataLayer);
+                        break;
+                    case 2:
+                        Console.WriteLine("Insert company CIF you want to update:");
+                        string updateCIF = Console.ReadLine();
+                        updateCompany(updateCIF, dataLayer);
+                        break;
+                    case 3:
+                        Console.WriteLine("Insert company CIF you want to remove:");
+                        string removeCIF = Console.ReadLine();
+                        removeCompany(removeCIF, dataLayer);
+                        break;
+                    case 4:
+                        addCompany(dataLayer);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
                 }
-                exportAsPDF();
+            } while (choice != 0);
+        }
+
+        public static void findCompany(string CIF, DataRepository datLayer)
+        {
+            Company company = datLayer.getCompany(CIF);
+
+            if (company == null)
+            {
+                Console.WriteLine("Company not found!" +
+                    "\n1 - Do you want to add it?" +
+                    "\n2 - Cancel");
+                int choice = int.Parse(Console.ReadLine());
+                if (choice == 1)
+                    addCompany(datLayer);
+                if (choice == 2)
+                    Console.WriteLine("Operation canceled!");
+            }
+            else
+                Console.WriteLine(company);
+        }
+
+        public static void addCompany(DataRepository dataLayer)
+        { 
+            Console.WriteLine("Add company\n" +
+                "Insert CIF:");
+            string CIF= Console.ReadLine();
+
+            Console.WriteLine("Insert company name:");
+            string Name = Console.ReadLine();
+
+            Console.WriteLine("Insert company address:");
+            string Address = Console.ReadLine();
+
+            Console.WriteLine("Insert county:");
+            string County = Console.ReadLine();
+
+            Console.WriteLine("Insert phone number:");
+            string Phone = Console.ReadLine();
+
+            dataLayer.insertCompany(CIF, Name, Address, County, Phone);
+        }
+
+        public static void removeCompany(string CIF, DataRepository dataLayer)
+        {
+            Company company = dataLayer.getCompany(CIF);
+
+            if (company != null)
+            {
+                Console.WriteLine("Are you sure you want to remove:\n" + company +
+                    "\n1 - yes" +
+                    "\n2 - no");
+                int choice = int.Parse(Console.ReadLine());
+                if (choice == 1)
+                {
+                    dataLayer.removeCompany(company);
+                }
+                else
+                {
+                    Console.WriteLine("Action canceled");
+                }
+            }
+        }
+
+        public static void updateCompany(string CIF, DataRepository dataLayer)
+        {
+            Company compToUpdate = dataLayer.getCompany(CIF);
+
+            if (compToUpdate != null)
+            {
+                Console.WriteLine("Company found!\n" + compToUpdate);
+
+                int updateChoice;
+                string newCIF = "", 
+                    newName = "", 
+                    newAddress = "", 
+                    newCounty = "", 
+                    newPhone = "";
+                bool changeCIF = false,
+                    changeName = false,
+                    changeAddress = false,
+                    changeCounty = false,
+                    changePhone = false;
+
+                do
+                {
+                    Console.WriteLine("What do you want to change?" +
+                        "\n1 - CIF" +
+                        "\n2 - name" +
+                        "\n3 - address" +
+                        "\n4 - county" +
+                        "\n5 - phone number" +
+                        "\n9 - Save Changes" +
+                        "\n0 - Cancel");
+                    updateChoice = int.Parse(Console.ReadLine());
+                    switch (updateChoice)
+                    {
+                        case 0:
+                            Console.WriteLine("Update company canceled");
+                            break;
+                        case 1:
+                            Console.WriteLine("Insert new CIF:");
+                            newCIF = Console.ReadLine();
+                            changeCIF = true;
+                            break;
+                        case 2:
+                            Console.WriteLine("Insert new name:");
+                            newName = Console.ReadLine();
+                            changeName = true;
+                            break;
+                        case 3:
+                            Console.WriteLine("Insert new address:");
+                            newAddress = Console.ReadLine();
+                            changeAddress = true;
+                            break;
+                        case 4:
+                            Console.WriteLine("Insert new county:");
+                            newCounty = Console.ReadLine();
+                            changeCounty = true;
+                            break;
+                        case 5:
+                            Console.WriteLine("Insert new phone number:");
+                            newPhone = Console.ReadLine();
+                            changePhone = true;
+                            break;
+                        case 9:
+                            if (!changeCIF) newCIF = compToUpdate.companyCIF;
+                            if (!changeName) newName = compToUpdate.companyName;
+                            if (!changeAddress) newAddress = compToUpdate.companyAddress;
+                            if (!changeCounty) newCounty = compToUpdate.companyCounty;
+                            if (!changePhone) newPhone = compToUpdate.companyPhone;
+
+                            dataLayer.updateCompany(CIF, newCIF, newName, newAddress, newCounty, newPhone);
+
+                            Console.WriteLine("Changes saved");
+                            updateChoice = 0;
+                            break;
+                    }
+                } while (updateChoice != 0);
             }
             else
             {
-                Console.WriteLine("No recent searches");
+                Console.WriteLine("Company not found!\n" +
+                    "Choose option:\n" +
+                    "1 - add company\n" +
+                    "2 - cancel update");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        addCompany(dataLayer);
+                        break;
+                    case 2:
+                        Console.WriteLine("Canceled update");
+                        break;
+                }
+
             }
-        }
-
-        public static void cautareNume(string name)
-        {
-            checkCompaniesList();
-
-            IEnumerable<Company> searchName = from company in companies
-                                              where company.companyName.ToLower().Contains(name.ToLower())
-                                              select company;
-
-            foreach(Company company in searchName)
-            {
-                Console.WriteLine(company);
-            }
-
-        }
-
-        public static void cautareAdresa(string adresa)
-        {
-            checkCompaniesList();
-
-            IEnumerable<Company> searchAddress = from company in companies
-                                                 where company.companyAddress.ToLower().Contains(adresa.ToLower())
-                                                 select company;
-
-            foreach(Company company in searchAddress)
-            {
-                Console.WriteLine(company);
-            }
-        }
-
-        public static void cautareOras(string oras)
-        {
-            checkCompaniesList();
-
-            var searchOras = from company in companies
-                              where company.companyAddress.ToLower().Contains(oras.ToLower())
-                              select company;
-
-            Console.WriteLine("There are {0} companies in this city!", searchOras.Count());
-            foreach(var company in searchOras)
-            {
-                Console.WriteLine(company);
-            }
-
-        }
-
-        public static void noInJudet(string judet)
-        {
-            checkCompaniesList();
-
-            int noComp = (from company in companies
-                          where company.companyCounty.ToLower().Contains(judet.ToLower())
-                          select company).Count();
-
-            Console.WriteLine("There are {0} companies in this county!", noComp);
         }
     }
 }
