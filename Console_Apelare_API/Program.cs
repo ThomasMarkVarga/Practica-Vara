@@ -1,10 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
 using Aspose.Cells;
 using Aspose.Cells.Utility;
 using System.Drawing;
-using System.Configuration;
 
 namespace Console_Apelare_API
 {

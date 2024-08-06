@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4Fu06JRnKm2VYpBUG72zzHjPjvkloalPpPzSKONAmXoPzumPj0rf7cJeeFRfbV7ufJIFPkGu3wfEpzQRZJj/7w==",
+  "dgSpecHash": "JQ8HmE8MeEW2FWZJS6jnc7WuS3BVzQ5hNrd2tSmskOnU59rDPtIWLDD3JFqqtSkJzEiZFgun4jQjoIBgBiT0bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\Console_Apelare_API\\Console_Apelare_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tommy\\.nuget\\packages\\aspose.cells\\24.6.0\\aspose.cells.24.6.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\skiasharp\\2.88.6\\skiasharp.2.88.6.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.6\\skiasharp.nativeassets.macos.2.88.6.nupkg.sha512",

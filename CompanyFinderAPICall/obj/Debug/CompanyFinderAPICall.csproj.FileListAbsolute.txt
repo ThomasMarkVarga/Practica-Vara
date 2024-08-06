@@ -1,0 +1,16 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\CompanyFinderAPICall.exe.config
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\CompanyFinderAPICall.exe
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\CompanyFinderAPICall.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.Form1.resources
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.Properties.Resources.resources
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.GenerateResource.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.CopyComplete
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.exe
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.pdb
