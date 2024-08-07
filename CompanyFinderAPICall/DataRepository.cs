@@ -5,6 +5,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Nito.AsyncEx;
 
 namespace Console_Apelare_API
 {
@@ -12,13 +13,13 @@ namespace Console_Apelare_API
     {
         private static string path = ConfigurationManager.AppSettings["path"];
 
-        public static List<Company> ReadCompanies()
+        public static async Task<List<Company>> ReadCompanies()
         {
             List<Company> companies = new List<Company>();
 
             using (StreamReader r = new StreamReader(path))
             {
-                string json = r.ReadToEnd();
+                string json = await r.ReadToEndAsync();
                 companies = JsonConvert.DeserializeObject<List<Company>>(json);
             }
             return companies;
@@ -55,8 +56,19 @@ namespace Console_Apelare_API
 
     internal class DataRepository
     {
-        private List<Company> companies = StorageFile.ReadCompanies();
+        private List<Company> companies { get; set; }
 
+        public DataRepository()
+        {
+            InitializeAsync().GetAwaiter().GetResult();
+        }
+
+        private async Task InitializeAsync()
+        {
+            companies = await StorageFile.ReadCompanies();
+
+            await Task.Delay(100);
+        }
 
         public Company[] getAllCompanies()
         {
