@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Console_Apelare_API
 {
@@ -23,10 +24,13 @@ namespace Console_Apelare_API
             return companies;
         }
 
-        public static void WriteCompaniesToFile(List<Company> companies)
+        public static async Task WriteCompaniesToFile(List<Company> companies)
         {
             string companiesString = JsonConvert.SerializeObject(companies.ToArray());
-            File.WriteAllText(path, companiesString);
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                await writer.WriteAsync(companiesString);
+            }
         }
     }
 
@@ -53,7 +57,8 @@ namespace Console_Apelare_API
     {
         private List<Company> companies = StorageFile.ReadCompanies();
 
-        public Company[] getAllCompanies()  
+
+        public Company[] getAllCompanies()
         {
             var company = (from comp in companies
                            select comp).ToArray();
@@ -67,7 +72,7 @@ namespace Console_Apelare_API
             return company;
         }
 
-        public void insertCompany(string CIF, string Name, string Address, string County, string Phone)
+        public async Task insertCompany(string CIF, string Name, string Address, string County, string Phone)
         {
             Company company = new Company();
 
@@ -78,14 +83,14 @@ namespace Console_Apelare_API
             company.companyPhone = Phone;
 
             this.companies.Add(company);
-            StorageFile.WriteCompaniesToFile(this.companies);
+            await StorageFile.WriteCompaniesToFile(this.companies);
         }
 
         public Company[] searchName(string Name)
         {
             var company = (from comp in companies
-                          where comp.companyName.ToLower().Contains(Name.ToLower())
-                          select comp).ToArray();
+                           where comp.companyName.ToLower().Contains(Name.ToLower())
+                           select comp).ToArray();
             return company;
         }
 
@@ -113,13 +118,13 @@ namespace Console_Apelare_API
             return no;
         }
 
-        public void removeCompany(Company company)
+        public async Task removeCompany(Company company)
         {
             this.companies.Remove(company);
-            StorageFile.WriteCompaniesToFile(this.companies);
+            await StorageFile.WriteCompaniesToFile(this.companies);
         }
 
-        public void updateCompany(string CIF, string newCIF, string newName, string newAddress, string newCounty, string newPhone) 
+        public async Task updateCompany(string CIF, string newCIF, string newName, string newAddress, string newCounty, string newPhone)
         {
             Company company = this.companies.FirstOrDefault(c => c.companyCIF == CIF);
 
@@ -129,7 +134,7 @@ namespace Console_Apelare_API
             company.companyCounty = newCounty;
             company.companyPhone = newPhone;
 
-            StorageFile.WriteCompaniesToFile(this.companies);
+            await StorageFile.WriteCompaniesToFile(this.companies);
         }
     }
 }

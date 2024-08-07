@@ -22,8 +22,6 @@ namespace CompanyFinderAPICall
         public Form1()
         {
             InitializeComponent();
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -93,7 +91,7 @@ namespace CompanyFinderAPICall
                     Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
                 }
 
-                dataLayer.insertCompany(
+                await dataLayer.insertCompany(
                     (string)json["cif"],
                     (string)json["denumire"],
                     (string)json["adresa"],
@@ -110,9 +108,9 @@ namespace CompanyFinderAPICall
             tbInsertCIF.Text = "";
         }
 
-        private void btnAddCompany_Click(object sender, EventArgs e)
+        private async void btnAddCompany_Click(object sender, EventArgs e)
         {
-            dataLayer.insertCompany(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
+            await dataLayer.insertCompany(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
             tbAddCIF.Text = "";
             tbAddNume.Text = "";
             tbAddAdresa.Text = "";
@@ -123,17 +121,17 @@ namespace CompanyFinderAPICall
             populateDataGrid();
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private async void btnRemove_Click(object sender, EventArgs e)
         {
             Company compToRemove = dataLayer.getCompany(tbRemoveCIF.Text);
             tbRemoveCIF.Text = "";
             if (compToRemove != null)
             {
-                var result = MessageBox.Show("Are you sure you want to delete " + compToRemove.companyName + "?" , "Deleting company", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var result = MessageBox.Show("Are you sure you want to delete " + compToRemove.companyName + "?", "Deleting company", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    dataLayer.removeCompany(compToRemove);
+                    await dataLayer.removeCompany(compToRemove);
 
                     // repopulare dataViewToate pentru a avea lista firme actualizata
                     populateDataGrid();
@@ -141,12 +139,12 @@ namespace CompanyFinderAPICall
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
             String CIF, nume, adresa, judet, telefon;
             Company compToUpdate = dataLayer.getCompany(tbUpdateCIF.Text);
 
-            if(compToUpdate != null)
+            if (compToUpdate != null)
             {
                 if (tbUpdateNewCIF.Text != "")
                     CIF = tbUpdateNewCIF.Text;
@@ -173,7 +171,7 @@ namespace CompanyFinderAPICall
                 else
                     telefon = compToUpdate.companyPhone;
 
-                dataLayer.updateCompany(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
+                await dataLayer.updateCompany(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
 
                 populateDataGrid();
             }
