@@ -1,5 +1,4 @@
-﻿using Console_Apelare_API;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +16,11 @@ namespace CompanyFinderAPICall
 {
     public partial class Form1 : Form
     {
-        DataRepository dataLayer = new DataRepository();
+        private readonly IDataRepository dataLayer;
 
-        public Form1()
+        public Form1(IDataRepository repository)
         {
+            dataLayer = repository;
             InitializeComponent();
         }
 

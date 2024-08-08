@@ -6,8 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Nito.AsyncEx;
+using CompanyFinderAPICall;
 
-namespace Console_Apelare_API
+namespace CompanyFinderAPICall
 {
     public class StorageFile
     {
@@ -54,7 +55,7 @@ namespace Console_Apelare_API
     }
 
 
-    internal class DataRepository
+    public class DataRepository : IDataRepository
     {
         private List<Company> companiesCache { get; set; }
 
