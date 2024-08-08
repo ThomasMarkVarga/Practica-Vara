@@ -43,11 +43,11 @@ namespace CompanyFinderAPICall
             populateDataGrid();
         }
 
-        private void populateDataGrid()
+        private async void populateDataGrid()
         {
             dataGridToate.Rows.Clear();
 
-            Company[] arr = dataLayer.getAllCompanies();
+            Company[] arr = await dataLayer.getAllCompanies();
 
             foreach (var comp in arr)
             {
@@ -62,7 +62,7 @@ namespace CompanyFinderAPICall
             string url = "https://api.openapi.ro/api/companies/";
             string apiKey = "ucvF8o3CRpMXUxHtrauhHgENHLjQJrPHNF4fWkxdPeXyz8eNLw";
 
-            Company searchCompanyByCIF = dataLayer.getCompany(tbInsertCIF.Text);
+            Company searchCompanyByCIF = await dataLayer.getCompany(tbInsertCIF.Text);
 
             if (searchCompanyByCIF != null)
             {
@@ -98,7 +98,7 @@ namespace CompanyFinderAPICall
                     (string)json["judet"],
                     (string)json["telefon"]);
 
-                Company newComp = dataLayer.getCompany(tbInsertCIF.Text);
+                Company newComp = await dataLayer.getCompany(tbInsertCIF.Text);
                 dataGridCautare.Rows.Add(newComp.companyCIF, newComp.companyName, newComp.companyAddress, newComp.companyCounty, newComp.companyPhone);
 
 
@@ -123,7 +123,7 @@ namespace CompanyFinderAPICall
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            Company compToRemove = dataLayer.getCompany(tbRemoveCIF.Text);
+            Company compToRemove = await dataLayer.getCompany(tbRemoveCIF.Text);
             tbRemoveCIF.Text = "";
             if (compToRemove != null)
             {
@@ -142,7 +142,7 @@ namespace CompanyFinderAPICall
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
             String CIF, nume, adresa, judet, telefon;
-            Company compToUpdate = dataLayer.getCompany(tbUpdateCIF.Text);
+            Company compToUpdate = await dataLayer.getCompany(tbUpdateCIF.Text);
 
             if (compToUpdate != null)
             {

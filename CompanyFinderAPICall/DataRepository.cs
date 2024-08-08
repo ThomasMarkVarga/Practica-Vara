@@ -56,30 +56,29 @@ namespace Console_Apelare_API
 
     internal class DataRepository
     {
-        private List<Company> companies { get; set; }
+        private List<Company> companiesCache { get; set; }
 
-        public DataRepository()
+
+        private async Task<List<Company>> getCompaniesCache()
         {
-            InitializeAsync().GetAwaiter().GetResult();
+            if(companiesCache == null)
+            {
+                companiesCache = await StorageFile.ReadCompanies();
+            }
+
+            return companiesCache;
         }
 
-        private async Task InitializeAsync()
+        public async Task<Company[]> getAllCompanies()
         {
-            companies = await StorageFile.ReadCompanies();
-
-            await Task.Delay(100);
-        }
-
-        public Company[] getAllCompanies()
-        {
-            var company = (from comp in companies
+            var company = (from comp in await getCompaniesCache()
                            select comp).ToArray();
             return company;
         }
 
-        public Company getCompany(string CIF)
+        public async Task<Company> getCompany(string CIF)
         {
-            var company = this.companies.FirstOrDefault(c => c.companyCIF == CIF);
+            var company = (await getCompaniesCache()).FirstOrDefault(c => c.companyCIF == CIF);
 
             return company;
         }
@@ -94,37 +93,37 @@ namespace Console_Apelare_API
             company.companyCounty = County;
             company.companyPhone = Phone;
 
-            this.companies.Add(company);
-            await StorageFile.WriteCompaniesToFile(this.companies);
+            (await getCompaniesCache()).Add(company);
+            await StorageFile.WriteCompaniesToFile(await getCompaniesCache());
         }
 
-        public Company[] searchName(string Name)
+        public async Task<Company[]> searchName(string Name)
         {
-            var company = (from comp in companies
+            var company = (from comp in await getCompaniesCache()
                            where comp.companyName.ToLower().Contains(Name.ToLower())
                            select comp).ToArray();
             return company;
         }
 
-        public Company[] seachAddress(string Address)
+        public async Task<Company[]> seachAddress(string Address)
         {
-            var company = (from comp in companies
+            var company = (from comp in await getCompaniesCache()
                            where comp.companyAddress.ToLower().Contains(Address.ToLower())
                            select comp).ToArray();
             return company;
         }
 
-        public Company[] searchCity(string City)
+        public async Task<Company[]> searchCity(string City)
         {
-            var company = (from comp in companies
+            var company = (from comp in await getCompaniesCache()
                            where comp.companyAddress.ToLower().Contains(City.ToLower())
                            select comp).ToArray();
             return company;
         }
 
-        public int noOfCompInCounty(string County)
+        public async Task<int> noOfCompInCounty(string County)
         {
-            var no = (from comp in companies
+            var no = (from comp in await getCompaniesCache()
                       where comp.companyCounty.ToLower().Contains(County.ToLower())
                       select comp).Count();
             return no;
@@ -132,13 +131,13 @@ namespace Console_Apelare_API
 
         public async Task removeCompany(Company company)
         {
-            this.companies.Remove(company);
-            await StorageFile.WriteCompaniesToFile(this.companies);
+            (await getCompaniesCache()).Remove(company);
+            await StorageFile.WriteCompaniesToFile(await getCompaniesCache());
         }
 
         public async Task updateCompany(string CIF, string newCIF, string newName, string newAddress, string newCounty, string newPhone)
         {
-            Company company = this.companies.FirstOrDefault(c => c.companyCIF == CIF);
+            Company company = (await getCompaniesCache()).FirstOrDefault(c => c.companyCIF == CIF);
 
             company.companyCIF = newCIF;
             company.companyName = newName;
@@ -146,7 +145,7 @@ namespace Console_Apelare_API
             company.companyCounty = newCounty;
             company.companyPhone = newPhone;
 
-            await StorageFile.WriteCompaniesToFile(this.companies);
+            await StorageFile.WriteCompaniesToFile(await getCompaniesCache());
         }
     }
 }
