@@ -31,7 +31,7 @@ namespace CompanyFinderAPICall
         {
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
-                    services.AddScoped<IDataRepository, DataRepository>();
+                    services.AddSingleton<IDataRepository, DataRepository>();
                     services.AddTransient<Form1>();
                 });
         }

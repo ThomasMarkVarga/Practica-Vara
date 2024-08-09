@@ -26,7 +26,8 @@ namespace Console_Apelare_API
                     "1 - search company using CIF\n" +
                     "2 - see previously searched comapnies\n" +
                     "3 - search company in cache\n" +
-                    "4 - manage companies");
+                    "4 - manage companies\n" +
+                    "5 - export");
                 userChoice = int.Parse(Console.ReadLine());
 
                 switch (userChoice)
@@ -79,8 +80,7 @@ namespace Console_Apelare_API
                         }
                         break;
                     case 2:
-                        displayCompanies(dataLayer);
-                        exportAsPDF(dataLayer); // afisam toate companiile salvate (un fel de search all?)
+                        displayCompanies(dataLayer); // afisam toate companiile salvate
                         break;
                     case 3:
                         Console.WriteLine("Seach company by:\n" +
@@ -158,6 +158,13 @@ namespace Console_Apelare_API
                     case 4:
                         manageCompanies(dataLayer);
                         break;
+                    case 5:
+                        Console.WriteLine("Which format do you want? PDF or XLS?");
+                        string formatChoice = Console.ReadLine();
+                        ReportGeneratorFactory reportGeneratorFactory = new ReportGeneratorFactory();
+                        IGenerateReport reportGen = reportGeneratorFactory.GetReportGenerator(formatChoice);
+                        reportGen.export(dataLayer);
+                        break;
                     default:
                         Console.WriteLine("Invalid choice!");
                         break;
@@ -224,7 +231,7 @@ namespace Console_Apelare_API
                 }
             }
 
-            wbJsonToPdf.Save("..\\..\\..\\output.pdf", SaveFormat.Auto);
+            wbJsonToPdf.Save("..\\..\\..\\output.xls", SaveFormat.Auto);
 
             Console.WriteLine("Exported as PDF");
         }

@@ -51,7 +51,7 @@ namespace Console_Apelare_API
     }
 
 
-    internal class DataRepository
+    public class DataRepository
     {
         private List<Company> companies = StorageFile.ReadCompanies();
 
