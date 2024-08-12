@@ -217,7 +217,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="results.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

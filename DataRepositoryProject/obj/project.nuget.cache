@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MDPYQZL5PH+uXCVbiWUJaN4L/De0F7CbWUdGTQrJkNPucqPkEkzWH5kDPmplBoG2PHZbxDt3efEiPWQgIa6bJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
