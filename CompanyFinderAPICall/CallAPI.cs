@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace CompanyFinderAPICall
 {
-    internal class CallAPI
+    internal class CallAPI : ICallAPI
     {
         HttpClient client;
 
@@ -61,6 +61,8 @@ namespace CompanyFinderAPICall
             };
 
             await client.SendAsync(request);
+
+
         }
 
         public async Task insertCompanyAPI(string CIF, string Name, string Address, string County, string Phone)
