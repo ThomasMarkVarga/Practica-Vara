@@ -19,7 +19,7 @@ namespace CompanyFinderAPICall
     {
         private CallAPI callAPI = new CallAPI();
 
-        public Form1(IDataRepository repository)
+        public Form1()
         {
             InitializeComponent();
         }

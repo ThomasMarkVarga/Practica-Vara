@@ -19,21 +19,7 @@ namespace CompanyFinderAPICall
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var host = CreateHostBuilder().Build();
-            ServiceProvider = host.Services;
-
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
-        }
-
-        public static IServiceProvider ServiceProvider { get; private set; }
-
-        static IHostBuilder CreateHostBuilder()
-        {
-            return Host.CreateDefaultBuilder()
-                .ConfigureServices((context, services) => {
-                    services.AddSingleton<IDataRepository, DataRepository>();
-                    services.AddTransient<Form1>();
-                });
+            Application.Run(new Form1());
         }
     }
 }
