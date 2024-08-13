@@ -185,6 +185,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallAPI.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -220,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyProject\CompanyProject.csproj">
+      <Project>{36d5f6e5-975b-45ca-bc1c-2509355930b2}</Project>
+      <Name>CompanyProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

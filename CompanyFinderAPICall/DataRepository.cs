@@ -5,8 +5,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Nito.AsyncEx;
-using CompanyFinderAPICall;
+using CompanyProject;
 
 namespace CompanyFinderAPICall
 {
@@ -33,24 +32,6 @@ namespace CompanyFinderAPICall
             {
                 await writer.WriteAsync(companiesString);
             }
-        }
-    }
-
-    public class Company
-    {
-        public string companyCIF { get; set; }
-        public string companyName { get; set; }
-        public string companyAddress { get; set; }
-        public string companyCounty { get; set; }
-        public string companyPhone { get; set; }
-
-        public override string ToString()
-        {
-            return "{\n" + this.companyCIF + "\n"
-                + this.companyName + "\n"
-                + this.companyAddress + "\n"
-                + this.companyCounty + "\n"
-                + this.companyPhone + "\n}";
         }
     }
 

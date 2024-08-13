@@ -10,17 +10,17 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CompanyProject;
 
 
 namespace CompanyFinderAPICall
 {
     public partial class Form1 : Form
     {
-        private readonly IDataRepository dataLayer;
+        private CallAPI callAPI = new CallAPI();
 
         public Form1(IDataRepository repository)
         {
-            dataLayer = repository;
             InitializeComponent();
         }
 
@@ -47,7 +47,7 @@ namespace CompanyFinderAPICall
         {
             dataGridToate.Rows.Clear();
 
-            Company[] arr = await dataLayer.getAllCompanies();
+            Company[] arr = await callAPI.getAllCompaniesAPI();
 
             foreach (var comp in arr)
             {
@@ -62,7 +62,7 @@ namespace CompanyFinderAPICall
             string url = "https://api.openapi.ro/api/companies/";
             string apiKey = "ucvF8o3CRpMXUxHtrauhHgENHLjQJrPHNF4fWkxdPeXyz8eNLw";
 
-            Company searchCompanyByCIF = await dataLayer.getCompany(tbInsertCIF.Text);
+            Company searchCompanyByCIF = await callAPI.getCompanyAPI(tbInsertCIF.Text);
 
             if (searchCompanyByCIF != null)
             {
@@ -86,19 +86,16 @@ namespace CompanyFinderAPICall
                     Console.WriteLine("Success");
                     json = JObject.Parse(response.Content.ReadAsStringAsync().Result);
                 }
-                else
-                {
-                    Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
-                }
 
-                await dataLayer.insertCompany(
+                await callAPI.insertCompanyAPI(
                     (string)json["cif"],
                     (string)json["denumire"],
                     (string)json["adresa"],
                     (string)json["judet"],
                     (string)json["telefon"]);
 
-                Company newComp = await dataLayer.getCompany(tbInsertCIF.Text);
+                Company newComp = await callAPI.getCompanyAPI(tbInsertCIF.Text);
+                Task.Delay(100);
                 dataGridCautare.Rows.Add(newComp.companyCIF, newComp.companyName, newComp.companyAddress, newComp.companyCounty, newComp.companyPhone);
 
 
@@ -110,7 +107,7 @@ namespace CompanyFinderAPICall
 
         private async void btnAddCompany_Click(object sender, EventArgs e)
         {
-            await dataLayer.insertCompany(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
+            await callAPI.insertCompanyAPI(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
             tbAddCIF.Text = "";
             tbAddNume.Text = "";
             tbAddAdresa.Text = "";
@@ -123,7 +120,7 @@ namespace CompanyFinderAPICall
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            Company compToRemove = await dataLayer.getCompany(tbRemoveCIF.Text);
+            Company compToRemove = await callAPI.getCompanyAPI(tbRemoveCIF.Text);
             tbRemoveCIF.Text = "";
             if (compToRemove != null)
             {
@@ -131,7 +128,7 @@ namespace CompanyFinderAPICall
 
                 if (result == DialogResult.Yes)
                 {
-                    await dataLayer.removeCompany(compToRemove);
+                    await callAPI.deleteCompanyAPI(compToRemove.companyCIF);
 
                     // repopulare dataViewToate pentru a avea lista firme actualizata
                     populateDataGrid();
@@ -142,7 +139,7 @@ namespace CompanyFinderAPICall
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
             String CIF, nume, adresa, judet, telefon;
-            Company compToUpdate = await dataLayer.getCompany(tbUpdateCIF.Text);
+            Company compToUpdate = await callAPI.getCompanyAPI(tbUpdateCIF.Text);
 
             if (compToUpdate != null)
             {
@@ -171,7 +168,7 @@ namespace CompanyFinderAPICall
                 else
                     telefon = compToUpdate.companyPhone;
 
-                await dataLayer.updateCompany(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
+                await callAPI.updateCompanyAPI(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
 
                 populateDataGrid();
             }

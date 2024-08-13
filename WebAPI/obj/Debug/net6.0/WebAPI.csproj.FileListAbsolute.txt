@@ -16,9 +16,9 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\System.Conf
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\CompanyProject.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\CompanyProject.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.dll.config
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\CompanyProject.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfoInputs.cache
