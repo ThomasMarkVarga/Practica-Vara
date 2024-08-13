@@ -1,8 +1,6 @@
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\App.config
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.exe
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.dll.config
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.deps.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.runtimeconfig.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.dll
@@ -18,7 +16,6 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\CompanyProj
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\CompanyProject.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.pdb
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\DataRepositoryProject.dll.config
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfoInputs.cache
@@ -35,3 +32,4 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\refint\WebA
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI\bin\Debug\net6.0\WebAPI.dll.config

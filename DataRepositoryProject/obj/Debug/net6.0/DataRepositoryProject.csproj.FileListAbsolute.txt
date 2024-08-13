@@ -1,4 +1,3 @@
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DataRepositoryProject\bin\Debug\net6.0\DataRepositoryProject.dll.config
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DataRepositoryProject\bin\Debug\net6.0\DataRepositoryProject.deps.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DataRepositoryProject\bin\Debug\net6.0\DataRepositoryProject.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DataRepositoryProject\bin\Debug\net6.0\DataRepositoryProject.pdb
