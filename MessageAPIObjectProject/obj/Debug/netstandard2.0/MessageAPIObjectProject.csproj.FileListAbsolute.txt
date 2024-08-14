@@ -1,0 +1,10 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\bin\Debug\netstandard2.0\MessageAPIObjectProject.deps.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\bin\Debug\netstandard2.0\MessageAPIObjectProject.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\bin\Debug\netstandard2.0\MessageAPIObjectProject.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\obj\Debug\netstandard2.0\MessageAPIObjectProject.pdb

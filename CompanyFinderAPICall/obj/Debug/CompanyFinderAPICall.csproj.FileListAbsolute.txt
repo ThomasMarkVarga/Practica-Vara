@@ -102,3 +102,5 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\Comp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.csproj.CopyComplete
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.exe
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\obj\Debug\CompanyFinderAPICall.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\MessageAPIObjectProject.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\CompanyFinderAPICall\bin\Debug\MessageAPIObjectProject.pdb

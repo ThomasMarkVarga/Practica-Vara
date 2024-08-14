@@ -12,11 +12,11 @@ namespace CompanyProject
 
         public override string ToString()
         {
-            return "{\n" + this.companyCIF + "\n"
-                + this.companyName + "\n"
-                + this.companyAddress + "\n"
-                + this.companyCounty + "\n"
-                + this.companyPhone + "\n}";
+            return "CIF: " + this.companyCIF +
+                "\nName: " + this.companyName +
+                "\nAddress: " + this.companyAddress +
+                "\nCounty: " + this.companyCounty +
+                "\nPhone: " + this.companyPhone;
         }
     }
 }

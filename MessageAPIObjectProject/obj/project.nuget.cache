@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vxsyxvIT54jlXMyfF0LGs4ZwaImlqftTaGeCTGs4vJUPj0WE9dT2YWrhbp719D2i3h3u4CpY2RB6Et+QLU5gvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\MessageAPIObjectProject\\MessageAPIObjectProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

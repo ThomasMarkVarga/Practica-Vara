@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CompanyProject;
+using MessageAPIObjectProject;
 
 
 namespace CompanyFinderAPICall
@@ -48,11 +49,17 @@ namespace CompanyFinderAPICall
         {
             dataGridToate.Rows.Clear();
 
-            Company[] arr = await callAPI.getAllCompaniesAPI();
-
-            foreach (var comp in arr)
+            var (arr, message) = await callAPI.getAllCompaniesAPI();
+            if (message.status == StatusCode.OK)
             {
-                dataGridToate.Rows.Add(comp.companyCIF, comp.companyName, comp.companyAddress, comp.companyCounty, comp.companyPhone);
+                foreach (var comp in arr)
+                {
+                    dataGridToate.Rows.Add(comp.companyCIF, comp.companyName, comp.companyAddress, comp.companyCounty, comp.companyPhone);
+                }
+            }
+            else if(message.status == StatusCode.NoContent)
+            {
+                MessageBox.Show(message.ErrorMessage);
             }
         }
 
@@ -63,13 +70,13 @@ namespace CompanyFinderAPICall
             string url = "https://api.openapi.ro/api/companies/";
             string apiKey = "ucvF8o3CRpMXUxHtrauhHgENHLjQJrPHNF4fWkxdPeXyz8eNLw";
 
-            Company searchCompanyByCIF = await callAPI.getCompanyAPI(tbInsertCIF.Text);
+            var (searchCompanyByCIF, searchMessage) = await callAPI.getCompanyAPI(tbInsertCIF.Text);
 
-            if (searchCompanyByCIF != null)
+            if (searchMessage.status == StatusCode.OK)
             {
                 dataGridCautare.Rows.Add(searchCompanyByCIF.companyCIF, searchCompanyByCIF.companyName, searchCompanyByCIF.companyAddress, searchCompanyByCIF.companyCounty, searchCompanyByCIF.companyPhone);
             }
-            else if (searchCompanyByCIF == null)
+            else if (searchMessage.status == StatusCode.NotFound)
             {
                 JObject json = new JObject();
 
@@ -95,10 +102,15 @@ namespace CompanyFinderAPICall
                     (string)json["judet"],
                     (string)json["telefon"]);
 
-                Company newComp = await callAPI.getCompanyAPI(tbInsertCIF.Text);
-                Task.Delay(100);
-                dataGridCautare.Rows.Add(newComp.companyCIF, newComp.companyName, newComp.companyAddress, newComp.companyCounty, newComp.companyPhone);
-
+                var (newComp, newCompMessage) = await callAPI.getCompanyAPI(tbInsertCIF.Text);
+                if (newCompMessage.status == StatusCode.OK)
+                {
+                    dataGridCautare.Rows.Add(newComp.companyCIF, newComp.companyName, newComp.companyAddress, newComp.companyCounty, newComp.companyPhone);
+                }
+                else if (newCompMessage.status == StatusCode.NotFound)
+                {
+                    MessageBox.Show(newCompMessage.ErrorMessage);
+                }
 
                 // repopulare dataViewToate pentru a avea lista firme actualizata
                 populateDataGrid();
@@ -108,41 +120,51 @@ namespace CompanyFinderAPICall
 
         private async void btnAddCompany_Click(object sender, EventArgs e)
         {
-            await callAPI.insertCompanyAPI(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
-            tbAddCIF.Text = "";
-            tbAddNume.Text = "";
-            tbAddAdresa.Text = "";
-            tbAddJudet.Text = "";
-            tbAddTelefon.Text = "";
+            var (comp, addMessage) = await callAPI.insertCompanyAPI(tbAddCIF.Text, tbAddNume.Text, tbAddAdresa.Text, tbAddJudet.Text, tbAddTelefon.Text);
+            if (addMessage.status == StatusCode.OK)
+            {
+                tbAddCIF.Text = "";
+                tbAddNume.Text = "";
+                tbAddAdresa.Text = "";
+                tbAddJudet.Text = "";
+                tbAddTelefon.Text = "";
 
-            // repopulare dataViewToate pentru a avea lista firme actualizata
-            populateDataGrid();
+                MessageBox.Show(addMessage.SuccessMessage + "\n" + comp.ToString());
+
+                // repopulare dataViewToate pentru a avea lista firme actualizata
+                populateDataGrid();
+            }
+            else if(addMessage.status == StatusCode.NotFound)
+            {
+                MessageBox.Show(addMessage.ErrorMessage);
+            }
         }
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            Company compToRemove = await callAPI.getCompanyAPI(tbRemoveCIF.Text);
+            MessageObjectAPI response = await callAPI.deleteCompanyAPI(tbRemoveCIF.Text);
             tbRemoveCIF.Text = "";
-            if (compToRemove != null)
+            if(response.status == StatusCode.NotFound)
             {
-                var result = MessageBox.Show("Are you sure you want to delete " + compToRemove.companyName + "?", "Deleting company", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    await callAPI.deleteCompanyAPI(compToRemove.companyCIF);
-
-                    // repopulare dataViewToate pentru a avea lista firme actualizata
-                    populateDataGrid();
-                }
+                MessageBox.Show(response.ErrorMessage);
+            }
+            else if(response.status == StatusCode.BadRequest)
+            {
+                MessageBox.Show(response.ErrorMessage);
+            }
+            else if(response.status == StatusCode.OK)
+            {
+                MessageBox.Show(response.SuccessMessage);
+                populateDataGrid();
             }
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
             String CIF, nume, adresa, judet, telefon;
-            Company compToUpdate = await callAPI.getCompanyAPI(tbUpdateCIF.Text);
+            var (compToUpdate, updateMessage) = await callAPI.getCompanyAPI(tbUpdateCIF.Text);
 
-            if (compToUpdate != null)
+            if (updateMessage.status == StatusCode.OK)
             {
                 if (tbUpdateNewCIF.Text != "")
                     CIF = tbUpdateNewCIF.Text;
@@ -169,9 +191,16 @@ namespace CompanyFinderAPICall
                 else
                     telefon = compToUpdate.companyPhone;
 
-                await callAPI.updateCompanyAPI(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
-
-                populateDataGrid();
+                var (updatedComp, message) = await callAPI.updateCompanyAPI(compToUpdate.companyCIF, CIF, nume, adresa, judet, telefon);
+                if(message.status == StatusCode.OK)
+                {
+                    MessageBox.Show(message.SuccessMessage + "\n" + updatedComp.ToString());
+                    populateDataGrid();
+                }
+            }
+            else if (updateMessage.status == StatusCode.NotFound)
+            {
+                MessageBox.Show(updateMessage.ErrorMessage);
             }
 
             tbUpdateCIF.Text = "";

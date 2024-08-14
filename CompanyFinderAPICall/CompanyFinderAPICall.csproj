@@ -226,6 +226,10 @@
       <Project>{36d5f6e5-975b-45ca-bc1c-2509355930b2}</Project>
       <Name>CompanyProject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MessageAPIObjectProject\MessageAPIObjectProject.csproj">
+      <Project>{4778025c-c00e-43af-b5a9-99d743c4f0d9}</Project>
+      <Name>MessageAPIObjectProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
