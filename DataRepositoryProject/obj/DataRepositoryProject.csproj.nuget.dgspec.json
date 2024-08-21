@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {}
+    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
         "projectName": "CompanyProject",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -57,29 +59,26 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
         "projectName": "DataRepositoryProject",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,14 +86,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
+              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
               }
             }
           }
@@ -103,6 +103,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -124,16 +129,31 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

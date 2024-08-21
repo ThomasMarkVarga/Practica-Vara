@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "likLXaSHu3T+m2leC6qSXg6O+n7P5W9DmPEz++cnV9m8ohkDj0N3EWBVu0SqRL0C4ijzwhjEBA7YA9UQ8iA1dw==",
+  "dgSpecHash": "L2LbqrgFsdA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+  "projectFilePath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
-    "C:\\Users\\Tommy\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+    "C:\\Users\\Tommy\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
   ],
   "logs": []
 }

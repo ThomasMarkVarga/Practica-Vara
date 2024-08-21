@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = MessageAPIObjectProject
-build_property.ProjectDir = C:\Users\Tommy\Desktop\resurse\Practica-Vara\MessageAPIObjectProject\
+build_property.ProjectDir = C:\Users\Tommy\Desktop\practica\Practica-Vara\MessageAPIObjectProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

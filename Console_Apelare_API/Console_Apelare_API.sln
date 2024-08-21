@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "..\WebAPI\WebAPI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyProject", "..\CompanyProject\CompanyProject.csproj", "{36D5F6E5-975B-45CA-BC1C-2509355930B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAPIObjectProject", "..\MessageAPIObjectProject\MessageAPIObjectProject.csproj", "{4778025C-C00E-43AF-B5A9-99D743C4F0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageAPIObjectProject", "..\MessageAPIObjectProject\MessageAPIObjectProject.csproj", "{4778025C-C00E-43AF-B5A9-99D743C4F0D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

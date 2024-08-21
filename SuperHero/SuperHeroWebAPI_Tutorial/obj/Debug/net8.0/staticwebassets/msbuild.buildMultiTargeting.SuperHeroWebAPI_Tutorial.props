@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SuperHeroWebAPI_Tutorial.props" />
+</Project>

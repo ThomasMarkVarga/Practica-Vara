@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\Console_Apelare_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6ACAC040-C657-4B14-863A-AC3A1A635C13}|..\\CompanyFinderAPICall\\CompanyFinderAPICall.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\companyfinderapicall\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ACAC040-C657-4B14-863A-AC3A1A635C13}|..\\CompanyFinderAPICall\\CompanyFinderAPICall.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\companyfinderapicall\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ACAC040-C657-4B14-863A-AC3A1A635C13}|..\\CompanyFinderAPICall\\CompanyFinderAPICall.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\companyfinderapicall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ACAC040-C657-4B14-863A-AC3A1A635C13}|..\\CompanyFinderAPICall\\CompanyFinderAPICall.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\companyfinderapicall\\callapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CAB3A0-48F6-4DD9-9A97-59B35A765D4B}|..\\DataRepositoryProject\\DataRepositoryProject.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\datarepositoryproject\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E45DCEB-8B65-44AF-B88A-07F83BD14C63}|..\\WebAPI\\WebAPI.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi\\controllers\\companyfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 178,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\CompanyFinderAPICall\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\CompanyFinderAPICall\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:26:10.342Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\CompanyFinderAPICall\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Form1.cs",
+              "RelativeToolTip": "..\\CompanyFinderAPICall\\Form1.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAuwEMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:26:11.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Program.cs",
+              "RelativeDocumentMoniker": "..\\CompanyFinderAPICall\\Program.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\Program.cs",
+              "RelativeToolTip": "..\\CompanyFinderAPICall\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:26:04.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CallAPI.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\CallAPI.cs",
+              "RelativeDocumentMoniker": "..\\CompanyFinderAPICall\\CallAPI.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyFinderAPICall\\CallAPI.cs",
+              "RelativeToolTip": "..\\CompanyFinderAPICall\\CallAPI.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:25:59.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataRepositoryProject\\DataRepository.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepository.cs",
+              "RelativeToolTip": "..\\DataRepositoryProject\\DataRepository.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAiwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:25:51.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CompanyFInderController.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI\\Controllers\\CompanyFInderController.cs",
+              "RelativeDocumentMoniker": "..\\WebAPI\\Controllers\\CompanyFInderController.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI\\Controllers\\CompanyFInderController.cs",
+              "RelativeToolTip": "..\\WebAPI\\Controllers\\CompanyFInderController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:25:44.718Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
