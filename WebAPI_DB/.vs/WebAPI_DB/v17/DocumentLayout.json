@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\WebAPI_DB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11E55F75-BBEA-41CA-BC99-651E63F02027}|..\\DataRpo\\DataRpo.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi_db\\datarpo\\datarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD7DA65-47EF-428F-9203-121594FA3F04}|WebAPI_DB.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi_db\\webapi_db\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD7DA65-47EF-428F-9203-121594FA3F04}|WebAPI_DB.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD7DA65-47EF-428F-9203-121594FA3F04}|WebAPI_DB.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi_db\\webapi_db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD7DA65-47EF-428F-9203-121594FA3F04}|WebAPI_DB.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA8A16F-D8C9-4429-BA1C-0D035F96B438}|..\\DbContextProj\\DbContextProj.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi_db\\dbcontextproj\\idatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11E55F75-BBEA-41CA-BC99-651E63F02027}|..\\DataRpo\\DataRpo.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi_db\\datarpo\\idatarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 178,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DbContextProj\\IDataContext.cs",
+              "RelativeDocumentMoniker": "..\\DbContextProj\\IDataContext.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DbContextProj\\IDataContext.cs",
+              "RelativeToolTip": "..\\DbContextProj\\IDataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:51:04.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompanyController.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\WebAPI_DB\\Controllers\\CompanyController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompanyController.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\WebAPI_DB\\Controllers\\CompanyController.cs",
+              "RelativeToolTip": "Controllers\\CompanyController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:43:16.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDataRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DataRpo\\IDataRepo.cs",
+              "RelativeDocumentMoniker": "..\\DataRpo\\IDataRepo.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DataRpo\\IDataRepo.cs",
+              "RelativeToolTip": "..\\DataRpo\\IDataRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:42:43.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DataRpo\\DataRepo.cs",
+              "RelativeDocumentMoniker": "..\\DataRpo\\DataRepo.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\DataRpo\\DataRepo.cs",
+              "RelativeToolTip": "..\\DataRpo\\DataRepo.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAmwBUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:41:25.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\WebAPI_DB\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI_DB\\WebAPI_DB\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T11:04:14.504Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\Console_Apelare_API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6E45DCEB-8B65-44AF-B88A-07F83BD14C63}|..\\WebAPI\\WebAPI.csproj|c:\\users\\tommy\\desktop\\practica\\practica-vara\\webapi\\controllers\\companyfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -13,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CompanyFInderController.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI\\Controllers\\CompanyFInderController.cs",
-              "RelativeDocumentMoniker": "..\\WebAPI\\Controllers\\CompanyFInderController.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\WebAPI\\Controllers\\CompanyFInderController.cs",
-              "RelativeToolTip": "..\\WebAPI\\Controllers\\CompanyFInderController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA5wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T11:59:53.279Z",
-              "EditorCaption": ""
             }
           ]
         }

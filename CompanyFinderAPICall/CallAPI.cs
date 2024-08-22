@@ -25,7 +25,7 @@ namespace CompanyFinderAPICall
         public async Task<(Company,MessageObjectAPI)> getCompanyAPI(string CIF)
         {
             MessageObjectAPI messageObj = new MessageObjectAPI();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7234/GetCompany?CIF=" + CIF);
+            HttpResponseMessage response = await client.GetAsync("https://localhost:7051/GetCompany?CIF=" + CIF);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -45,7 +45,7 @@ namespace CompanyFinderAPICall
         public async Task<(Company[], MessageObjectAPI)> getAllCompaniesAPI()
         {
             MessageObjectAPI messageObj = new MessageObjectAPI();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7234/GetAllCompanies");
+            HttpResponseMessage response = await client.GetAsync("https://localhost:7051/GetAllCompanies");
 
             if (!response.IsSuccessStatusCode)
             {
@@ -68,7 +68,7 @@ namespace CompanyFinderAPICall
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Delete,
-                RequestUri = new Uri("https://localhost:7234/DeleteCompany?CIF=" + CIF)
+                RequestUri = new Uri("https://localhost:7051/DeleteCompany?CIF=" + CIF)
             };
 
             var response = await client.SendAsync(request);
@@ -96,7 +96,7 @@ namespace CompanyFinderAPICall
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
-                RequestUri = new Uri("https://localhost:7234/InsertCompany?CIF=" + CIF + "&Name=" + Name + "&Address=" + Address + "&County=" + County + "&Phone=" + Phone)
+                RequestUri = new Uri("https://localhost:7051/InsertCompany?CIF=" + CIF + "&Name=" + Name + "&Address=" + Address + "&County=" + County + "&Phone=" + Phone)
             };
 
             var response = await client.SendAsync(request);
@@ -126,7 +126,7 @@ namespace CompanyFinderAPICall
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Put, 
-                RequestUri = new Uri("https://localhost:7234/UpdateCompany?CIF=" + CIF + "&newCIF=" + newCIF + "&newName=" + newName + "&newAddress=" + newAddress + "&newCounty=" + newCounty + "&newPhone=" + newPhone)
+                RequestUri = new Uri("https://localhost:7051/UpdateCompany?CIF=" + CIF + "&newCIF=" + newCIF + "&newName=" + newName + "&newAddress=" + newAddress + "&newCounty=" + newCounty + "&newPhone=" + newPhone)
             };
 
             var response = await client.SendAsync(request);

@@ -1,0 +1,12 @@
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\bin\Debug\net8.0\CompanyProj.deps.json
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\bin\Debug\net8.0\CompanyProj.dll
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\bin\Debug\net8.0\CompanyProj.pdb
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.sourcelink.json
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.dll
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\refint\CompanyProj.dll
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\CompanyProj.pdb
+C:\Users\Tommy\Desktop\practica\Practica-Vara\WebAPI_DB\CompanyProj\obj\Debug\net8.0\ref\CompanyProj.dll
