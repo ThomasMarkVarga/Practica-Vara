@@ -1,0 +1,48 @@
+﻿@page "/addcompany"
+
+<h3>Add Company</h3>
+
+<EditForm Model = "company" OnSubmit ="HandleSubmit">
+    <label>CIF</label>
+    <InputText @bind-Value = "company.companyCIF">@company.companyCIF</InputText>
+    <br>
+
+    <label>Name</label>
+    <InputText @bind-Value = "company.companyName">@company.companyName</InputText>
+    <br>
+
+    <label>Address</label>
+    <InputText @bind-Value="company.companyAddress">@company.companyAddress</InputText>
+    <br>
+
+    <label>County</label>
+    <InputText @bind-Value="company.companyCounty">@company.companyCounty</InputText>
+    <br>
+
+    <label>Phone</label>
+    <InputText @bind-Value="company.companyPhone">@company.companyPhone</InputText>
+    <br>
+
+    <button type= "submit" class ="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string CIF { get; set; }
+
+    Company company = new Company();
+
+    async Task HandleSubmit()
+    {
+        HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+        HttpRequestMessage request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri("https://localhost:7051/InsertCompany?CIF=" + company.companyCIF + "&Name=" + company.companyName + "&Address=" + company.companyAddress + "&County=" + company.companyCounty + "&Phone=" + company.companyPhone)
+            };
+
+        await client.SendAsync(request);
+    }
+}

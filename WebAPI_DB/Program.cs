@@ -11,6 +11,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var MyAllowedSpecificOrigins = "_myAllowedSpecificOrigins";
+
+builder.Services.AddCors( options =>
+{
+    options.AddPolicy(name: MyAllowedSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:7045");
+        });
+});
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("WebAPI_DB"));
@@ -32,5 +43,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(MyAllowedSpecificOrigins);
 
 app.Run();

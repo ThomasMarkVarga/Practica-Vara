@@ -1,0 +1,63 @@
+﻿@page "/companies"
+@inject NavigationManager NavigationManager
+@attribute [StreamRendering(true)]
+
+<h3>CompanyList</h3>
+
+@if(companies == null)
+{
+    <span>Loading...</span>
+}
+else if(companies.Length == 0)
+{
+    <span>No companies found</span>
+}
+else
+{
+    <ul>
+        @foreach( var comp in companies)
+        {
+            <li>@comp.companyName<button @onclick="() => EditCompany(comp.companyCIF)">Edit</button><button @onclick="() => DeleteCompany(comp.companyCIF)">Delete</button></li>
+        }
+    </ul>
+}
+
+<button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
+
+@code {
+    Company[] companies = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Task.Delay(1000);
+
+        HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+        HttpResponseMessage response = await client.GetAsync("https://localhost:7051/GetAllCompanies");
+        string contentString = await response.Content.ReadAsStringAsync();
+        companies = JsonConvert.DeserializeObject<Company[]>(contentString);
+    }
+
+    void CreateCompany()
+    {
+        NavigationManager.NavigateTo("/addcompany");
+    }
+
+    void EditCompany(string CIF)
+    {
+        NavigationManager.NavigateTo($"/editcompany/{CIF}");
+    }
+
+    async Task DeleteCompany(string CIF)
+    {
+        HttpClient client = new HttpClient();
+
+        HttpRequestMessage request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Delete,
+                RequestUri = new Uri("https://localhost:7051/DeleteCompany?CIF=" + CIF)
+            };
+        await client.SendAsync(request);
+    }
+}
