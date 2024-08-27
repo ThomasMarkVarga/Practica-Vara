@@ -1,29 +1,36 @@
 ﻿@page "/addcompany"
+@inject IAPICallService APICallService
+@inject NavigationManager NavigationManager
 
 <h3>Add Company</h3>
 
 <EditForm Model = "company" OnSubmit ="HandleSubmit">
-    <label>CIF</label>
+    <label>CIF:</label>
+    <br>
     <InputText @bind-Value = "company.companyCIF">@company.companyCIF</InputText>
     <br>
 
-    <label>Name</label>
+    <label>Name:</label>
+    <br>
     <InputText @bind-Value = "company.companyName">@company.companyName</InputText>
     <br>
 
-    <label>Address</label>
+    <label>Address:</label>
+    <br>
     <InputText @bind-Value="company.companyAddress">@company.companyAddress</InputText>
     <br>
 
-    <label>County</label>
+    <label>County:</label>
+    <br>
     <InputText @bind-Value="company.companyCounty">@company.companyCounty</InputText>
     <br>
 
-    <label>Phone</label>
+    <label>Phone:</label>
+    <br>
     <InputText @bind-Value="company.companyPhone">@company.companyPhone</InputText>
     <br>
-
-    <button type= "submit" class ="btn btn-primary">Submit</button>
+    <br>
+    <button type= "submit" class ="btn btn-primary">Add</button>
 </EditForm>
 
 @code {
@@ -34,15 +41,8 @@
 
     async Task HandleSubmit()
     {
-        HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        await APICallService.AddCompany(company);
 
-        HttpRequestMessage request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://localhost:7051/InsertCompany?CIF=" + company.companyCIF + "&Name=" + company.companyName + "&Address=" + company.companyAddress + "&County=" + company.companyCounty + "&Phone=" + company.companyPhone)
-            };
-
-        await client.SendAsync(request);
+        NavigationManager.NavigateTo("/companies");
     }
 }
