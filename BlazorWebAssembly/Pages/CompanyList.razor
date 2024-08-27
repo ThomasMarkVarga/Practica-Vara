@@ -2,7 +2,7 @@
 @inject NavigationManager NavigationManager
 @attribute [StreamRendering(true)]
 
-<h3>CompanyList</h3>
+<h3>Company List</h3>
 
 @if(companies == null)
 {
@@ -14,12 +14,34 @@ else if(companies.Length == 0)
 }
 else
 {
-    <ul>
-        @foreach( var comp in companies)
-        {
-            <li>@comp.companyName<button @onclick="() => EditCompany(comp.companyCIF)">Edit</button><button @onclick="() => DeleteCompany(comp.companyCIF)">Delete</button></li>
-        }
-    </ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CIF</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>County</th>
+                <th>Phone</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var comp in companies)
+            {
+                <tr>
+                    <td>@comp.companyCIF</td>
+                    <td>@comp.companyName</td>
+                    <td>@comp.companyAddress</td>
+                    <td>@comp.companyCounty</td>
+                    <td>@comp.companyPhone</td>
+                    <td>
+                        <button @onclick ="() => EditCompany(comp.companyCIF)">Edit</button>
+                        <button @onclick ="() => DeleteCompany(comp.companyCIF)">Delete</button>
+                        </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 <button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
@@ -59,5 +81,7 @@ else
                 RequestUri = new Uri("https://localhost:7051/DeleteCompany?CIF=" + CIF)
             };
         await client.SendAsync(request);
+
+        NavigationManager.Refresh();
     }
 }

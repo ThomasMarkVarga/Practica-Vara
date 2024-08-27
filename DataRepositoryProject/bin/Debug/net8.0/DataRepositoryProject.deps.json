@@ -191,7 +191,10 @@
           "System.Text.Json": "8.0.4"
         },
         "runtime": {
-          "CompanyProject.dll": {}
+          "CompanyProject.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DbContextProj/1.0.0": {
@@ -201,7 +204,10 @@
           "System.Text.Json": "8.0.4"
         },
         "runtime": {
-          "DbContextProj.dll": {}
+          "DbContextProj.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

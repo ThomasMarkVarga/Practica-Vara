@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Console_Apelare_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08b426249e03c14e23d35feed96c88b4ab86bcbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8473fb576bcfce62f764f5d9128790da14b8e010")]
 [assembly: System.Reflection.AssemblyProductAttribute("Console_Apelare_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Console_Apelare_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

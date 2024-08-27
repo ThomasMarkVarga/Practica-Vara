@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj": {}
+    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
         "projectName": "BlazorWebAssembly",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\BlazorWebAssembly\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
               },
-              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj"
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj"
               }
             }
           }
@@ -65,13 +69,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "Newtonsoft.Json": {
@@ -93,7 +97,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.7, 8.0.7]"
+              "version": "[8.0.8, 8.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -110,17 +114,21 @@
         }
       }
     },
-    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
         "projectName": "CompanyProject",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,21 +182,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
         "projectName": "DataRepositoryProject",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryProject.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DataRepositoryProject\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -203,11 +215,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
               },
-              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\DbContextProj.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\DbContextProj.csproj"
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\DbContextProj.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\DbContextProj.csproj"
               }
             }
           }
@@ -256,21 +268,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\DbContextProj.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\DbContextProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\DbContextProj.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\DbContextProj.csproj",
         "projectName": "DbContextProj",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\DbContextProj.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\DbContextProj.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\DbContextProj\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DbContextProj\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -285,8 +301,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
-                "projectPath": "C:\\Users\\Tommy\\Desktop\\practica\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\CompanyProject\\CompanyProject.csproj"
               }
             }
           }
@@ -331,7 +347,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
