@@ -1,5 +1,7 @@
 ﻿using CompanyProject;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using MessageAPIObjectProject;
 
 namespace BlazorWebAssembly.Services
 {
@@ -21,17 +23,35 @@ namespace BlazorWebAssembly.Services
             return JsonConvert.DeserializeObject<Company[]>(contentString);
         }
 
-        public async Task DeleteCompany(string CIF)
+        public async Task<MessageObjectAPI> DeleteCompany(string CIF)
         {
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Delete,
                 RequestUri = new Uri("https://localhost:7051/DeleteCompany?CIF=" + CIF)
             };
-            await client.SendAsync(request);
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            MessageObjectAPI message = new MessageObjectAPI();
+            if (response.IsSuccessStatusCode)
+            {
+                message.status = StatusCode.OK;
+                message.SuccessMessage = "Company deleted succesfully";
+            }
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                message.status = StatusCode.BadRequest;
+                message.ErrorMessage = "Bad Request";
+            }
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                message.status = StatusCode.NotFound;
+                message.ErrorMessage = "Company not found!";
+            }
+            return message;
         }
 
-        public async Task AddCompany(Company company)
+        public async Task<MessageObjectAPI> AddCompany(Company company)
         {
             HttpRequestMessage request = new HttpRequestMessage
             {
@@ -39,7 +59,17 @@ namespace BlazorWebAssembly.Services
                 RequestUri = new Uri("https://localhost:7051/InsertCompany?CIF=" + company.companyCIF + "&Name=" + company.companyName + "&Address=" + company.companyAddress + "&County=" + company.companyCounty + "&Phone=" + company.companyPhone)
             };
 
-            await client.SendAsync(request);
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            MessageObjectAPI message = new MessageObjectAPI();
+            if (response.IsSuccessStatusCode) { 
+                message.status = StatusCode.OK;
+            }
+            else
+            {
+                message.status = StatusCode.BadRequest;
+            }
+            return message;
         }
 
         public async Task UpdateCompany(string CIF, Company company)

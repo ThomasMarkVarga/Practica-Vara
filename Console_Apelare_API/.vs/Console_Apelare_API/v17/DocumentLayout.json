@@ -6,9 +6,6 @@
       "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\services\\apicallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\editcompany.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\services\\iapicallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,15 +24,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IAPICallService.cs",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\IAPICallService.cs",
               "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Services\\IAPICallService.cs",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\IAPICallService.cs",
               "RelativeToolTip": "..\\BlazorWebAssembly\\Services\\IAPICallService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T09:41:38.864Z",
+              "WhenOpened": "2024-09-05T07:09:11.934Z",
               "EditorCaption": ""
             },
             {
@@ -46,28 +43,9 @@
               "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Services\\APICallService.cs",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\APICallService.cs",
               "RelativeToolTip": "..\\BlazorWebAssembly\\Services\\APICallService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAiwDsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T09:40:52.697Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 178,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditCompany.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\EditCompany.razor",
-              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\EditCompany.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\EditCompany.razor",
-              "RelativeToolTip": "..\\BlazorWebAssembly\\Pages\\EditCompany.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T07:42:56.408Z",
+              "WhenOpened": "2024-09-05T07:06:05.532Z",
               "EditorCaption": ""
             }
           ]

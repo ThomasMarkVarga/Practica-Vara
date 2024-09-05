@@ -33,16 +33,40 @@
     <button type= "submit" class ="btn btn-primary">Add</button>
 </EditForm>
 
+<Modal @ref="confirmationModal">
+    <BodyTemplate>Company added successfuly!</BodyTemplate>
+    <FooterTemplate>
+        <Button Color = "ButtonColor.Primary" @onclick ="HideConfirmationModal">Ok</Button>
+    </FooterTemplate>
+</Modal>
+
+<Modal @ref="errorModal">
+    <BodyTemplate>Couldn't add company!'</BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Primary" @onclick="errorModal.HideAsync">Ok</Button>
+    </FooterTemplate>
+</Modal>
+
 @code {
     [Parameter]
     public string CIF { get; set; }
 
     Company company = new Company();
+    Modal confirmationModal;
+    Modal errorModal;
 
     async Task HandleSubmit()
     {
-        await APICallService.AddCompany(company);
+        MessageObjectAPI response = await APICallService.AddCompany(company);
+        if (response.status == StatusCode.OK)
+            await confirmationModal.ShowAsync();
+        else
+            await errorModal.ShowAsync();
+    }
 
+    async Task HideConfirmationModal()
+    {
+        await confirmationModal.HideAsync();
         NavigationManager.NavigateTo("/companies");
     }
 }

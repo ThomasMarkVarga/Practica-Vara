@@ -1,0 +1,126 @@
+[
+  {
+    "ContainingType": "WebAPI.Controllers.CompanyFinderController",
+    "Method": "DeleteCompany",
+    "RelativePath": "DeleteCompany",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CIF",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Delete Company"
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.CompanyFinderController",
+    "Method": "GetAllCompanies",
+    "RelativePath": "GetAllCompanies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Get All Companies"
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.CompanyFinderController",
+    "Method": "GetCompany",
+    "RelativePath": "GetCompany",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CIF",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Get Company"
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.CompanyFinderController",
+    "Method": "InsertCompany",
+    "RelativePath": "InsertCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CIF",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "County",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Insert Company"
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.CompanyFinderController",
+    "Method": "UpdateCompany",
+    "RelativePath": "UpdateCompany",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CIF",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newCIF",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newCounty",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPhone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Update Company"
+  }
+]

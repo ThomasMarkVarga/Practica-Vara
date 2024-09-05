@@ -15,40 +15,73 @@ else if(companies.Length == 0)
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>CIF</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>County</th>
-                <th>Phone</th>
-                <th>Options</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var comp in companies)
-            {
-                <tr>
-                    <td>@comp.companyCIF</td>
-                    <td>@comp.companyName</td>
-                    <td>@comp.companyAddress</td>
-                    <td>@comp.companyCounty</td>
-                    <td>@comp.companyPhone</td>
-                    <td>
-                        <button @onclick ="() => EditCompany(comp.companyCIF)">Edit</button>
-                        <button @onclick ="() => DeleteCompany(comp.companyCIF)">Delete</button>
-                        </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <Grid 
+        TItem="Company"
+        Class = "table table-hover table-bordered table-striped"
+        Data = "companies"
+        AllowFiltering = "true"
+        Responsive = "true">
+
+        <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="CIF">
+            @context.companyCIF
+        </GridColumn>
+        <GridColumn TItem = "Company" HeaderText = "Name" PropertyName="Name">
+            @context.companyName
+        </GridColumn>
+        <GridColumn TItem = "Company" HeaderText = "Address" PropertyName="Address">
+            @context.companyAddress
+        </GridColumn>
+        <GridColumn TItem = "Company" HeaderText = "County" PropertyName="County">
+            @context.companyCounty
+        </GridColumn>
+        <GridColumn TItem = "Company" HeaderText = "Phone" PropertyName="Phone">
+            @context.companyPhone
+        </GridColumn>
+        <GridColumn TItem = "Company" HeaderText = "Options">
+            <ChildContent> 
+                <button @onclick ="() => EditCompany(context.companyCIF)">Edit</button>
+                <button @onclick ="() => ShowModalDelete(context.companyCIF)">Delete</button>
+            </ChildContent>
+        </GridColumn>
+    </Grid>
+
+    <Modal @ref="modal">
+        <BodyTemplate>
+            Are you sure you want to delete this company?
+        </BodyTemplate>
+        <FooterTemplate>
+            <Button Color="ButtonColor.Secondary" @onclick = "modal.HideAsync">No</Button>
+            <Button Color ="ButtonColor.Primary" @onclick = "DeleteCompany">Yes</Button>
+        </FooterTemplate>
+    </Modal>
+
+    <Modal @ref="deleteConfirmationModal">
+        <BodyTemplate>
+            Company deleted succefully!
+        </BodyTemplate>
+        <FooterTemplate>
+            <Button Color="ButtonColor.Primary" @onclick ="HideConfirmationModal">Ok</Button>
+        </FooterTemplate>
+    </Modal>
+
+    <Modal @ref="errorModal">
+        <BodyTemplate>
+            An error ocurred! Try again!
+        </BodyTemplate>
+        <FooterTemplate>
+            <Button Color="ButtonColor.Primary" @onclick="HideErrorModal">Ok</Button>
+        </FooterTemplate>
+    </Modal>
 }
 
 <button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
 
 @code {
     Company[] companies = null;
+    private Modal modal;
+    private Modal deleteConfirmationModal;
+    private Modal errorModal;
+    string CIFtoBeDeleted;
 
     protected override async Task OnInitializedAsync()
     {
@@ -66,10 +99,36 @@ else
         NavigationManager.NavigateTo($"/editcompany/{CIF}");
     }
 
-    async Task DeleteCompany(string CIF)
+    async Task DeleteCompany()
     {
-        await APICallService.DeleteCompany(CIF);
+        var response = await APICallService.DeleteCompany(this.CIFtoBeDeleted);
+        this.CIFtoBeDeleted = "";
+        if (response.status == StatusCode.OK)
+        {
+            await modal.HideAsync();
+            await deleteConfirmationModal.ShowAsync();
+        }
+        else
+        {
+            await errorModal.ShowAsync();
+        }
+    }
 
+    async Task ShowModalDelete(string CIF)
+    {
+        this.CIFtoBeDeleted = CIF;
+        await modal.ShowAsync();   
+    }
+
+    async Task HideConfirmationModal()
+    {
+        await deleteConfirmationModal.HideAsync();
+        NavigationManager.Refresh();
+    }
+
+    async Task HideErrorModal()
+    {
+        await errorModal.HideAsync();
         NavigationManager.Refresh();
     }
 }
