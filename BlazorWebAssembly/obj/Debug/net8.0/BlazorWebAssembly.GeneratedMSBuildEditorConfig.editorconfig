@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/BlazorWebAssembly/Pages/DatePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0ZVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tommy/Desktop/resurse/Practica-Vara/BlazorWebAssembly/Pages/EditCompany.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdENvbXBhbnkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

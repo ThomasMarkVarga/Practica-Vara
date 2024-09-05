@@ -1,0 +1,33 @@
+﻿@page "/date"
+@using System.Globalization
+
+ <DateInput TValue="DateTime?" @bind-Value="selectedDate"/>
+
+<br>
+<Button Color="ButtonColor.Primary" @onclick = "ShowModal">Sumbit</Button>
+
+<Modal @ref="modal">
+    <BodyTemplate>
+        @selectedDateFormatted
+    </BodyTemplate>
+</Modal>
+
+@code {
+    Modal modal;
+    DateTime? selectedDate;
+
+    string selectedDateFormatted;
+
+    async Task ShowModal()
+    {
+        if (selectedDate != null)
+        {
+            selectedDateFormatted = selectedDate.Value.ToString("dd/MM/yyyy");
+            await modal.ShowAsync();
+        }
+    }
+}
+
+
+
+

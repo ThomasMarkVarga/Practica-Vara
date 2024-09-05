@@ -34,11 +34,32 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </EditForm>
 
+<Modal @ref = "confirmationModal"
+       ShowCloseButton ="false"
+       CloseOnEscape="false">
+    <BodyTemplate>Company updated succesfully!</BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Primary" @onclick = "HideConfirmationModal">Ok</Button>
+    </FooterTemplate>
+</Modal>
+
+<Modal @ref="errorModal"
+       ShowCloseButton="false"
+       CloseOnEscape="false">
+    <BodyTemplate>An error ocured!</BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Primary" @onclick = "errorModal.HideAsync">Ok</Button>
+    </FooterTemplate>
+</Modal>
+
 @code {
     [Parameter]
     public string CIF { get; set; }
 
     Company company = new Company();
+    Modal confirmationModal;
+    Modal errorModal;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -47,8 +68,14 @@
 
     async Task HandleSubmit()
     {
-        await APICallService.UpdateCompany(CIF, company);
+        MessageObjectAPI response = await APICallService.UpdateCompany(CIF, company);
+        if (response.status == StatusCode.OK)
+            await confirmationModal.ShowAsync();
+    }
 
+    async Task HideConfirmationModal()
+    {
+        await confirmationModal.HideAsync();
         NavigationManager.NavigateTo("/companies");
     }
 }

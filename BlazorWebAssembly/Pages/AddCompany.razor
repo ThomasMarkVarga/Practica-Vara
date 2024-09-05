@@ -33,14 +33,18 @@
     <button type= "submit" class ="btn btn-primary">Add</button>
 </EditForm>
 
-<Modal @ref="confirmationModal">
+<Modal @ref="confirmationModal"
+       ShowCloseButton="false"
+       CloseOnEscape="false">
     <BodyTemplate>Company added successfuly!</BodyTemplate>
     <FooterTemplate>
         <Button Color = "ButtonColor.Primary" @onclick ="HideConfirmationModal">Ok</Button>
     </FooterTemplate>
 </Modal>
 
-<Modal @ref="errorModal">
+<Modal @ref="errorModal"
+       ShowCloseButton="false"
+       CloseOnEscape="false">
     <BodyTemplate>Couldn't add company!'</BodyTemplate>
     <FooterTemplate>
         <Button Color="ButtonColor.Primary" @onclick="errorModal.HideAsync">Ok</Button>

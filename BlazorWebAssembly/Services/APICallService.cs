@@ -72,14 +72,21 @@ namespace BlazorWebAssembly.Services
             return message;
         }
 
-        public async Task UpdateCompany(string CIF, Company company)
+        public async Task<MessageObjectAPI> UpdateCompany(string CIF, Company company)
         {
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Put,
                 RequestUri = new Uri("https://localhost:7051/UpdateCompany?CIF=" + CIF + "&newCIF=" + company.companyCIF + "&newName=" + company.companyName + "&newAddress=" + company.companyAddress + "&newCounty=" + company.companyCounty + "&newPhone=" + company.companyPhone)
             };
-            await client.SendAsync(request);
+            HttpResponseMessage response = await client.SendAsync(request);
+            MessageObjectAPI message = new MessageObjectAPI();
+            if (response.IsSuccessStatusCode)
+                message.status = StatusCode.OK;
+            else 
+                message.status = StatusCode.BadRequest;
+
+            return message;
         }
 
         public async Task<Company> GetCompany(string CIF)

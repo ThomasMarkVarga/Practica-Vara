@@ -45,7 +45,9 @@ else
         </GridColumn>
     </Grid>
 
-    <Modal @ref="modal">
+    <Modal @ref="modal"
+           ShowCloseButton="false"
+           CloseOnEscape="false">
         <BodyTemplate>
             Are you sure you want to delete this company?
         </BodyTemplate>
@@ -55,7 +57,9 @@ else
         </FooterTemplate>
     </Modal>
 
-    <Modal @ref="deleteConfirmationModal">
+    <Modal @ref="deleteConfirmationModal"
+           ShowCloseButton="false"
+           CloseOnEscape="false">
         <BodyTemplate>
             Company deleted succefully!
         </BodyTemplate>
@@ -64,7 +68,9 @@ else
         </FooterTemplate>
     </Modal>
 
-    <Modal @ref="errorModal">
+    <Modal @ref="errorModal"
+           ShowCloseButton="false"
+           CloseOnEscape="false">
         <BodyTemplate>
             An error ocurred! Try again!
         </BodyTemplate>
@@ -76,7 +82,15 @@ else
 
 <button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
 
+<div>
+    <input type="date" @bind ="date" placeholder="dd-mm-yyyy" >
+    <div class="mb-3">Entered date: @date</div>
+
+</div>
+
 @code {
+    private DateOnly date;
+
     Company[] companies = null;
     private Modal modal;
     private Modal deleteConfirmationModal;
