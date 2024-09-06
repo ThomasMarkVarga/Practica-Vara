@@ -1,5 +1,58 @@
 @import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
 
+/* /Components/Dialog.razor.rz.scp.css */
+.overlay[b-u7x763wr4o] {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.dialog[b-u7x763wr4o] {
+    width: 750px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+    .dialog .dialog-header[b-u7x763wr4o] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .dialog .dialog-body[b-u7x763wr4o] {
+        padding: 2rem;
+    }
+
+    .dialog .dialog-footer[b-u7x763wr4o] {
+        padding: 2rem;
+    }
+
+
+.close[b-u7x763wr4o] {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    transition: 0.25s ease;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+    .close:hover[b-u7x763wr4o] {
+        background-color: #DDD;
+    }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-fd0bj2xgcy] {
     position: relative;

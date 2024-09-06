@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\Console_Apelare_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\datepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\companylist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,14 +22,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DatePage.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\DatePage.razor",
-              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\DatePage.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\DatePage.razor",
-              "RelativeToolTip": "..\\BlazorWebAssembly\\Pages\\DatePage.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Title": "CompanyList.razor",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\CompanyList.razor",
+              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\CompanyList.razor",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\CompanyList.razor",
+              "RelativeToolTip": "..\\BlazorWebAssembly\\Pages\\CompanyList.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-05T09:29:30.68Z",
+              "WhenOpened": "2024-09-06T08:24:30.922Z",
               "EditorCaption": ""
             }
           ]

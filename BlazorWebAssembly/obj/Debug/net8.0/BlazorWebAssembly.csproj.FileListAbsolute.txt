@@ -2310,3 +2310,4 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\BlazorWebAssembly\obj\Debug\net8.0\
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\BlazorWebAssembly\obj\Debug\net8.0\compressed\9q3onqobtu.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\BlazorWebAssembly\obj\Debug\net8.0\compressed\7twl4g7q1w.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\BlazorWebAssembly\obj\Debug\net8.0\compressed\0a9uz3s0uz.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\BlazorWebAssembly\obj\Debug\net8.0\scopedcss\Components\Dialog.razor.rz.scp.css

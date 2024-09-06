@@ -4,26 +4,30 @@
  <DateInput TValue="DateTime?" @bind-Value="selectedDate"/>
 
 <br>
-<Button Color="ButtonColor.Primary" @onclick = "ShowModal">Sumbit</Button>
+<Button Color="ButtonColor.Primary" @onclick = "ShowDialog">Sumbit</Button>
 
-<Modal @ref="modal">
-    <BodyTemplate>
-        @selectedDateFormatted
-    </BodyTemplate>
-</Modal>
+<Dialog title="Selected Date" Opened ="dialogShown" CloseButtonClicked="@(() => dialogShown = false)">
+    <BodyContent>
+        @selectedDate
+    </BodyContent>
+    
+    <FooterContent>
+        <Button Color="ButtonColor.Primary">Ok</Button>
+    </FooterContent>
+</Dialog>
 
 @code {
-    Modal modal;
     DateTime? selectedDate;
-
     string selectedDateFormatted;
 
-    async Task ShowModal()
+    private bool dialogShown = false;
+
+    async Task ShowDialog()
     {
         if (selectedDate != null)
         {
             selectedDateFormatted = selectedDate.Value.ToString("dd/MM/yyyy");
-            await modal.ShowAsync();
+            dialogShown = true;
         }
     }
 }

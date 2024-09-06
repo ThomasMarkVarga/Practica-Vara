@@ -18,26 +18,27 @@ else
     <Grid 
         TItem="Company"
         Class = "table table-hover table-bordered table-striped"
-        Data = "companies"
+        Data = "myCompanies"
         AllowFiltering = "true"
+        AllowSorting = "true"
         Responsive = "true">
 
-        <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="CIF">
+        <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="companyCIF" SortKeySelector="item => item.companyCIF">
             @context.companyCIF
         </GridColumn>
-        <GridColumn TItem = "Company" HeaderText = "Name" PropertyName="Name">
+        <GridColumn TItem="Company" HeaderText="Name" PropertyName="companyName" SortKeySelector="item => item.companyName">
             @context.companyName
         </GridColumn>
-        <GridColumn TItem = "Company" HeaderText = "Address" PropertyName="Address">
+        <GridColumn TItem="Company" HeaderText="Address" PropertyName="companyAddress" SortKeySelector="item => item.companyAddress">
             @context.companyAddress
         </GridColumn>
-        <GridColumn TItem = "Company" HeaderText = "County" PropertyName="County">
+        <GridColumn TItem="Company" HeaderText="County" PropertyName="companyCounty" SortKeySelector="item => item.companyCounty">
             @context.companyCounty
         </GridColumn>
-        <GridColumn TItem = "Company" HeaderText = "Phone" PropertyName="Phone">
+        <GridColumn TItem="Company" HeaderText="Phone" PropertyName="companyPhone" SortKeySelector="item => item.companyPhone">
             @context.companyPhone
         </GridColumn>
-        <GridColumn TItem = "Company" HeaderText = "Options">
+        <GridColumn TItem = "Company" HeaderText = "Options" Filterable="false">
             <ChildContent> 
                 <button @onclick ="() => EditCompany(context.companyCIF)">Edit</button>
                 <button @onclick ="() => ShowModalDelete(context.companyCIF)">Delete</button>
@@ -82,16 +83,10 @@ else
 
 <button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
 
-<div>
-    <input type="date" @bind ="date" placeholder="dd-mm-yyyy" >
-    <div class="mb-3">Entered date: @date</div>
-
-</div>
 
 @code {
-    private DateOnly date;
-
-    Company[] companies = null;
+    Company[]? companies;
+    IEnumerable<Company>? myCompanies;
     private Modal modal;
     private Modal deleteConfirmationModal;
     private Modal errorModal;
@@ -99,8 +94,9 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        //await Task.Delay(1000);
+       // await Task.Delay(1000);
         companies = await APICallService.getAllCompanies();
+        myCompanies = companies;
     }
 
     void CreateCompany()
