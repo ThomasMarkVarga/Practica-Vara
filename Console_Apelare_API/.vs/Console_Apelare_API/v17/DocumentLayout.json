@@ -3,13 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\Console_Apelare_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E0CAB3A0-48F6-4DD9-9A97-59B35A765D4B}|..\\DataRepositoryProject\\DataRepositoryProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\datarepositoryproject\\datarepositorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E20DD334-CA76-4D2C-A6DB-AADDF6F43AD8}|..\\WebAPI_DB\\WebAPI_DB.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\webapi_db\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0CAB3A0-48F6-4DD9-9A97-59B35A765D4B}|..\\DataRepositoryProject\\DataRepositoryProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\datarepositoryproject\\idatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CAB3A0-48F6-4DD9-9A97-59B35A765D4B}|..\\DataRepositoryProject\\DataRepositoryProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\datarepositoryproject\\datarepositorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,7 +19,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,39 +27,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IDataRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\IDataRepository.cs",
               "RelativeDocumentMoniker": "..\\DataRepositoryProject\\IDataRepository.cs",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\IDataRepository.cs",
               "RelativeToolTip": "..\\DataRepositoryProject\\IDataRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T08:29:39.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataRepositoryDB.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "RelativeDocumentMoniker": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "RelativeToolTip": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T08:13:44.37Z",
+              "WhenOpened": "2024-09-09T10:08:31.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DataRepositoryDB.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
+              "RelativeDocumentMoniker": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
+              "RelativeToolTip": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACIAAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T09:20:22.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CompanyController.cs",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\WebAPI_DB\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "..\\WebAPI_DB\\Controllers\\CompanyController.cs",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\WebAPI_DB\\Controllers\\CompanyController.cs",
               "RelativeToolTip": "..\\WebAPI_DB\\Controllers\\CompanyController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwGkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAcwEEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T08:13:11.368Z",
               "EditorCaption": ""

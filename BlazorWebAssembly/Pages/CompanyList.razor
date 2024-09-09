@@ -15,19 +15,19 @@
         AllowPaging = "true"
         PageSize="10">
 
-        <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="companyCIF" SortKeySelector="item => item.companyCIF">
+        <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="companyCIF" SortString="companyCIF" SortKeySelector="item => item.companyCIF">
             @context.companyCIF
         </GridColumn>
-        <GridColumn TItem="Company" HeaderText="Name" PropertyName="companyName" SortKeySelector="item => item.companyName">
+    <GridColumn TItem="Company" HeaderText="Name" PropertyName="companyName" SortString="companyName" SortKeySelector="item => item.companyName">
             @context.companyName
         </GridColumn>
-        <GridColumn TItem="Company" HeaderText="Address" PropertyName="companyAddress" SortKeySelector="item => item.companyAddress">
+    <GridColumn TItem="Company" HeaderText="Address" PropertyName="companyAddress" SortString="companyAddress" SortKeySelector="item => item.companyAddress">
             @context.companyAddress
         </GridColumn>
-        <GridColumn TItem="Company" HeaderText="County" PropertyName="companyCounty" SortKeySelector="item => item.companyCounty">
+    <GridColumn TItem="Company" HeaderText="County" PropertyName="companyCounty" SortString="companyCounty" SortKeySelector="item => item.companyCounty">
             @context.companyCounty
         </GridColumn>
-        <GridColumn TItem="Company" HeaderText="Phone" PropertyName="companyPhone" SortKeySelector="item => item.companyPhone">
+    <GridColumn TItem="Company" HeaderText="Phone" PropertyName="companyPhone" SortString="companyPhone" SortKeySelector="item => item.companyPhone">
             @context.companyPhone
         </GridColumn>
         <GridColumn TItem = "Company" HeaderText = "Options" Filterable="false">
@@ -84,7 +84,15 @@
 
     private async Task<GridDataProviderResult<Company>> CompanyDataProvider(GridDataProviderRequest<Company> request)
     {
-        Company[] result = await APICallService.getAllCompaniesWithPagination(request.PageSize, request.PageNumber);
+        string sortString = "";
+        SortDirection sortDirection = SortDirection.None;
+
+        if(request.Sorting is not null && request.Sorting.Any())
+        {
+            sortString = request.Sorting.FirstOrDefault()!.SortString;
+            sortDirection = request.Sorting.FirstOrDefault()!.SortDirection;
+        }
+        Company[] result = await APICallService.getAllCompaniesWithPagination(request.PageSize, request.PageNumber, sortString, sortDirection);
         return await Task.FromResult(new GridDataProviderResult<Company> {Data = result, TotalCount = await APICallService.GetNoOfCompanies()});
     }
 

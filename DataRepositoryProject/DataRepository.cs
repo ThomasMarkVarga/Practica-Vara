@@ -30,7 +30,7 @@ namespace DataRepositoryProject
         }
     }
 
-    public class DataRepository : IDataRepository
+    public class DataRepository //: IDataRepository
     {
         private List<Company> companiesCache { get; set; }
 

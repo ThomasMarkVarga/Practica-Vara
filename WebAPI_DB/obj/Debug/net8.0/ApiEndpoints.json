@@ -44,6 +44,16 @@
         "Name": "pageNumber",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "sortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortString",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [],

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using MessageAPIObjectProject;
+using BlazorBootstrap;
 
 namespace BlazorWebAssembly.Services
 {
@@ -23,9 +24,9 @@ namespace BlazorWebAssembly.Services
             return JsonConvert.DeserializeObject<Company[]>(contentString);
         }
 
-        public async Task<Company[]> getAllCompaniesWithPagination(int pageSize, int pageNumber)
+        public async Task<Company[]> getAllCompaniesWithPagination(int pageSize, int pageNumber, string sortString, SortDirection sortDirection)
         {
-            HttpResponseMessage response = await client.GetAsync("/GetAllCompaniesWithPagination?pageSize="+pageSize+"&pageNumber=" + pageNumber);
+            HttpResponseMessage response = await client.GetAsync("GetAllCompaniesWithPagination?pageSize=" + pageSize + "&pageNumber=" + pageNumber + "&sortString=" + sortString + "&sortDirection=" + sortDirection);
             string contentString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Company[]>(contentString);
         }

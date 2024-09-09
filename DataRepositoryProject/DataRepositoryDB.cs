@@ -10,6 +10,15 @@ using System.Reflection;
 
 namespace DataRepositoryProject
 {
+
+    public enum SortDirections
+    {
+        None,
+        Ascending,
+        Descending
+    }
+
+
     public class DataRepositoryDB : IDataRepository
     {
         public readonly DataContext _context;
@@ -23,8 +32,56 @@ namespace DataRepositoryProject
             return companies;
         }
 
-        public async Task<Company[]> getAllCompaniesWithPagination(int skip,int pageSize) {
-            return await _context.Companies.Skip(skip).Take(pageSize).ToArrayAsync();
+        public async Task<Company[]> getAllCompaniesWithPagination(int skip,int pageSize, SortDirections sortDirection,string? sortString) {
+            
+            IQueryable<Company> query = _context.Companies;
+            
+            if((sortString != string.Empty || sortString != null) && sortDirection != SortDirections.None)
+            {
+                if(sortDirection == SortDirections.Descending)
+                {
+                    switch (sortString) {
+                        case "companyCIF":
+                            query = query.OrderByDescending(c => c.companyCIF);
+                            break;
+                        case "companyName":
+                            query = query.OrderByDescending(c => c.companyName);
+                            break;
+                        case "companyAddress":
+                            query = query.OrderByDescending(c => c.companyAddress);
+                            break;
+                        case "companyCounty":
+                            query = query.OrderByDescending(c => c.companyCounty);
+                            break;
+                        case "companyPhone":
+                            query = query.OrderByDescending(c => c.companyPhone);
+                            break;
+                    }
+                }
+                else if (sortDirection == SortDirections.Ascending)
+                {
+                    switch (sortString)
+                    {
+                        case "companyCIF":
+                            query = query.OrderBy(c => c.companyCIF);
+                            break;
+                        case "companyName":
+                            query = query.OrderBy(c => c.companyName);
+                            break;
+                        case "companyAddress":
+                            query = query.OrderBy(c => c.companyAddress);
+                            break;
+                        case "companyCounty":
+                            query = query.OrderBy(c => c.companyCounty);
+                            break;
+                        case "companyPhone":
+                            query = query.OrderBy(c => c.companyPhone);
+                            break;
+                    }
+                }
+            }
+
+            return await query.Skip(skip).Take(pageSize).ToArrayAsync();
         }
 
         public async Task<Company> getCompany(string CIF)

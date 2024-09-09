@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebAPI_DB.Controllers
 {
+    public enum SortDirection
+    {
+        None,
+        Ascending,
+        Descending
+    }
 
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("[action]")]
@@ -43,11 +49,11 @@ namespace WebAPI_DB.Controllers
         }
 
         [HttpGet(Name = "Get All Companies With Pagination")]
-        public async Task<IActionResult> GetAllCompaniesWithPagination(int pageSize, int pageNumber)
+        public async Task<IActionResult> GetAllCompaniesWithPagination(int pageSize, int pageNumber, SortDirection sortDirection, string? sortString)
         {
             int skip = (pageNumber - 1) * pageSize;
 
-            Company[] comp = await _dataLayer.getAllCompaniesWithPagination(skip, pageSize);
+            Company[] comp = await _dataLayer.getAllCompaniesWithPagination(skip, pageSize, (DataRepositoryProject.SortDirections)sortDirection, sortString);
             if (comp == null)
             {
                 return NoContent();
