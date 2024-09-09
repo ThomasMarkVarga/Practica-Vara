@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DbContextProj;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace DataRepositoryProject
 {
@@ -20,6 +21,10 @@ namespace DataRepositoryProject
         {
             var companies = await _context.Companies.ToArrayAsync();
             return companies;
+        }
+
+        public async Task<Company[]> getAllCompaniesWithPagination(int skip,int pageSize) {
+            return await _context.Companies.Skip(skip).Take(pageSize).ToArrayAsync();
         }
 
         public async Task<Company> getCompany(string CIF)
@@ -57,6 +62,11 @@ namespace DataRepositoryProject
             company.companyPhone = newPhone;
 
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> getCompanyNo()
+        {
+            return _context.Companies.Count();
         }
     }
 }

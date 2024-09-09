@@ -5,23 +5,15 @@
 
 <h3>Company List</h3>
 
-@if(companies == null)
-{
-    <span>Loading...</span>
-}
-else if(companies.Length == 0)
-{
-    <span>No companies found</span>
-}
-else
-{
     <Grid 
         TItem="Company"
         Class = "table table-hover table-bordered table-striped"
-        Data = "myCompanies"
+        DataProvider = "CompanyDataProvider"
         AllowFiltering = "true"
         AllowSorting = "true"
-        Responsive = "true">
+        Responsive = "true"
+        AllowPaging = "true"
+        PageSize="10">
 
         <GridColumn TItem = "Company" HeaderText = "CIF" PropertyName="companyCIF" SortKeySelector="item => item.companyCIF">
             @context.companyCIF
@@ -79,25 +71,23 @@ else
             <Button Color="ButtonColor.Primary" @onclick="HideErrorModal">Ok</Button>
         </FooterTemplate>
     </Modal>
-}
 
 <button @onclick="CreateCompany" class="btn btn-primary">Add Company</button>
 
 
 @code {
-    Company[]? companies;
-    IEnumerable<Company>? myCompanies;
     private Modal modal;
     private Modal deleteConfirmationModal;
     private Modal errorModal;
     string CIFtoBeDeleted;
 
-    protected override async Task OnInitializedAsync()
+
+    private async Task<GridDataProviderResult<Company>> CompanyDataProvider(GridDataProviderRequest<Company> request)
     {
-       // await Task.Delay(1000);
-        companies = await APICallService.getAllCompanies();
-        myCompanies = companies;
+        Company[] result = await APICallService.getAllCompaniesWithPagination(request.PageSize, request.PageNumber);
+        return await Task.FromResult(new GridDataProviderResult<Company> {Data = result, TotalCount = await APICallService.GetNoOfCompanies()});
     }
+
 
     void CreateCompany()
     {

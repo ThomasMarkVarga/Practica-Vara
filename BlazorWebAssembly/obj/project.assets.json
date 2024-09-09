@@ -416,6 +416,38 @@
           }
         }
       },
+      "Microsoft.Build.Framework/17.11.4": {
+        "type": "package",
+        "compile": {
+          "ref/net8.0/Microsoft.Build.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Build.Framework.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Build.Utilities.Core/17.11.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Framework": "17.11.4",
+          "Microsoft.NET.StringTools": "17.11.4",
+          "System.Collections.Immutable": "8.0.0",
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "compile": {
+          "ref/net8.0/Microsoft.Build.Utilities.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Build.Utilities.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -899,6 +931,19 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
+      "Microsoft.NET.StringTools/17.11.4": {
+        "type": "package",
+        "compile": {
+          "ref/net8.0/Microsoft.NET.StringTools.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.NET.StringTools.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -977,6 +1022,22 @@
           "ref/netstandard1.3/System.Collections.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Collections.Immutable/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Configuration.ConfigurationManager/8.0.0": {
@@ -1549,9 +1610,11 @@
         "dependencies": {
           "CompanyProject": "1.0.0",
           "DbContextProj": "1.0.0",
+          "Microsoft.Build.Utilities.Core": "17.11.4",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Text.Json": "8.0.4"
+          "System.Text.Json": "8.0.4",
+          "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
           "bin/placeholder/DataRepositoryProject.dll": {}
@@ -2001,6 +2064,38 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Build.Framework/17.11.4": {
+        "type": "package",
+        "compile": {
+          "ref/net8.0/Microsoft.Build.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Build.Framework.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Build.Utilities.Core/17.11.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Framework": "17.11.4",
+          "Microsoft.NET.StringTools": "17.11.4",
+          "System.Collections.Immutable": "8.0.0",
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "compile": {
+          "ref/net8.0/Microsoft.Build.Utilities.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Build.Utilities.Core.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -2487,6 +2582,19 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
+      "Microsoft.NET.StringTools/17.11.4": {
+        "type": "package",
+        "compile": {
+          "ref/net8.0/Microsoft.NET.StringTools.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.NET.StringTools.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -2680,6 +2788,22 @@
           "ref/netstandard1.3/System.Collections.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Collections.Immutable/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Configuration.ConfigurationManager/8.0.0": {
@@ -3247,9 +3371,11 @@
         "dependencies": {
           "CompanyProject": "1.0.0",
           "DbContextProj": "1.0.0",
+          "Microsoft.Build.Utilities.Core": "17.11.4",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Text.Json": "8.0.4"
+          "System.Text.Json": "8.0.4",
+          "System.Threading.Tasks": "4.0.11"
         },
         "compile": {
           "bin/placeholder/DataRepositoryProject.dll": {}
@@ -3794,6 +3920,58 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Build.Framework/17.11.4": {
+      "sha512": "u28uDihlqxtt8h2dL1ZJOZ7TRkxBK+HGr+3FgQpILVo7Q7gErkw8mYW9R+RM5PtxvZTdYb/4MWDL66vdIsANBQ==",
+      "type": "package",
+      "path": "microsoft.build.framework/17.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "lib/net472/Microsoft.Build.Framework.dll",
+        "lib/net472/Microsoft.Build.Framework.pdb",
+        "lib/net472/Microsoft.Build.Framework.xml",
+        "lib/net8.0/Microsoft.Build.Framework.dll",
+        "lib/net8.0/Microsoft.Build.Framework.pdb",
+        "lib/net8.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.17.11.4.nupkg.sha512",
+        "microsoft.build.framework.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net472/Microsoft.Build.Framework.dll",
+        "ref/net472/Microsoft.Build.Framework.xml",
+        "ref/net8.0/Microsoft.Build.Framework.dll",
+        "ref/net8.0/Microsoft.Build.Framework.xml",
+        "ref/netstandard2.0/Microsoft.Build.Framework.dll",
+        "ref/netstandard2.0/Microsoft.Build.Framework.xml"
+      ]
+    },
+    "Microsoft.Build.Utilities.Core/17.11.4": {
+      "sha512": "b2CEJMgVuv5fkhaR6TXjgocIa6YQbseowRj15q3/IyH343EPr+CrxXAZs6Xp6uZDE8A3ynsLPlufFUMkjUl37A==",
+      "type": "package",
+      "path": "microsoft.build.utilities.core/17.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "lib/net472/Microsoft.Build.Utilities.Core.dll",
+        "lib/net472/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net472/Microsoft.Build.Utilities.Core.xml",
+        "lib/net8.0/Microsoft.Build.Utilities.Core.dll",
+        "lib/net8.0/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net8.0/Microsoft.Build.Utilities.Core.xml",
+        "microsoft.build.utilities.core.17.11.4.nupkg.sha512",
+        "microsoft.build.utilities.core.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net472/Microsoft.Build.Utilities.Core.dll",
+        "ref/net472/Microsoft.Build.Utilities.Core.xml",
+        "ref/net8.0/Microsoft.Build.Utilities.Core.dll",
+        "ref/net8.0/Microsoft.Build.Utilities.Core.xml",
+        "ref/netstandard2.0/Microsoft.Build.Utilities.Core.dll",
+        "ref/netstandard2.0/Microsoft.Build.Utilities.Core.xml"
       ]
     },
     "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
@@ -4620,6 +4798,35 @@
         "tools/net8.0/System.Windows.Extensions.dll"
       ]
     },
+    "Microsoft.NET.StringTools/17.11.4": {
+      "sha512": "mudqUHhNpeqIdJoUx2YDWZO/I9uEDYVowan89R6wsomfnUJQk6HteoQTlNjZDixhT2B4IXMkMtgZtoceIjLRmA==",
+      "type": "package",
+      "path": "microsoft.net.stringtools/17.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "lib/net472/Microsoft.NET.StringTools.dll",
+        "lib/net472/Microsoft.NET.StringTools.pdb",
+        "lib/net472/Microsoft.NET.StringTools.xml",
+        "lib/net8.0/Microsoft.NET.StringTools.dll",
+        "lib/net8.0/Microsoft.NET.StringTools.pdb",
+        "lib/net8.0/Microsoft.NET.StringTools.xml",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.pdb",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.xml",
+        "microsoft.net.stringtools.17.11.4.nupkg.sha512",
+        "microsoft.net.stringtools.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net472/Microsoft.NET.StringTools.dll",
+        "ref/net472/Microsoft.NET.StringTools.xml",
+        "ref/net8.0/Microsoft.NET.StringTools.dll",
+        "ref/net8.0/Microsoft.NET.StringTools.xml",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.0.1": {
       "sha512": "2G6OjjJzwBfNOO8myRV/nFrbTw5iA+DEm0N+qUqhrOmaVtn4pC77h38I1jsXGw5VH55+dPfQsqHD0We9sCl9FQ==",
       "type": "package",
@@ -5161,6 +5368,36 @@
         "ref/xamarinwatchos10/_._",
         "system.collections.4.0.11.nupkg.sha512",
         "system.collections.nuspec"
+      ]
+    },
+    "System.Collections.Immutable/8.0.0": {
+      "sha512": "AurL6Y5BA1WotzlEvVaIDpqzpIPvYnnldxru8oXJU2yFxFUy3+pNXjXd1ymO+RA0rq0+590Q8gaz2l3Sr7fmqg==",
+      "type": "package",
+      "path": "system.collections.immutable/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Collections.Immutable.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets",
+        "lib/net462/System.Collections.Immutable.dll",
+        "lib/net462/System.Collections.Immutable.xml",
+        "lib/net6.0/System.Collections.Immutable.dll",
+        "lib/net6.0/System.Collections.Immutable.xml",
+        "lib/net7.0/System.Collections.Immutable.dll",
+        "lib/net7.0/System.Collections.Immutable.xml",
+        "lib/net8.0/System.Collections.Immutable.dll",
+        "lib/net8.0/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "system.collections.immutable.8.0.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Configuration.ConfigurationManager/8.0.0": {

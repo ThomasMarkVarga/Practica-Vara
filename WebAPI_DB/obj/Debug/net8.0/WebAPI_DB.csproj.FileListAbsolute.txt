@@ -412,3 +412,6 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\obj\Debug\net8.0\WebAPI_D
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\obj\Debug\net8.0\WebAPI_DB.genruntimeconfig.cache
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\obj\Debug\net8.0\ref\WebAPI_DB.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\bin\Debug\net8.0\Microsoft.Build.Utilities.Core.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\WebAPI_DB\bin\Debug\net8.0\Microsoft.NET.StringTools.dll

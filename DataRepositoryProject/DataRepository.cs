@@ -52,6 +52,13 @@ namespace DataRepositoryProject
             return company;
         }
 
+        public async Task<Company[]> getAllCompaniesWithPagination(
+    int skip,
+    int pageSize)
+        {
+            return null;
+        }
+
         public async Task<Company> getCompany(string CIF)
         {
             var company = (await getCompaniesCache()).FirstOrDefault(c => c.companyCIF == CIF);
@@ -122,6 +129,11 @@ namespace DataRepositoryProject
             company.companyPhone = newPhone;
 
             await StorageFile.WriteCompaniesToFile(await getCompaniesCache());
+        }
+
+        public async Task<int> getCompanyNo()
+        {
+            return companiesCache.Count;
         }
     }
 }

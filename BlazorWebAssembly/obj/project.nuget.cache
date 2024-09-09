@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vjKaHIM5Plo=",
+  "dgSpecHash": "8Ed43heM3Vw=",
   "success": true,
   "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,8 @@
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.2.0\\microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.build.framework\\17.11.4\\microsoft.build.framework.17.11.4.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.build.utilities.core\\17.11.4\\microsoft.build.utilities.core.17.11.4.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
@@ -56,6 +58,7 @@
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.8\\microsoft.net.sdk.webassembly.pack.8.0.8.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.stringtools\\17.11.4\\microsoft.net.stringtools.17.11.4.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
@@ -75,6 +78,7 @@
     "C:\\Users\\Tommy\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.0\\system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",

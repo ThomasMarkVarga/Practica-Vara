@@ -42,6 +42,19 @@ namespace WebAPI_DB.Controllers
             return Ok(comp);
         }
 
+        [HttpGet(Name = "Get All Companies With Pagination")]
+        public async Task<IActionResult> GetAllCompaniesWithPagination(int pageSize, int pageNumber)
+        {
+            int skip = (pageNumber - 1) * pageSize;
+
+            Company[] comp = await _dataLayer.getAllCompaniesWithPagination(skip, pageSize);
+            if (comp == null)
+            {
+                return NoContent();
+            }
+            return Ok(comp);
+        }
+
         [HttpPost(Name = "Insert Company")]
         public async Task<IActionResult> InsertCompany(string CIF, string Name, string Address, string County, string Phone)
         {
@@ -82,6 +95,12 @@ namespace WebAPI_DB.Controllers
             await _dataLayer.updateCompany(CIF, newCIF, newName, newAddress, newCounty, newPhone);
             comp = await _dataLayer.getCompany(newCIF);
             return Ok(comp);
+        }
+
+        [HttpGet(Name = "Get no of companies")]
+        public async Task<IActionResult> GetCompanyNo()
+        {
+            return Ok(await _dataLayer.getCompanyNo());
         }
     }
 }

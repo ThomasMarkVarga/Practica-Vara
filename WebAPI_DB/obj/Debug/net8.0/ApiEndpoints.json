@@ -29,6 +29,28 @@
   },
   {
     "ContainingType": "WebAPI_DB.Controllers.CompanyController",
+    "Method": "GetAllCompaniesWithPagination",
+    "RelativePath": "GetAllCompaniesWithPagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Get All Companies With Pagination"
+  },
+  {
+    "ContainingType": "WebAPI_DB.Controllers.CompanyController",
     "Method": "GetCompany",
     "RelativePath": "GetCompany",
     "HttpMethod": "GET",
@@ -43,6 +65,17 @@
     ],
     "ReturnTypes": [],
     "EndpointName": "Get Company"
+  },
+  {
+    "ContainingType": "WebAPI_DB.Controllers.CompanyController",
+    "Method": "GetCompanyNo",
+    "RelativePath": "GetCompanyNo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Get no of companies"
   },
   {
     "ContainingType": "WebAPI_DB.Controllers.CompanyController",

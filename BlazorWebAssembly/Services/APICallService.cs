@@ -23,6 +23,13 @@ namespace BlazorWebAssembly.Services
             return JsonConvert.DeserializeObject<Company[]>(contentString);
         }
 
+        public async Task<Company[]> getAllCompaniesWithPagination(int pageSize, int pageNumber)
+        {
+            HttpResponseMessage response = await client.GetAsync("/GetAllCompaniesWithPagination?pageSize="+pageSize+"&pageNumber=" + pageNumber);
+            string contentString = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<Company[]>(contentString);
+        }
+
         public async Task<MessageObjectAPI> DeleteCompany(string CIF)
         {
             HttpRequestMessage request = new HttpRequestMessage
@@ -94,6 +101,13 @@ namespace BlazorWebAssembly.Services
             HttpResponseMessage response = await client.GetAsync("/GetCompany?CIF=" + CIF);
             string contentString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Company>(contentString);
+        }
+
+        public async Task<int> GetNoOfCompanies()
+        {
+            HttpResponseMessage response = await client.GetAsync("/GetCompanyNo");
+            string contentString = await response.Content.ReadAsStringAsync();
+            return int.Parse(contentString);
         }
     }
 }
