@@ -7,7 +7,7 @@ namespace BlazorWebAssembly.Services
     public interface IAPICallService
     {
         Task<Company[]> getAllCompanies();
-        Task<Company[]> getAllCompaniesWithPagination(int pageSize, int pageNumber, string sortString, SortDirection sortDirection);
+        Task<(int,Company[])> getAllCompaniesWithPagination(IEnumerable<FilterItem> filters, int pageSize, int pageNumber, string sortString, SortDirection sortDirection);
         Task<MessageObjectAPI> DeleteCompany(string CIF);
         Task<MessageObjectAPI> AddCompany(Company company);
         Task<MessageObjectAPI> UpdateCompany(string CIF, Company company);

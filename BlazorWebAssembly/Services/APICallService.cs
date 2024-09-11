@@ -6,6 +6,12 @@ using BlazorBootstrap;
 
 namespace BlazorWebAssembly.Services
 {
+    public class APIResponse
+    {
+        public int count { get; set; }
+        public Company[] comp { get; set; }
+    }
+
     public class APICallService : IAPICallService
     {
         HttpClient client;
@@ -24,11 +30,21 @@ namespace BlazorWebAssembly.Services
             return JsonConvert.DeserializeObject<Company[]>(contentString);
         }
 
-        public async Task<Company[]> getAllCompaniesWithPagination(int pageSize, int pageNumber, string sortString, SortDirection sortDirection)
+        public async Task<(int, Company[])> getAllCompaniesWithPagination(IEnumerable<FilterItem> filters ,int pageSize, int pageNumber, string sortString, SortDirection sortDirection)
         {
-            HttpResponseMessage response = await client.GetAsync("GetAllCompaniesWithPagination?pageSize=" + pageSize + "&pageNumber=" + pageNumber + "&sortString=" + sortString + "&sortDirection=" + sortDirection);
+
+            // dictionar prin care trimit numele prop care va fi filtrata si continutul filtrului
+            Dictionary<string, string> filterValues = new Dictionary<string, string>();
+
+            foreach (FilterItem filterItem in filters) {
+                filterValues.Add(filterItem.PropertyName, filterItem.Value);    
+            }
+
+            HttpResponseMessage response = await client.GetAsync("GetAllCompaniesWithPagination?pageSize=" + pageSize + "&pageNumber=" + pageNumber + "&sortString=" + sortString + "&sortDirection=" + sortDirection + FiltersToSting(filterValues));
             string contentString = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<Company[]>(contentString);
+            APIResponse objResponse =  JsonConvert.DeserializeObject<APIResponse>(contentString);
+
+            return (objResponse.count, objResponse.comp);
         }
 
         public async Task<MessageObjectAPI> DeleteCompany(string CIF)
@@ -109,6 +125,17 @@ namespace BlazorWebAssembly.Services
             HttpResponseMessage response = await client.GetAsync("/GetCompanyNo");
             string contentString = await response.Content.ReadAsStringAsync();
             return int.Parse(contentString);
+        }
+
+        public string FiltersToSting(Dictionary<string, string> filters)
+        {
+            string finalString = "";
+            foreach (var filterPair in filters)
+            {
+                finalString += "&" + filterPair.Key + "=" + filterPair.Value;
+            }
+
+            return finalString;
         }
     }
 }

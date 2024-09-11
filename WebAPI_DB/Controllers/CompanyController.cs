@@ -49,16 +49,21 @@ namespace WebAPI_DB.Controllers
         }
 
         [HttpGet(Name = "Get All Companies With Pagination")]
-        public async Task<IActionResult> GetAllCompaniesWithPagination(int pageSize, int pageNumber, SortDirection sortDirection, string? sortString)
+        public async Task<IActionResult> GetAllCompaniesWithPagination(int pageSize, int pageNumber, SortDirection sortDirection, string? sortString, [FromQuery]Dictionary<string, string>? filters)
         {
             int skip = (pageNumber - 1) * pageSize;
 
-            Company[] comp = await _dataLayer.getAllCompaniesWithPagination(skip, pageSize, (DataRepositoryProject.SortDirections)sortDirection, sortString);
+            var (count, comp) = await _dataLayer.getAllCompaniesWithPagination(skip, pageSize, (DataRepositoryProject.SortDirections)sortDirection, sortString, filters);
             if (comp == null)
             {
                 return NoContent();
             }
-            return Ok(comp);
+            return Ok(new
+            {
+                count = count,
+                comp=comp
+            });
+
         }
 
         [HttpPost(Name = "Insert Company")]
@@ -101,12 +106,6 @@ namespace WebAPI_DB.Controllers
             await _dataLayer.updateCompany(CIF, newCIF, newName, newAddress, newCounty, newPhone);
             comp = await _dataLayer.getCompany(newCIF);
             return Ok(comp);
-        }
-
-        [HttpGet(Name = "Get no of companies")]
-        public async Task<IActionResult> GetCompanyNo()
-        {
-            return Ok(await _dataLayer.getCompanyNo());
         }
     }
 }

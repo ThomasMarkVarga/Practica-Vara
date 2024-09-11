@@ -1610,6 +1610,7 @@
         "dependencies": {
           "CompanyProject": "1.0.0",
           "DbContextProj": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.Build.Utilities.Core": "17.11.4",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "8.0.0",
@@ -3371,6 +3372,7 @@
         "dependencies": {
           "CompanyProject": "1.0.0",
           "DbContextProj": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.Build.Utilities.Core": "17.11.4",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "8.0.0",

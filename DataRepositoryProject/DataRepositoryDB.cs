@@ -32,56 +32,94 @@ namespace DataRepositoryProject
             return companies;
         }
 
-        public async Task<Company[]> getAllCompaniesWithPagination(int skip,int pageSize, SortDirections sortDirection,string? sortString) {
+        public async Task<(int, Company[])> getAllCompaniesWithPagination(int skip,int pageSize, SortDirections sortDirection,string? sortString, Dictionary<string,string>? filters) {
             
             IQueryable<Company> query = _context.Companies;
-            
-            if((sortString != string.Empty || sortString != null) && sortDirection != SortDirections.None)
+
+            if (filters != null)
             {
-                if(sortDirection == SortDirections.Descending)
+                foreach (var filterPair in filters)
                 {
-                    switch (sortString) {
-                        case "companyCIF":
-                            query = query.OrderByDescending(c => c.companyCIF);
-                            break;
-                        case "companyName":
-                            query = query.OrderByDescending(c => c.companyName);
-                            break;
-                        case "companyAddress":
-                            query = query.OrderByDescending(c => c.companyAddress);
-                            break;
-                        case "companyCounty":
-                            query = query.OrderByDescending(c => c.companyCounty);
-                            break;
-                        case "companyPhone":
-                            query = query.OrderByDescending(c => c.companyPhone);
-                            break;
-                    }
-                }
-                else if (sortDirection == SortDirections.Ascending)
-                {
-                    switch (sortString)
+                    if (!string.IsNullOrEmpty(filterPair.Value))
                     {
-                        case "companyCIF":
-                            query = query.OrderBy(c => c.companyCIF);
-                            break;
-                        case "companyName":
-                            query = query.OrderBy(c => c.companyName);
-                            break;
-                        case "companyAddress":
-                            query = query.OrderBy(c => c.companyAddress);
-                            break;
-                        case "companyCounty":
-                            query = query.OrderBy(c => c.companyCounty);
-                            break;
-                        case "companyPhone":
-                            query = query.OrderBy(c => c.companyPhone);
-                            break;
+                        switch (filterPair.Key) {
+                            case "companyCIF":
+                                query = query.Where(c => c.companyCIF.Contains(filterPair.Value));
+                                break;
+                            case "companyName":
+                                query = query.Where(c => c.companyName.Contains(filterPair.Value));
+                                break;
+                            case "companyAddress":
+                                query = query.Where(c => c.companyAddress.Contains(filterPair.Value));
+                                break;
+                            case "companyCounty":
+                                query = query.Where(c => c.companyCounty.Contains(filterPair.Value));
+                                break;
+                            case "companyPhone":
+                                query = query.Where(c => c.companyPhone.Contains(filterPair.Value));
+                                break;
+                        }
                     }
                 }
             }
 
-            return await query.Skip(skip).Take(pageSize).ToArrayAsync();
+            // sortare
+            if (!string.IsNullOrEmpty(sortString) && sortDirection != SortDirections.None)
+            {
+                query = await sortQuery(query, sortDirection, sortString);
+            }
+
+            return (await getCompanyNo(query) ,await query.Skip(skip).Take(pageSize).ToArrayAsync());
+            
+        }
+
+        // genereaza query sortat
+        public async Task<IQueryable<Company>> sortQuery(IQueryable<Company> query, SortDirections sortDirection, string sortString)
+        { 
+            if (sortDirection == SortDirections.Descending)
+            {
+                switch (sortString)
+                {
+                    case "companyCIF":
+                        query = query.OrderByDescending(c => c.companyCIF);
+                        break;
+                    case "companyName":
+                        query = query.OrderByDescending(c => c.companyName);
+                        break;
+                    case "companyAddress":
+                        query = query.OrderByDescending(c => c.companyAddress);
+                        break;
+                    case "companyCounty":
+                        query = query.OrderByDescending(c => c.companyCounty);
+                        break;
+                    case "companyPhone":
+                        query = query.OrderByDescending(c => c.companyPhone);
+                        break;
+                }
+            }
+            else if (sortDirection == SortDirections.Ascending)
+            {
+                switch (sortString)
+                {
+                    case "companyCIF":
+                        query = query.OrderBy(c => c.companyCIF);
+                        break;
+                    case "companyName":
+                        query = query.OrderBy(c => c.companyName);
+                        break;
+                    case "companyAddress":
+                        query = query.OrderBy(c => c.companyAddress);
+                        break;
+                    case "companyCounty":
+                        query = query.OrderBy(c => c.companyCounty);
+                        break;
+                    case "companyPhone":
+                        query = query.OrderBy(c => c.companyPhone);
+                        break;
+                }
+            }
+
+            return query;
         }
 
         public async Task<Company> getCompany(string CIF)
@@ -121,9 +159,10 @@ namespace DataRepositoryProject
             await _context.SaveChangesAsync();
         }
 
-        public async Task<int> getCompanyNo()
+        public async Task<int> getCompanyNo(IQueryable<Company> query)
         {
-            return _context.Companies.Count();
+            return query.Count();
         }
+
     }
 }

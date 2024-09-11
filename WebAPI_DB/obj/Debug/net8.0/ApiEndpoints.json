@@ -54,6 +54,11 @@
         "Name": "sortString",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "filters",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [],
@@ -75,17 +80,6 @@
     ],
     "ReturnTypes": [],
     "EndpointName": "Get Company"
-  },
-  {
-    "ContainingType": "WebAPI_DB.Controllers.CompanyController",
-    "Method": "GetCompanyNo",
-    "RelativePath": "GetCompanyNo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [],
-    "EndpointName": "Get no of companies"
   },
   {
     "ContainingType": "WebAPI_DB.Controllers.CompanyController",

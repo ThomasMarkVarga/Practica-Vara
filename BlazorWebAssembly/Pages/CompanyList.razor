@@ -92,8 +92,9 @@
             sortString = request.Sorting.FirstOrDefault()!.SortString;
             sortDirection = request.Sorting.FirstOrDefault()!.SortDirection;
         }
-        Company[] result = await APICallService.getAllCompaniesWithPagination(request.PageSize, request.PageNumber, sortString, sortDirection);
-        return await Task.FromResult(new GridDataProviderResult<Company> {Data = result, TotalCount = await APICallService.GetNoOfCompanies()});
+
+        var (count, result) = await APICallService.getAllCompaniesWithPagination(request.Filters, request.PageSize, request.PageNumber, sortString, sortDirection);
+        return await Task.FromResult(new GridDataProviderResult<Company> {Data = result, TotalCount = count});
     }
 
 
