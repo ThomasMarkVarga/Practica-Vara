@@ -1,0 +1,44 @@
+﻿@page "/dropdown"
+
+@inject IAPICallService APICallService
+@attribute [StreamRendering(true)]
+
+<h2>Dropdown Page</h2>
+<br>
+<br>
+
+<h3>Single select dropdown</h3>
+<select @onchange="@(args => ShowDialog(args))">
+	@foreach(Company comp in companies)
+	{
+		<option value="@comp.companyCIF">@comp.companyName</option>
+	}
+</select>
+
+
+<Dialog Title="Selected Company" Opened="showDialog" CloseButtonClicked="() => showDialog = false">
+	<BodyContent>
+		@selectedCompany;
+	</BodyContent>
+</Dialog>
+
+@code {
+	Company[] companies = Array.Empty<Company>();
+	string selectedCompanyCIF;
+	bool showDialog = false;
+
+	Company selectedCompany;
+
+	protected override async Task OnInitializedAsync()
+	{
+		companies = await APICallService.getAllCompanies();
+	}
+
+	public async Task ShowDialog(ChangeEventArgs e)
+	{
+		Console.WriteLine(e.Value);
+		string CIF = e.Value.ToString();
+		selectedCompany = await APICallService.GetCompany(CIF);
+		showDialog = true;
+	}
+}

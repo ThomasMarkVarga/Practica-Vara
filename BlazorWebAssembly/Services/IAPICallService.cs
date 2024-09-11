@@ -12,6 +12,5 @@ namespace BlazorWebAssembly.Services
         Task<MessageObjectAPI> AddCompany(Company company);
         Task<MessageObjectAPI> UpdateCompany(string CIF, Company company);
         Task<Company> GetCompany(string CIF);
-        Task<int> GetNoOfCompanies();
     }
 }

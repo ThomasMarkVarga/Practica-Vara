@@ -120,13 +120,6 @@ namespace BlazorWebAssembly.Services
             return JsonConvert.DeserializeObject<Company>(contentString);
         }
 
-        public async Task<int> GetNoOfCompanies()
-        {
-            HttpResponseMessage response = await client.GetAsync("/GetCompanyNo");
-            string contentString = await response.Content.ReadAsStringAsync();
-            return int.Parse(contentString);
-        }
-
         public string FiltersToSting(Dictionary<string, string> filters)
         {
             string finalString = "";
