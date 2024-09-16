@@ -4,22 +4,12 @@
 @inject IJSRuntime JS
 @attribute [StreamRendering(true)]
 
-<head>
-	<script>
-		window.clearSelect = function (elename) {
-			document.getElementById(elename).value = "0";
-		}
-	</script>
-</head>
-
-<h2>Dropdown Page</h2>
-<br>
-<br>
+<h2>Single Select dropdown</h2>
 <div>
-	<h3>Single select dropdown</h3>
+	<h3>Single select dropdown - model (bind)</h3>
 	<select @bind="@selectedCompanyCIF">
 		<option disabled selected>-- Select a company --</option>
-		@foreach(Company comp in companies)
+		@foreach (Company comp in companies)
 		{
 			<option value="@comp.companyCIF">@comp.companyName</option>
 		}
@@ -27,6 +17,14 @@
 	<br>
 	<br>
 	<Button Color="ButtonColor.Primary" @onclick="ShowDialog">See selected</Button>
+
+	<h3>Single Select Dropdown - on change</h3>
+	<select @onchange="@(args => ShowDialog(args))">
+		@foreach (Company comp in companies)
+		{
+			<option value="@comp.companyCIF">@comp.companyName</option>
+		}
+	</select>
 </div>
 
 <br>
@@ -34,7 +32,8 @@
 
 <div>
 	<h3>Multiple select</h3>
-	<select id = "multi_select" multiple class="form-control" @onchange="HandleSelectionChange" style="height:500px">
+	<select id="multi_select" multiple class="form-control" @onchange="HandleSelectionChange" style="height:250px">
+		<option disabled>-- Select --</option>
 		@foreach (var comp in companies)
 		{
 			<option value="@comp.companyCIF">@comp.companyName</option>
@@ -42,14 +41,36 @@
 	</select>
 	<br>
 	<Button Color="ButtonColor.Primary" @onclick="ShowDialogMulti">Show Selected</Button>
-	<Button Color="ButtonColor.Secondary" @onclick="async () => 
+	<Button Color="ButtonColor.Secondary" @onclick="async () =>
 	{
 		SelectedCIF.Clear();
 		SelectedCompanies.Clear();
 
-		//call JS function
-	}">Clear</Button>
+		/* e comentat pentru ca IDE nu vea sa indexeze corect ghilimelele, nu deselecteaza in UI */
+		// await JS.InvokeVoidAsync(clearSelect, multi_select);
+	}">
+		Clear 
+	</Button> 
 </div>
+
+<br>
+<br>
+
+<div>
+	<h3>Typeahead</h3>
+	<BlazoredTypeahead EnableDropDown ShowDropDownOnFocus SearchMethod="SearchCompany"
+		@bind-Value="TypeaheadCompany">
+		<SelectedTemplate>
+			@context.companyName
+		</SelectedTemplate>
+		<ResultTemplate>
+			@context.companyName
+		</ResultTemplate>
+	</BlazoredTypeahead>
+
+	<p>@TypeaheadCompany</p>
+</div>
+
 
 
 <Dialog Title="Selected Company" Opened="showDialog" CloseButtonClicked="() => showDialog = false">
@@ -60,7 +81,7 @@
 
 <Dialog Title="Selected Companies" Opened="showDialog2" CloseButtonClicked="() => showDialog2 = false">
 	<BodyContent>
-		@foreach(var comp in SelectedCompanies)
+		@foreach (var comp in SelectedCompanies)
 		{
 			<p>@comp</p>
 		}
@@ -86,6 +107,13 @@
 		showDialog = true;
 	}
 
+	public async Task ShowDialog(ChangeEventArgs e)
+	{
+		string CIF = e.Value.ToString();
+		selectedCompany = await APICallService.GetCompany(CIF);
+		showDialog = true;
+	}
+
 	List<string> SelectedCIF = new List<string>();
 	List<Company> SelectedCompanies = new List<Company>();
 
@@ -100,11 +128,18 @@
 	{
 		SelectedCompanies.Clear();
 
-		foreach(var CIF in SelectedCIF)
+		foreach (var CIF in SelectedCIF)
 		{
 			SelectedCompanies.Add(await APICallService.GetCompany(CIF));
 		}
 
 		showDialog2 = true;
+	}
+
+	Company TypeaheadCompany;
+
+	private async Task<IEnumerable<Company>> SearchCompany(string searchText)
+	{
+		return await Task.FromResult(companies.Where(c => c.companyName.ToLower().Contains(searchText.ToLower())));
 	}
 }

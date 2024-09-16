@@ -1,0 +1,10 @@
+﻿@page "/input"
+
+<h2>Input and Complete</h2>
+
+<MyNumberInput @bind-Value="number" DecimalPlaces="0"/>
+
+<p>@number</p>
+@code {
+    private decimal number { get; set; }
+}

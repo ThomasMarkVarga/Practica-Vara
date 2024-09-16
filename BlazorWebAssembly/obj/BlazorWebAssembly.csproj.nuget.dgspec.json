@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Blazored.Typeahead": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[8.0.7, )"

@@ -1,0 +1,48 @@
+﻿<input @bind="FormattedValue" @oninput="OnInput" @onblur="OnBlur" @onfocus="OnFocus" />
+
+@code {
+    [Parameter] public decimal Value { get; set; }
+    [Parameter] public EventCallback<decimal> ValueChanged { get; set; }
+    [Parameter] public int DecimalPlaces { get; set; } = 2;
+
+    private string FormattedValue { get; set; }
+
+    protected override void OnInitialized()
+    {
+        FormattedValue = FormatValue(Value);
+    }
+
+    private void OnInput(ChangeEventArgs e)
+    {
+        string input = e.Value.ToString();
+
+        if (decimal.TryParse(input, out decimal result))
+        {
+            Value = result;
+            ValueChanged.InvokeAsync(Value);
+        }
+    }
+
+    private void OnBlur()
+    {
+        FormattedValue = FormatValue(Value);
+        Value = decimal.Parse(FormattedValue);
+        ValueChanged.InvokeAsync(Value);
+    }
+
+    private void OnFocus()
+    {
+        FormattedValue = Value.ToString();
+    }
+
+    private string FormatValue(decimal value)
+    {
+        if(DecimalPlaces == 0)
+            return value.ToString("#,##0", new System.Globalization.CultureInfo("de-DE"));
+        else if(DecimalPlaces == 4)
+            return value.ToString("#,##0.0000", new System.Globalization.CultureInfo("de-DE"));
+        else
+            return value.ToString("#,##0.00", new System.Globalization.CultureInfo("de-DE"));
+
+    }
+}

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3boFzhCOXxY=",
+  "dgSpecHash": "6WWO9WKpq3I=",
   "success": true,
   "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\BlazorWebAssembly.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tommy\\.nuget\\packages\\blazor.bootstrap\\3.0.0\\blazor.bootstrap.3.0.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\blazored.typeahead\\4.7.0\\blazored.typeahead.4.7.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.7\\microsoft.aspnetcore.authorization.8.0.7.nupkg.sha512",

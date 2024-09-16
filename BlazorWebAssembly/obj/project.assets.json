@@ -20,6 +20,25 @@
           "buildMultiTargeting/Blazor.Bootstrap.props": {}
         }
       },
+      "Blazored.Typeahead/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.Typeahead.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Typeahead.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.Typeahead.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.Typeahead.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1670,6 +1689,25 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Blazor.Bootstrap.props": {}
+        }
+      },
+      "Blazored.Typeahead/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.Typeahead.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Typeahead.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.Typeahead.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.Typeahead.props": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -3442,6 +3480,25 @@
         "staticwebassets/icon/128X128.png",
         "staticwebassets/pdfjs-4.0.379.min.js",
         "staticwebassets/pdfjs-4.0.379.worker.min.js"
+      ]
+    },
+    "Blazored.Typeahead/4.7.0": {
+      "sha512": "fTN4Bt9rwEE/d33FXFd+h/DBjVtsFJLRf9B8mu0zJWMWG5Mk2tU2il3aK0+laUxNgBNBgEL0jW/831I+oapd6A==",
+      "type": "package",
+      "path": "blazored.typeahead/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.typeahead.4.7.0.nupkg.sha512",
+        "blazored.typeahead.nuspec",
+        "build/Blazored.Typeahead.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazored.Typeahead.props",
+        "buildTransitive/Blazored.Typeahead.props",
+        "icon.png",
+        "lib/net6.0/Blazored.Typeahead.dll",
+        "staticwebassets/blazored-typeahead.css",
+        "staticwebassets/blazored-typeahead.js"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -7282,6 +7339,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Blazor.Bootstrap >= 3.0.0",
+      "Blazored.Typeahead >= 4.7.0",
       "CompanyProject >= 1.0.0",
       "DataRepositoryProject >= 1.0.0",
       "MessageAPIObjectProject >= 1.0.0",
@@ -7356,6 +7414,10 @@
           "Blazor.Bootstrap": {
             "target": "Package",
             "version": "[3.0.0, )"
+          },
+          "Blazored.Typeahead": {
+            "target": "Package",
+            "version": "[4.7.0, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
