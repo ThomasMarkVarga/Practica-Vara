@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorWebAssembly",
   "resources": {
-    "hash": "sha256-5rAtsMXDBpLaZGySzda8blUsws6xZIsZ4Fw5gVF/AMQ=",
+    "hash": "sha256-7R7BV3zY80snblsuO4ZLvCyPbSZndEBHfepIMxnkoI0=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.hei8flw7so.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -245,14 +245,14 @@
       "DataRepositoryProject.wasm": "sha256-PzoZ80BbG5c2aJfn1Kx+XCecAYZUC8w9rqlcr4auafQ=",
       "DbContextProj.wasm": "sha256-E3RtC6ew/tS+vrejWzDEpnLGfXXhh7qFyBj3yjKopEA=",
       "MessageAPIObjectProject.wasm": "sha256-mhXqjCUDMNO491I0f+TVgKi5Orzo61z5c78aSK8OVlw=",
-      "BlazorWebAssembly.wasm": "sha256-2nt612IwfpF+QAavSv/gHd8/PJoRp/iPItj0lWwmQDQ="
+      "BlazorWebAssembly.wasm": "sha256-8zMv/UZvaDyXHmTryWr+PXExRcSb2UFaCGt5WaC4ohA="
     },
     "pdb": {
       "CompanyProject.pdb": "sha256-GcAio7PPdr0RFEWEPoVEGinjIVlOaZy0twlgqa7IJP8=",
       "DataRepositoryProject.pdb": "sha256-hLE5/KZkUkv3AtH8s5oYvKRmmsKU2qp0B/SsKhObQrw=",
       "MessageAPIObjectProject.pdb": "sha256-o6x5Lf3bJmW6quhr1KyASt1vPJ0EUANwzv5k44UWD/s=",
       "DbContextProj.pdb": "sha256-Jb5tcDEEL/+fHJEjTNOYaGn53mrWjAljlXNhUUT2df0=",
-      "BlazorWebAssembly.pdb": "sha256-Vh7I+GzauwCrNzxtsXg/3vEhGjs10eSWXDITIfr0VTA="
+      "BlazorWebAssembly.pdb": "sha256-u0yZlsYJiS6OHe0ltuuT7HHwksJagRy0FMu5JUtriaI="
     }
   },
   "cacheBootResources": true,

@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\Console_Apelare_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\components\\mynumberinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\inputandcomplete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\inputandcomplete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\components\\mynumberinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,7 +16,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -24,20 +24,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MyNumberInput.razor",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
               "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
               "RelativeToolTip": "..\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-16T09:36:10.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InputAndComplete.razor",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\InputAndComplete.razor",
               "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\InputAndComplete.razor",

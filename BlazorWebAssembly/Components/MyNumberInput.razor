@@ -1,4 +1,5 @@
-﻿<input @bind="FormattedValue" @oninput="OnInput" @onblur="OnBlur" @onfocus="OnFocus" />
+﻿<input @bind="FormattedValue" onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 44 || event.charCode == 46)"
+       @oninput="OnInput" @onblur="OnBlur" @onfocus="OnFocus" />
 
 @code {
     [Parameter] public decimal Value { get; set; }
@@ -16,11 +17,15 @@
     {
         string input = e.Value.ToString();
 
+        input = new string(input.Where(c => char.IsDigit(c) || c == ',' || c == '.').ToArray());
+
         if (decimal.TryParse(input, out decimal result))
         {
             Value = result;
             ValueChanged.InvokeAsync(Value);
         }
+
+        FormattedValue = input;
     }
 
     private void OnBlur()
