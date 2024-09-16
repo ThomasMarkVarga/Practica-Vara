@@ -6,14 +6,30 @@
 <h2>Dropdown Page</h2>
 <br>
 <br>
+<div>
+	<h3>Single select dropdown</h3>
+	<select @onchange="@(args => ShowDialog(args))">
+		@foreach(Company comp in companies)
+		{
+			<option value="@comp.companyCIF">@comp.companyName</option>
+		}
+	</select>
+</div>
 
-<h3>Single select dropdown</h3>
-<select @onchange="@(args => ShowDialog(args))">
-	@foreach(Company comp in companies)
-	{
-		<option value="@comp.companyCIF">@comp.companyName</option>
-	}
-</select>
+<br>
+<br>
+
+<div>
+	<h3>Multiple select dropdown</h3>
+	<select multiple class="form-control" @onchange="HandleSelectionChange">
+		@foreach (var comp in companies)
+		{
+			<option value="@comp.companyCIF">@comp.companyName</option>
+		}
+	</select>
+	<br>
+	<Button Color="ButtonColor.Primary" @onclick="ShowDialogMulti">Show Selected</Button>
+</div>
 
 
 <Dialog Title="Selected Company" Opened="showDialog" CloseButtonClicked="() => showDialog = false">
@@ -22,10 +38,20 @@
 	</BodyContent>
 </Dialog>
 
+<Dialog Title="Selected Companies" Opened="showDialog2" CloseButtonClicked="() => showDialog2 = false">
+	<BodyContent>
+		@foreach(var comp in SelectedCompanies)
+		{
+			<p>@comp</p>
+		}
+	</BodyContent>
+</Dialog>
+
 @code {
 	Company[] companies = Array.Empty<Company>();
 	string selectedCompanyCIF;
 	bool showDialog = false;
+	bool showDialog2 = false;
 
 	Company selectedCompany;
 
@@ -40,5 +66,24 @@
 		string CIF = e.Value.ToString();
 		selectedCompany = await APICallService.GetCompany(CIF);
 		showDialog = true;
+	}
+
+	List<string> SelectedCIF = new List<string>();
+	List<Company> SelectedCompanies = new List<Company>();
+
+	public async Task HandleSelectionChange(ChangeEventArgs e)
+	{
+		var selectedValues = ((IEnumerable<string>)e.Value).ToList();
+		SelectedCIF = selectedValues;
+	}
+
+	public async Task ShowDialogMulti()
+	{
+		foreach(var CIF in SelectedCIF)
+		{
+			SelectedCompanies.Add(await APICallService.GetCompany(CIF));
+		}
+
+		showDialog2 = true;
 	}
 }

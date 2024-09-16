@@ -3,19 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\Console_Apelare_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0CAB3A0-48F6-4DD9-9A97-59B35A765D4B}|..\\DataRepositoryProject\\DataRepositoryProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\datarepositoryproject\\datarepositorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20DD334-CA76-4D2C-A6DB-AADDF6F43AD8}|..\\WebAPI_DB\\WebAPI_DB.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\webapi_db\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\services\\apicallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\services\\iapicallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\companylist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\pages\\dropdownpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +13,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,67 +21,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CompanyController.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\WebAPI_DB\\Controllers\\CompanyController.cs",
-              "RelativeDocumentMoniker": "..\\WebAPI_DB\\Controllers\\CompanyController.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\WebAPI_DB\\Controllers\\CompanyController.cs",
-              "RelativeToolTip": "..\\WebAPI_DB\\Controllers\\CompanyController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAD8AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T10:37:13.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataRepositoryDB.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "RelativeDocumentMoniker": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "RelativeToolTip": "..\\DataRepositoryProject\\DataRepositoryDB.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAKcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T10:35:33.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "APICallService.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\APICallService.cs",
-              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Services\\APICallService.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\APICallService.cs",
-              "RelativeToolTip": "..\\BlazorWebAssembly\\Services\\APICallService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T06:32:08.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAPICallService.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\IAPICallService.cs",
-              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Services\\IAPICallService.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Services\\IAPICallService.cs",
-              "RelativeToolTip": "..\\BlazorWebAssembly\\Services\\IAPICallService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T06:31:44.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CompanyList.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\CompanyList.razor",
-              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\CompanyList.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\CompanyList.razor",
-              "RelativeToolTip": "..\\BlazorWebAssembly\\Pages\\CompanyList.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAeAAAAAAAAAA==",
+              "Title": "DropdownPage.razor",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\DropdownPage.razor",
+              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Pages\\DropdownPage.razor",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Pages\\DropdownPage.razor",
+              "RelativeToolTip": "..\\BlazorWebAssembly\\Pages\\DropdownPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-11T06:13:39.64Z",
+              "WhenOpened": "2024-09-11T11:40:52.094Z",
               "EditorCaption": ""
             }
           ]
