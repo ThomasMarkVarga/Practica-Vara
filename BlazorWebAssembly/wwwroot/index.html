@@ -43,6 +43,12 @@
     <script src="_content/Blazor.Bootstrap/blazor.bootstrap.js"></script>
 
     <script src="_content/Blazored.Typeahead/blazored-typeahead.js"></script>
+
+    <script>
+        windows.checkInput = (letter) => {
+            return (letter != 8 && letter == 0 || (letter >= 48 && letter <= 57) || letter == 44 || letter == 46)
+        }
+    </script>
 </body>
 
 </html>

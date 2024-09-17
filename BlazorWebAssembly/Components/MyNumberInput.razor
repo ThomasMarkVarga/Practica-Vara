@@ -1,30 +1,97 @@
-﻿<input @bind="FormattedValue" onkeypress="return (event.charCode != 8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 44 || event.charCode == 46)"
-       @oninput="OnInput" @onblur="OnBlur" @onfocus="OnFocus" />
+﻿<input type="text" class="input-group"
+       @bind="FormattedValue"
+       @onkeydown = "HandleKeyPress"
+       @onkeydown:preventDefault = "@preventDefault"
+       @oninput="OnInput" 
+       @onblur="OnBlur" 
+       @onfocus="OnFocus" />
 
 @code {
     [Parameter] public decimal Value { get; set; }
     [Parameter] public EventCallback<decimal> ValueChanged { get; set; }
     [Parameter] public int DecimalPlaces { get; set; } = 2;
 
-    private string FormattedValue { get; set; }
+    public string FormattedValue { set; get; }
+
+    bool preventDefault = false;
+    public bool commaExist = false;
+    int decimalCount = 0;
 
     protected override void OnInitialized()
     {
         FormattedValue = FormatValue(Value);
     }
 
+    private void HandleKeyPress(KeyboardEventArgs e)
+    {
+        bool isNum = IsNumericLetter(e.Key, FormattedValue);
+
+        if(DecimalPlaces == 0 && e.Key.ToCharArray()[0] == ',')
+        {
+            preventDefault = true;
+        }
+        else if ((isNum && decimalCount < DecimalPlaces) || e.Key == "Backspace" || (isNum && !commaExist))
+        {
+            preventDefault = isNum == false;
+        }
+        else 
+        {
+            preventDefault = true;
+        }
+
+
+        if (FormattedValue.Contains(','))
+        {
+            commaExist = true;
+        }
+        else
+        {
+            decimalCount = 0;
+            commaExist = false;
+        }
+
+        if(isNum && commaExist && decimalCount < DecimalPlaces && e.Key != "Backspace")
+        {
+            decimalCount++;
+        }
+        if(decimalCount != 0 && e.Key == "Backspace")
+        {
+            decimalCount--;
+        }
+    }
+
+    static bool IsNumericLetter(string letter, string text)
+    {
+        if (letter == "Backspace" || letter == ".")
+        {
+            return true;
+        }
+
+        char keyChar = letter.ToCharArray()[0];
+
+        if (char.IsDigit(keyChar))
+        {
+            return true;
+        }
+
+        if (keyChar == ',' && text.Contains(',') == false)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
     private void OnInput(ChangeEventArgs e)
     {
         string input = e.Value.ToString();
-
-        input = new string(input.Where(c => char.IsDigit(c) || c == ',' || c == '.').ToArray());
 
         if (decimal.TryParse(input, out decimal result))
         {
             Value = result;
             ValueChanged.InvokeAsync(Value);
         }
-
+        
         FormattedValue = input;
     }
 

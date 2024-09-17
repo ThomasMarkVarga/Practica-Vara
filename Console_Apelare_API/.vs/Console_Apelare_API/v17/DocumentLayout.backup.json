@@ -7,6 +7,9 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\components\\mynumberinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9E297A-B39D-4A3C-803B-A51ECB410B3B}|..\\BlazorWebAssembly\\BlazorWebAssembly.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\blazorwebassembly\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,11 +19,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\wwwroot\\index.html",
+              "RelativeToolTip": "..\\BlazorWebAssembly\\wwwroot\\index.html",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-17T06:30:18.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -30,7 +46,7 @@
               "RelativeDocumentMoniker": "..\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
               "RelativeToolTip": "..\\BlazorWebAssembly\\Components\\MyNumberInput.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-16T09:36:10.099Z",
               "EditorCaption": ""
