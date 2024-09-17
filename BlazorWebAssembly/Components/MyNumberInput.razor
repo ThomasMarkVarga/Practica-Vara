@@ -1,17 +1,29 @@
-﻿<input type="text" class="input-group"
+﻿<!--
+Blazor component for a decimal input field with formatting with period '.'
+as thousands separator and comma ',' as decimal separator.
+
+Parameters:
+- Value: Bound decimal value.
+- DecimalPlaces: Number of decimal places (default is 2).
+- ValueChanged: Callback for value changes.
+-->
+
+<input type="text" class="input-group"
        @bind="FormattedValue"
        @onkeydown = "HandleKeyPress"
        @onkeydown:preventDefault = "@preventDefault"
        @oninput="OnInput" 
        @onblur="OnBlur" 
-       @onfocus="OnFocus" />
+       @onfocus="OnFocus"
+       style="width: 25vw; text-align: right;" />
 
 @code {
     [Parameter] public decimal Value { get; set; }
-    [Parameter] public EventCallback<decimal> ValueChanged { get; set; }
     [Parameter] public int DecimalPlaces { get; set; } = 2;
+    [Parameter] public EventCallback<decimal> ValueChanged { get; set; }
 
     public string FormattedValue { set; get; }
+    string format = "#,##0.";
 
     bool preventDefault = false;
     public bool commaExist = false;
@@ -19,6 +31,10 @@
 
     protected override void OnInitialized()
     {
+        for(int i = 0; i < DecimalPlaces; i++)
+        {
+            format += "0";
+        }
         FormattedValue = FormatValue(Value);
     }
 
@@ -27,23 +43,15 @@
         bool isNum = IsNumericLetter(e.Key, FormattedValue);
 
         if(DecimalPlaces == 0 && e.Key.ToCharArray()[0] == ',')
-        {
             preventDefault = true;
-        }
         else if ((isNum && decimalCount < DecimalPlaces) || e.Key == "Backspace" || (isNum && !commaExist))
-        {
             preventDefault = isNum == false;
-        }
         else 
-        {
             preventDefault = true;
-        }
 
 
         if (FormattedValue.Contains(','))
-        {
             commaExist = true;
-        }
         else
         {
             decimalCount = 0;
@@ -51,33 +59,24 @@
         }
 
         if(isNum && commaExist && decimalCount < DecimalPlaces && e.Key != "Backspace")
-        {
             decimalCount++;
-        }
         if(decimalCount != 0 && e.Key == "Backspace")
-        {
             decimalCount--;
-        }
     }
 
     static bool IsNumericLetter(string letter, string text)
     {
         if (letter == "Backspace" || letter == ".")
-        {
             return true;
-        }
 
         char keyChar = letter.ToCharArray()[0];
 
         if (char.IsDigit(keyChar))
-        {
             return true;
-        }
 
         if (keyChar == ',' && text.Contains(',') == false)
-        {
             return true;
-        }
+
         return false;
     }
 
@@ -91,7 +90,7 @@
             Value = result;
             ValueChanged.InvokeAsync(Value);
         }
-        
+
         FormattedValue = input;
     }
 
@@ -111,10 +110,7 @@
     {
         if(DecimalPlaces == 0)
             return value.ToString("#,##0", new System.Globalization.CultureInfo("de-DE"));
-        else if(DecimalPlaces == 4)
-            return value.ToString("#,##0.0000", new System.Globalization.CultureInfo("de-DE"));
         else
-            return value.ToString("#,##0.00", new System.Globalization.CultureInfo("de-DE"));
-
+            return value.ToString(format, new System.Globalization.CultureInfo("de-DE"));
     }
 }

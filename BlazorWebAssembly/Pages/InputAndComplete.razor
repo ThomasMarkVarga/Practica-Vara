@@ -1,10 +1,72 @@
 ﻿@page "/input"
 
 <h2>Input and Complete</h2>
+<br />
+<div>
+    <h3>Input for int</h3>
+    <MyNumberInput @bind-Value="number1" DecimalPlaces="0"/>
+    <p>Inserted number: @number1</p>
+    <br />
+    <h3>Input with 2 decimals</h3>
+    <MyNumberInput @bind-Value="number2" DecimalPlaces="2" />
+    <p>Inserted number: @number2</p>
+    <br />
+    <h3>Input with 4 decimals</h3>
+    <MyNumberInput @bind-Value="number3" DecimalPlaces="4" />
+    <p>Inserted number: @number3</p>
+</div>
 
-<MyNumberInput @bind-Value="number" DecimalPlaces="2"/>
+<br />
 
-<p>@number</p>
+<h3>Bind with model</h3>
+@foreach(var model in models)
+{
+    <br />
+    <h4>Model:</h4>
+    <div>
+        <label>Name:</label>
+        <input type="text" @bind="model.Name" />
+    </div>
+    <div>
+        <label>Value:</label>
+        <MyNumberInput @bind-Value="model.Value"/>
+    </div>
+}
+<br />
+<Button Color="ButtonColor.Primary" @onclick="() => models.Add(new Model())">Add</Button>
+
+
 @code {
-    private decimal number { get; set; }
+    private decimal number1 { get; set; }
+    private decimal number2 { get; set; }
+    private decimal number3 { get; set; }
+
+    class Model
+    {
+        public string Name { get; set; }
+        public decimal Value { get; set; }
+
+        public Model()
+        {
+            this.Name = string.Empty;
+            this.Value = 0;
+        }         
+        
+        public Model(string Name, decimal Value)
+        {
+            this.Name = Name;
+            this.Value = Value;
+        }        
+    }
+
+    List<Model> models = new List<Model>
+    {
+            new Model("Model1", 10.50m),
+            new Model("Model2", 20.00m),
+            new Model("Model3", 30.25m),
+            new Model("Model4", 40.75m),
+            new Model("Model5", 50.90m)
+    };
+
+
 }
