@@ -1,0 +1,15 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\bin\Debug\net8.0\DecontDbContext.deps.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\bin\Debug\net8.0\DecontDbContext.runtimeconfig.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\bin\Debug\net8.0\DecontDbContext.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\bin\Debug\net8.0\DecontDbContext.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.sourcelink.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\refint\DecontDbContext.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\DecontDbContext.genruntimeconfig.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontDbContext\obj\Debug\net8.0\ref\DecontDbContext.dll

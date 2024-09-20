@@ -1,0 +1,6 @@
+@DecontWebAPI_HostAddress = http://localhost:5221
+
+GET {{DecontWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
