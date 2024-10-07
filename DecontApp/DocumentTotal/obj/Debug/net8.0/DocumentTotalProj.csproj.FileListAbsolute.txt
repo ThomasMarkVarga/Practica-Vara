@@ -1,0 +1,16 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\bin\Debug\net8.0\DocumentTotalProj.deps.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\bin\Debug\net8.0\DocumentTotalProj.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\bin\Debug\net8.0\DocumentTotalProj.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\bin\Debug\net8.0\DecontDbContext.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\bin\Debug\net8.0\DecontDbContext.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.sourcelink.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\Document.FDE8F3B3.Up2Date
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\refint\DocumentTotalProj.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\DocumentTotalProj.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DocumentTotal\obj\Debug\net8.0\ref\DocumentTotalProj.dll

@@ -3,13 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BlazorDecontApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0234173A-C0E2-44F7-B964-747711098559}|..\\DecontWebAPI\\DecontWebAPI.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapi\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7B22C2-1FEC-4632-998E-0AC0A158544C}|..\\RepositoryLayerProject\\RepositoryLayerProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\repositorylayerproject\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7B22C2-1FEC-4632-998E-0AC0A158544C}|..\\RepositoryLayerProject\\RepositoryLayerProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\repositorylayerproject\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0234173A-C0E2-44F7-B964-747711098559}|..\\DecontWebAPI\\DecontWebAPI.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapi\\controllers\\tipcheltuialacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E7B22C2-1FEC-4632-998E-0AC0A158544C}|..\\RepositoryLayerProject\\RepositoryLayerProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\repositorylayerproject\\tipcheltuialarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E7B22C2-1FEC-4632-998E-0AC0A158544C}|..\\RepositoryLayerProject\\RepositoryLayerProject.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\repositorylayerproject\\itipcheltuialarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,26 +21,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 178,
+          "DockedWidth": 171,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebAPI\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "..\\DecontWebAPI\\Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebAPI\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "..\\DecontWebAPI\\Controllers\\DocumentController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T10:44:10.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TipCheltuialaController.cs",
               "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebAPI\\Controllers\\TipCheltuialaController.cs",
               "RelativeDocumentMoniker": "..\\DecontWebAPI\\Controllers\\TipCheltuialaController.cs",
               "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebAPI\\Controllers\\TipCheltuialaController.cs",
               "RelativeToolTip": "..\\DecontWebAPI\\Controllers\\TipCheltuialaController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T07:56:39.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T10:44:19.248Z"
             }
           ]
         },
         {
-          "DockedWidth": 178,
+          "DockedWidth": 185,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -47,27 +62,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TipCheltuialaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\TipCheltuialaRepository.cs",
-              "RelativeDocumentMoniker": "..\\RepositoryLayerProject\\TipCheltuialaRepository.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\TipCheltuialaRepository.cs",
-              "RelativeToolTip": "..\\RepositoryLayerProject\\TipCheltuialaRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAABKAAAAAAAAAA==",
+              "Title": "DocumentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\DocumentRepository.cs",
+              "RelativeDocumentMoniker": "..\\RepositoryLayerProject\\DocumentRepository.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\DocumentRepository.cs",
+              "RelativeToolTip": "..\\RepositoryLayerProject\\DocumentRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwCoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T07:48:04.957Z",
+              "WhenOpened": "2024-09-20T10:42:13.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ITipCheltuialaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\ITipCheltuialaRepository.cs",
-              "RelativeDocumentMoniker": "..\\RepositoryLayerProject\\ITipCheltuialaRepository.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\ITipCheltuialaRepository.cs",
-              "RelativeToolTip": "..\\RepositoryLayerProject\\ITipCheltuialaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Title": "IDocumentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\IDocumentRepository.cs",
+              "RelativeDocumentMoniker": "..\\RepositoryLayerProject\\IDocumentRepository.cs",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\IDocumentRepository.cs",
+              "RelativeToolTip": "..\\RepositoryLayerProject\\IDocumentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:00:28.263Z",
+              "WhenOpened": "2024-09-20T10:42:13.003Z",
               "EditorCaption": ""
             }
           ]

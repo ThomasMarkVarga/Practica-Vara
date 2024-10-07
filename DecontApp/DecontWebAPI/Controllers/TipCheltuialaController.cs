@@ -5,7 +5,7 @@ using RepositoryLayerProject;
 
 namespace DecontWebAPI.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     public class TipCheltuialaController : ControllerBase
     {

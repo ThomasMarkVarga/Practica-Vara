@@ -1,5 +1,7 @@
 using DecontDbContext.Models;
 using RepositoryLayerProject;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers().AddJsonOptions(x =>
+ x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+
 builder.Services.AddDbContext<DecontDbContextCs>();
 
 builder.Services.AddTransient<ITipCheltuialaRepository, TipCheltuialaRepository>();
+builder.Services.AddTransient<IDocumentRepository, DocumentRepository>();
 
 var MyAllowedSpecificOrigins = "_myAllowedSpecificOrigins";
 builder.Services.AddCors(options =>

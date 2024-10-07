@@ -1,8 +1,98 @@
 [
   {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "DeleteDocument",
+    "RelativePath": "Document/DeleteDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "GetDocuments",
+    "RelativePath": "Document/GetDocuments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IsActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "GetRand",
+    "RelativePath": "Document/GetRand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DecontDbContext.Models.RandDocument[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "SaveDocument",
+    "RelativePath": "Document/SaveDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "document",
+        "Type": "DecontDbContext.Models.Document",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "SaveRand",
+    "RelativePath": "Document/SaveRand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rand",
+        "Type": "DecontDbContext.Models.RandDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DecontWebAPI.Controllers.TipCheltuialaController",
     "Method": "DeleteTipCheltuiala",
-    "RelativePath": "api/TipCheltuiala/DeleteTipCheltuiala",
+    "RelativePath": "TipCheltuiala/DeleteTipCheltuiala",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +108,7 @@
   {
     "ContainingType": "DecontWebAPI.Controllers.TipCheltuialaController",
     "Method": "GetTipCheltuiala",
-    "RelativePath": "api/TipCheltuiala/GetTipCheltuiala",
+    "RelativePath": "TipCheltuiala/GetTipCheltuiala",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -34,7 +124,7 @@
   {
     "ContainingType": "DecontWebAPI.Controllers.TipCheltuialaController",
     "Method": "SaveTipCheltuiala",
-    "RelativePath": "api/TipCheltuiala/SaveTipCheltuiala",
+    "RelativePath": "TipCheltuiala/SaveTipCheltuiala",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

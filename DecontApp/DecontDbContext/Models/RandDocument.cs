@@ -17,7 +17,7 @@ public partial class RandDocument
 
     public bool? IsActive { get; set; }
 
-    public virtual TipCheltuiala Cheltuiala { get; set; } = null!;
+    public virtual TipCheltuiala? Cheltuiala { get; set; } = null!;
 
-    public virtual Document Document { get; set; } = null!;
+    public virtual Document? Document { get; set; } = null!;
 }

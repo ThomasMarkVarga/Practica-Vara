@@ -9,6 +9,7 @@
       "DecontWebAPI/1.0.0": {
         "dependencies": {
           "DecontDbContext": "1.0.0",
+          "DocumentTotalProj": "1.0.0",
           "EntityFramework": "6.5.1",
           "RepositoryLayerProject": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -659,9 +660,21 @@
           }
         }
       },
+      "DocumentTotalProj/1.0.0": {
+        "dependencies": {
+          "DecontDbContext": "1.0.0"
+        },
+        "runtime": {
+          "DocumentTotalProj.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "RepositoryLayerProject/1.0.0": {
         "dependencies": {
           "DecontDbContext": "1.0.0",
+          "DocumentTotalProj": "1.0.0",
           "EntityFramework": "6.5.1"
         },
         "runtime": {
@@ -1170,6 +1183,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "DecontDbContext/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DocumentTotalProj/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

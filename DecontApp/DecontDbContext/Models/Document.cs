@@ -19,7 +19,7 @@ public partial class Document
 
     public bool? IsActive { get; set; }
 
-    public virtual ICollection<RandDocument> RandDocuments { get; set; } = new List<RandDocument>();
+    public virtual ICollection<RandDocument>? RandDocuments { get; set; } = new List<RandDocument>();
 
-    public virtual Status Status { get; set; } = null!;
+    public virtual Status? Status { get; set; } = null!;
 }
