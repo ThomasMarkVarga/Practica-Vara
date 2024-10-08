@@ -82,5 +82,5 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\ne
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\RepositoryLayerProject.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\DecontDbContext.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\RepositoryLayerProject.pdb
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\DocumentTotalProj.dll
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\DocumentTotalProj.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\BusinessModels.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebAPI\bin\Debug\net8.0\BusinessModels.pdb

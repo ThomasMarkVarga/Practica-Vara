@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BusinessModels\BusinessModels.csproj" />
     <ProjectReference Include="..\DecontDbContext\DecontDbContext.csproj" />
-    <ProjectReference Include="..\DocumentTotal\DocumentTotalProj.csproj" />
     <ProjectReference Include="..\RepositoryLayerProject\RepositoryLayerProject.csproj" />
   </ItemGroup>
 

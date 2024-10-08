@@ -1223,6 +1223,16 @@
           }
         }
       },
+      "BusinessModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BusinessModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessModels.dll": {}
+        }
+      },
       "DecontDbContext/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1236,25 +1246,12 @@
           "bin/placeholder/DecontDbContext.dll": {}
         }
       },
-      "DocumentTotalProj/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "DecontDbContext": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/DocumentTotalProj.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DocumentTotalProj.dll": {}
-        }
-      },
       "RepositoryLayerProject/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "BusinessModels": "1.0.0",
           "DecontDbContext": "1.0.0",
-          "DocumentTotalProj": "1.0.0",
           "EntityFramework": "6.5.1"
         },
         "compile": {
@@ -3719,15 +3716,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BusinessModels/1.0.0": {
+      "type": "project",
+      "path": "../BusinessModels/BusinessModels.csproj",
+      "msbuildProject": "../BusinessModels/BusinessModels.csproj"
+    },
     "DecontDbContext/1.0.0": {
       "type": "project",
       "path": "../DecontDbContext/DecontDbContext.csproj",
       "msbuildProject": "../DecontDbContext/DecontDbContext.csproj"
-    },
-    "DocumentTotalProj/1.0.0": {
-      "type": "project",
-      "path": "../DocumentTotal/DocumentTotalProj.csproj",
-      "msbuildProject": "../DocumentTotal/DocumentTotalProj.csproj"
     },
     "RepositoryLayerProject/1.0.0": {
       "type": "project",
@@ -3737,8 +3734,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BusinessModels >= 1.0.0",
       "DecontDbContext >= 1.0.0",
-      "DocumentTotalProj >= 1.0.0",
       "EntityFramework >= 6.5.1",
       "RepositoryLayerProject >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -3777,11 +3774,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\BusinessModels.csproj": {
+              "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\BusinessModels.csproj"
+            },
             "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontDbContext\\DecontDbContext.csproj": {
               "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontDbContext\\DecontDbContext.csproj"
-            },
-            "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DocumentTotal\\DocumentTotalProj.csproj": {
-              "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DocumentTotal\\DocumentTotalProj.csproj"
             },
             "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\RepositoryLayerProject.csproj": {
               "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\RepositoryLayerProject\\RepositoryLayerProject.csproj"

@@ -1,0 +1,12 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\bin\Debug\net8.0\BusinessModels.deps.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\bin\Debug\net8.0\BusinessModels.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\bin\Debug\net8.0\BusinessModels.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.sourcelink.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\refint\BusinessModels.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\BusinessModels.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\BusinessModels\obj\Debug\net8.0\ref\BusinessModels.dll

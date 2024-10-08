@@ -13,5 +13,5 @@ public partial class TipCheltuiala
 
     public bool? IsActive { get; set; }
 
-    public virtual ICollection<RandDocument> RandDocuments { get; set; } = new List<RandDocument>();
+    public virtual ICollection<RandDocument>? RandDocuments { get; set; } = new List<RandDocument>();
 }

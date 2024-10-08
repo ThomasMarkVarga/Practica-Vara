@@ -1,4 +1,5 @@
-﻿using DecontDbContext.Models;
+﻿using DecontDbContext;
+using DecontDbContext.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLayerProject

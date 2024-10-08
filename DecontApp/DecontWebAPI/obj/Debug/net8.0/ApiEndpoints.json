@@ -33,32 +33,6 @@
   },
   {
     "ContainingType": "DecontWebAPI.Controllers.DocumentController",
-    "Method": "GetRand",
-    "RelativePath": "Document/GetRand",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "docId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "DecontDbContext.Models.RandDocument[]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
     "Method": "SaveDocument",
     "RelativePath": "Document/SaveDocument",
     "HttpMethod": "POST",
@@ -67,23 +41,7 @@
     "Parameters": [
       {
         "Name": "document",
-        "Type": "DecontDbContext.Models.Document",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
-    "Method": "SaveRand",
-    "RelativePath": "Document/SaveRand",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "rand",
-        "Type": "DecontDbContext.Models.RandDocument",
+        "Type": "BusinessModels.Document",
         "IsRequired": true
       }
     ],

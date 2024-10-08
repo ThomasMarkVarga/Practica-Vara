@@ -1,11 +1,11 @@
-﻿using DecontDbContext.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DocumentTotalProj;
+using BusinessModels;
+using DecontDbContext;
 
 namespace RepositoryLayerProject
 {
@@ -21,22 +21,63 @@ namespace RepositoryLayerProject
         public async Task<List<DocumentTotal>> GetDocuments(bool? IsActive)
         {
             List<DocumentTotal> docTotal = new List<DocumentTotal>();
-            Document[] documents;
-
+            List<Document> documents = new List<Document>();
             if (IsActive == null)
-                documents = await _context.Documents.ToArrayAsync();
+                 documents = _context.Documents
+                                        .Select(doc => new Document
+                                        {
+                                            Id = doc.Id,
+                                            Numar = doc.Numar,
+                                            Data = doc.Data,
+                                            Explicatie = doc.Explicatie,
+                                            StatusId = doc.StatusId,
+                                            DataPlata = doc.DataPlata,
+                                            IsActive = doc.IsActive,
+                                            RandDocuments = doc.RandDocuments
+                                                              .Select(rd => new BusinessModels.RandDocument
+                                                              {
+                                                                  Id = rd.Id,
+                                                                  DocumentId = rd.DocumentId,
+                                                                  CheltuialaId = rd.CheltuialaId,
+                                                                  Explicatie = rd.Explicatie,
+                                                                  Valoare = rd.Valoare,
+                                                                  IsActive = rd.IsActive
+                                                              })
+                                                              .ToList()
+                                        })
+                                        .ToList();
+
             else
-                documents = await _context.Documents.Where(d => d.IsActive == IsActive).ToArrayAsync();
+                documents = _context.Documents
+                                        .Select(doc => new Document
+                                        {
+                                            Id = doc.Id,
+                                            Numar = doc.Numar,
+                                            Data = doc.Data,
+                                            Explicatie = doc.Explicatie,
+                                            StatusId = doc.StatusId,
+                                            DataPlata = doc.DataPlata,
+                                            IsActive = doc.IsActive,
+                                            RandDocuments = doc.RandDocuments
+                                                              .Select(rd => new BusinessModels.RandDocument
+                                                              {
+                                                                  Id = rd.Id,
+                                                                  DocumentId = rd.DocumentId,
+                                                                  CheltuialaId = rd.CheltuialaId,
+                                                                  Explicatie = rd.Explicatie,
+                                                                  Valoare = rd.Valoare,
+                                                                  IsActive = rd.IsActive
+                                                              })
+                                                              .ToList()
+                                        })
+                                        .ToList();
+
 
             foreach (var document in documents) {
-                RandDocument[] rand = await _context.RandDocuments.Where(r => r.DocumentId == document.Id).ToArrayAsync();
-                decimal sum = 0;
-                
-                foreach (var r in rand) {
-                    sum += r.Valoare;
-                }
 
-                docTotal.Add(new DocumentTotal(document, sum));
+                decimal totalRand = document.RandDocuments.Select(rd => rd.Valoare).Sum();
+
+                docTotal.Add(new DocumentTotal(document, totalRand));
             }
  
             return docTotal;
@@ -44,55 +85,98 @@ namespace RepositoryLayerProject
 
         public async Task<Document> GetDocumentById(int ID)
         {
-            return await _context.Documents.Where(d => d.Id == ID).FirstOrDefaultAsync();
+            return  await _context.Documents.Where(d => d.Id == ID)
+                                           .Select(doc => new Document
+                                           {
+                                               Id = doc.Id,
+                                               Numar = doc.Numar,
+                                               Data = doc.Data,
+                                               Explicatie = doc.Explicatie,
+                                               StatusId = doc.StatusId,
+                                               DataPlata = doc.DataPlata,
+                                               IsActive = doc.IsActive,
+                                               RandDocuments = doc.RandDocuments
+                                                              .Select(rd => new BusinessModels.RandDocument
+                                                              {
+                                                                  Id = rd.Id,
+                                                                  DocumentId = rd.DocumentId,
+                                                                  CheltuialaId = rd.CheltuialaId,
+                                                                  Explicatie = rd.Explicatie,
+                                                                  Valoare = rd.Valoare,
+                                                                  IsActive = rd.IsActive
+                                                              })
+                                                              .ToList()
+                                           }).FirstOrDefaultAsync();
         }
 
         public async Task DeleteDocument(int ID)
         {
-            Document doc = await _context.Documents.Where(d => d.Id == ID).FirstOrDefaultAsync();
+            DecontDbContext.Models.Document doc = await _context.Documents.Where(d => d.Id == ID).FirstOrDefaultAsync();
             doc.IsActive = false;
             await _context.SaveChangesAsync();
         }
 
         public async Task InsertDocument(Document doc)
         {
-            _context.Documents.Add(doc);
+            var docDB = new DecontDbContext.Models.Document {
+                Id = doc.Id,
+                Numar = doc.Numar,
+                Data = doc.Data,
+                Explicatie = doc.Explicatie,
+                StatusId = doc.StatusId,
+                DataPlata = doc.DataPlata,
+                IsActive = doc.IsActive,
+                RandDocuments = doc.RandDocuments
+                                      .Select(rd => new DecontDbContext.Models.RandDocument
+                                      {
+                                          Id = rd.Id,
+                                          DocumentId = rd.DocumentId,
+                                          CheltuialaId = rd.CheltuialaId,
+                                          Explicatie = rd.Explicatie,
+                                          Valoare = rd.Valoare,
+                                          IsActive = rd.IsActive
+                                      })
+                                      .ToList()
+            };
+
+            _context.Documents.Add(docDB);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateDocument(Document doc)
         {
-            Document documentToUpdate = await _context.Documents.Where(d => d.Id == doc.Id).FirstOrDefaultAsync();
+            var docDB = new DecontDbContext.Models.Document
+            {
+                Id = doc.Id,
+                Numar = doc.Numar,
+                Data = doc.Data,
+                Explicatie = doc.Explicatie,
+                StatusId = doc.StatusId,
+                DataPlata = doc.DataPlata,
+                IsActive = doc.IsActive,
+                RandDocuments = doc.RandDocuments
+                                      .Select(rd => new DecontDbContext.Models.RandDocument
+                                      {
+                                          Id = rd.Id,
+                                          DocumentId = rd.DocumentId,
+                                          CheltuialaId = rd.CheltuialaId,
+                                          Explicatie = rd.Explicatie,
+                                          Valoare = rd.Valoare,
+                                          IsActive = rd.IsActive
+                                      })
+                                      .ToList()
+            };
 
-            documentToUpdate.Numar = doc.Numar;
-            documentToUpdate.Data = doc.Data;
-            documentToUpdate.Explicatie = doc.Explicatie;
-            documentToUpdate.StatusId = doc.StatusId;
-            documentToUpdate.DataPlata = doc.DataPlata;
+            DecontDbContext.Models.Document documentToUpdate = await _context.Documents.Where(d => d.Id == doc.Id).FirstOrDefaultAsync();
+
+            documentToUpdate.Numar = docDB.Numar;
+            documentToUpdate.Data = docDB.Data;
+            documentToUpdate.Explicatie = docDB.Explicatie;
+            documentToUpdate.StatusId = docDB.StatusId;
+            documentToUpdate.DataPlata = docDB.DataPlata;
+            documentToUpdate.RandDocuments = docDB.RandDocuments;
 
             await _context.SaveChangesAsync();
-        }
-
-        public async Task InsertRand(RandDocument rand)
-        {
-            _context.RandDocuments.Add(rand);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateRand(RandDocument rand)
-        {
-            RandDocument randToUpdate = await _context.RandDocuments.Where(r => r.Id == rand.Id).FirstOrDefaultAsync();
-           
-            randToUpdate.CheltuialaId = rand.CheltuialaId;
-            randToUpdate.Explicatie = rand.Explicatie;
-            randToUpdate.Valoare = rand.Valoare;
-
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<RandDocument[]> GetRand(int docId)
-        {
-            return await _context.RandDocuments.Where(r => r.DocumentId == docId).ToArrayAsync();
         }
     }
 }

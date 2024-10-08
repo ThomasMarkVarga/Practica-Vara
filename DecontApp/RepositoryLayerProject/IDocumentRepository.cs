@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DecontDbContext.Models;
-using DocumentTotalProj;
+using BusinessModels;
 
 namespace RepositoryLayerProject
 {
@@ -15,8 +14,5 @@ namespace RepositoryLayerProject
         Task DeleteDocument(int ID);
         Task InsertDocument(Document doc);
         Task UpdateDocument(Document doc);
-        Task InsertRand(RandDocument rand);
-        Task UpdateRand(RandDocument rand);
-        Task<RandDocument[]> GetRand(int docId);
     }
 }
