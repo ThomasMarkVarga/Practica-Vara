@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\obj\\Debug\\net8.0\\compressed\\c63r34298r.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DecontWebApp.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DecontWebApp.Client.props",
+      "PackagePath": "build\\DecontWebApp.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DecontWebApp.Client.props",
+      "PackagePath": "buildMultiTargeting\\DecontWebApp.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DecontWebApp.Client.props",
+      "PackagePath": "buildTransitive\\DecontWebApp.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

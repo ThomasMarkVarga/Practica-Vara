@@ -1,5 +1,6 @@
 using DecontWebApp.Client.Pages;
 using DecontWebApp.Components;
+using DecontWebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents()
 	.AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddSingleton<IDocumentService, DocumentService>();
+
 
 var app = builder.Build();
 

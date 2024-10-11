@@ -14,5 +14,7 @@ namespace RepositoryLayerProject
         Task DeleteDocument(int ID);
         Task InsertDocument(Document doc);
         Task UpdateDocument(Document doc);
+
+        Task<List<Status>> GetStatuses();
     }
 }

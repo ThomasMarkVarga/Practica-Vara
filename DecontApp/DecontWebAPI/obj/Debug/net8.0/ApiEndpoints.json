@@ -33,6 +33,16 @@
   },
   {
     "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "GetStatuses",
+    "RelativePath": "Document/GetStatuses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
     "Method": "SaveDocument",
     "RelativePath": "Document/SaveDocument",
     "HttpMethod": "POST",

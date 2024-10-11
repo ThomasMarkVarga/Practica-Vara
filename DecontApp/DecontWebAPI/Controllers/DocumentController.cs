@@ -27,6 +27,13 @@ namespace DecontWebAPI.Controllers
             return Ok(response.ToArray());
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetStatuses()
+        {
+            List<BusinessModels.Status> response = await _documentRepo.GetStatuses();
+            return Ok(response);
+        }
+
         [HttpPost]
         public async Task<IActionResult> DeleteDocument(int ID)
         {

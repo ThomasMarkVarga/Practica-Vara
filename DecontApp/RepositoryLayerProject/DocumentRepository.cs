@@ -178,5 +178,14 @@ namespace RepositoryLayerProject
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Status>> GetStatuses()
+        {
+            return await _context.Statuses.Select(s => new Status
+            {
+                Id = s.Id,
+                Status1 = s.Status1
+            }).ToListAsync();
+        }
     }
 }

@@ -1,0 +1,51 @@
+﻿@page "/decontlist"
+
+@inject IDocumentService DocService
+
+<style>
+	table, th, td {
+	  border:1px solid black;
+	}
+</style>
+
+<table width="100%">
+	<thead>
+		<td>Numar</td>
+		<td>Data</td>
+		<td>Explicatie</td>
+		<td>Total</td>
+		<td>Status</td>
+		<td>Data Plata</td>
+		<td>Optiuni</td>
+	</thead>
+
+	@foreach (var document in docs)
+	{
+		<tr>
+			<td>@document.document.Numar</td>
+			<td>@document.document.Data</td>
+			<td>@document.document.Explicatie</td>
+			<td>@document.total</td>
+			<td>@statusDict[document.document.StatusId]</td>
+			<td>@document.document.DataPlata</td>
+			<td><button>Option</button></td>
+		</tr>
+	}
+
+</table>
+
+
+@code {
+	List<DocumentTotal> docs = new List<DocumentTotal>();
+	Dictionary<int, string> statusDict = new Dictionary<int, string>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		DocumentTotal[] d = await DocService.getDocuments(true);
+
+		statusDict = (await DocService.getStatuses()).ToDictionary(status => status.Id, status => status.Status1);
+
+		docs = d.OfType<DocumentTotal>().ToList();
+	}
+
+}

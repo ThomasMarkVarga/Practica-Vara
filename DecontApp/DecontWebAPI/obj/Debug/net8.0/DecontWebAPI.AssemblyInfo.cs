@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecontWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9c1a5d8e78c624ac408470bf5b00be6e5fba249")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+897a297873f87a8bfd9e1b88db7973709a99667a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecontWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecontWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

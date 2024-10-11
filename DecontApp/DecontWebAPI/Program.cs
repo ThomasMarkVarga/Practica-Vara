@@ -32,7 +32,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowedSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://localhost:7045");
+            policy.WithOrigins("https://localhost:7076");
         });
 });
 
