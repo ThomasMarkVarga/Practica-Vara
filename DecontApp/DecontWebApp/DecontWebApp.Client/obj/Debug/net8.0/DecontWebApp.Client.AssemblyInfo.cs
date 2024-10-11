@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecontWebApp.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a4d0c8152a2a03cfabcccdbb50f05e85eb6afea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9c1a5d8e78c624ac408470bf5b00be6e5fba249")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecontWebApp.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecontWebApp.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
