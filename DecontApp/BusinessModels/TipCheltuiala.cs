@@ -12,7 +12,7 @@ namespace BusinessModels
 
         public string Denumire { get; set; } = null!;
 
-        public decimal? ValoareImplicita { get; set; }
+        public decimal ValoareImplicita { get; set; } = 0;
 
         public bool? IsActive { get; set; }
     }

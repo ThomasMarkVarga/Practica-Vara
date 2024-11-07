@@ -805,6 +805,7 @@
       },
       "DecontWebApp.Client/1.0.0": {
         "dependencies": {
+          "BusinessModels": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.8"
         },
         "runtime": {

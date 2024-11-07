@@ -1,5 +1,14 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.sourcelink.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\BusinessModels.pdb
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\BusinessModels.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\DecontWebApp.Client.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\DecontWebApp.Client.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
@@ -40,6 +49,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Registry.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm
@@ -211,6 +221,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Pipes.AccessControl.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Resources.Reader.wasm.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.TypeExtensions.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Formats.Asn1.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.UnmanagedMemoryStream.wasm.gz
@@ -264,6 +275,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.Parallel.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Numerics.wasm.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\BusinessModels.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.Extensions.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Metadata.wasm.gz
@@ -372,6 +384,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebClient.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Dynamic.Runtime.wasm.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\BusinessModels.pdb.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Windows.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.wasm.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm.gz
@@ -431,6 +444,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Microsoft.CSharp.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\Microsoft.VisualBasic.Core.dll
@@ -609,13 +623,8 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\icudt_CJK.dat
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\icudt_no_CJK.dat
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.csproj.AssemblyReference.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.AssemblyInfoInputs.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.AssemblyInfo.cs
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.csproj.CoreCompileInputs.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.sourcelink.json
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\BusinessModels.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\bin\Debug\net8.0\BusinessModels.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -638,6 +647,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Primitives.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.WebAssembly.wasm
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.CSharp.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.Core.wasm
@@ -807,6 +817,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\mscorlib.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\netstandard.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\System.Private.CoreLib.wasm
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\BusinessModels.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\webcil\DecontWebApp.Client.wasm
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\blazor.build.boot-extension.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\blazor.boot.json
@@ -841,6 +852,7 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\nrxvmlr5p8.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\n7xsdbmh3y.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\oacz5g7y5e.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\1zpv8y28ll.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\w95z0v6sxs.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\hzhuv8vmgd.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\pmhpdsfipk.gz
@@ -1019,6 +1031,8 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\at76l1u9aa.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\fs9p4ewxjs.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\vatr508a57.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\cg99jctidl.gz
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\udb81op8s3.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\lm3ood8819.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\sapfyxjqn3.gz
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\compressed\fveyapdap7.gz
@@ -1027,3 +1041,5 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\refint\DecontWebApp.Client.dll
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\DecontWebApp.Client.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\ref\DecontWebApp.Client.dll
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\scopedcss\Components\Dialog.razor.rz.scp.css
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client\obj\Debug\net8.0\scopedcss\projectbundle\DecontWebApp.Client.bundle.scp.css

@@ -1,0 +1,138 @@
+﻿@page "/decontlist"
+
+@attribute [StreamRendering(true)]
+@rendermode @(new InteractiveAutoRenderMode(false))
+
+@inject IDocumentService DocService
+@inject NavigationManager NavManager
+
+<style>
+	table, th, td {
+	  border:1px solid black;
+	}
+</style>
+
+<table>
+	<thead>
+	<td>Numar</td>
+	<td>Data</td>
+	<td>Explicatie</td>
+	<td>Total</td>
+	<td>Status</td>
+	<td>Data Plata</td>
+	<td>Optiuni</td>
+	</thead>
+
+	@foreach (var document in docs)
+	{
+		<tr>
+			<td>@document.document.Numar</td>
+			<td>@document.document.Data</td>
+			<td>@document.document.Explicatie</td>
+			<td>@document.total</td>
+			<td>@statusDict[document.document.StatusId]</td>
+			<td>@document.document.DataPlata</td>
+			<td>
+				<button @onclick = "() => {ShowWarning(document.document);}">Sterge</button>
+				@if (document.document.DataPlata == null)
+				{
+					<button @onclick = "() => {EditDecont(document.document.Id);}">Edit</button>
+					<button @onclick = "() => {ShowDialog(document.document);}">Marcheaza ca platit</button>
+				}
+			</td>
+		</tr>
+	}
+
+</table>
+<button @onclick = "AddDecont">Adauga Decont</button>
+
+
+<Dialog title="Select Date" Opened="dialogShow" CloseButtonClicked="@(() => dialogShow = false)">
+	<BodyContent>
+		<p>Selecteaza data plata:</p>
+		<input type="date" @bind="selectedDate"/>
+	</BodyContent>
+
+	<FooterContent>
+		<button @onclick="Save">Submit</button>
+		<button @onclick="@(() => dialogShow = false)">Cancel</button>
+	</FooterContent>
+</Dialog>
+
+<Dialog Title="Delete Warning" Opened="deleteShow" CloseButtonClicked="@(() => deleteShow = false)">
+	<BodyContent>
+		<p>
+			 Sigur vrei sa stergi @docDeSters.Explicatie ?
+		</p>
+	</BodyContent>
+
+	<FooterContent>
+		<button @onclick="DeleteDecont">Yes</button>
+		<button @onclick="() => deleteShow = false">No</button>
+	</FooterContent>
+</Dialog>
+
+@code {
+	List<DocumentTotal> docs = new List<DocumentTotal>();
+	Dictionary<int, string> statusDict = new Dictionary<int, string>();
+
+	public bool deleteShow = false;
+	Document docDeSters;
+
+	public bool dialogShow = false;
+	Document docDePlatit;
+	DateOnly? selectedDate = null;
+
+	protected override async Task OnInitializedAsync()
+	{
+		DocumentTotal[] d = await DocService.getDocuments(true);
+
+		statusDict = (await DocService.getStatuses()).ToDictionary(status => status.Id, status => status.Status1);
+
+		docs = d.OfType<DocumentTotal>().ToList();
+	}
+
+	public async Task AddDecont()
+	{
+		NavManager.NavigateTo("/adddecont");
+	}
+
+	public async Task EditDecont(int ID)
+	{
+		NavManager.NavigateTo("/editdecont/" + ID.ToString());
+	}
+
+
+	public async Task ShowDialog(Document doc)
+	{
+		docDePlatit = doc;
+		dialogShow = true;
+	}
+
+	public async Task Save()
+	{
+		if (selectedDate != null)
+		{
+			docDePlatit.DataPlata = selectedDate;
+			docDePlatit.StatusId = 2;
+			await DocService.SaveDocument(docDePlatit);
+			NavManager.Refresh(true);
+		}
+	}
+
+	public async Task ShowWarning(Document doc)
+	{
+		deleteShow = true;
+		docDeSters = doc;
+	}
+
+	public async Task DeleteDecont()
+	{
+		if(docDeSters != null)
+		{
+			await DocService.DeleteDocument(docDeSters.Id);
+			NavManager.Refresh(true);	
+		}
+	}
+}
+

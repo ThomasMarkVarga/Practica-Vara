@@ -22,10 +22,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp.Client
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Components/MyNumberInput.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNeU51bWJlcklucHV0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Pages/DecontDoc.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVjb250RG9jLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Pages/DecontList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVjb250TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Pages/TipCheltuialaPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlwQ2hlbHR1aWFsYVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tommy/Desktop/resurse/Practica-Vara/DecontApp/DecontWebApp/DecontWebApp.Client/Components/Dialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6dmvbsb4in

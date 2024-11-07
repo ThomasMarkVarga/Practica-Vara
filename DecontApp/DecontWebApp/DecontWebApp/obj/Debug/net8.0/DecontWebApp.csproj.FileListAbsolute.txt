@@ -1,3 +1,10 @@
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.csproj.AssemblyReference.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.sourcelink.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\DecontWebApp.Client.staticwebassets.runtime.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\appsettings.json
@@ -87,13 +94,6 @@ C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\RepositoryLayerProject.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\DecontWebApp.Client.pdb
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\bin\Debug\net8.0\DecontDbContext.pdb
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.csproj.AssemblyReference.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.AssemblyInfoInputs.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.AssemblyInfo.cs
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.csproj.CoreCompileInputs.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\DecontWebApp.sourcelink.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Tommy\Desktop\resurse\Practica-Vara\DecontApp\DecontWebApp\DecontWebApp\obj\Debug\net8.0\staticwebassets\msbuild.DecontWebApp.Microsoft.AspNetCore.StaticWebAssets.props

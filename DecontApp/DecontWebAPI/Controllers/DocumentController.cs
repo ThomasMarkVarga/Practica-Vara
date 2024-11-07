@@ -34,6 +34,20 @@ namespace DecontWebAPI.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        public async Task<BusinessModels.Document> GetDocumentById(int ID)
+        {
+            BusinessModels.Document doc = await _documentRepo.GetDocumentById(ID);
+
+            return doc;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DocumentMax()
+        {
+            return Ok(await _documentRepo.MaxDocNo());
+        }
+
         [HttpPost]
         public async Task<IActionResult> DeleteDocument(int ID)
         {
@@ -57,5 +71,6 @@ namespace DecontWebAPI.Controllers
 
             return Ok();
         }
+
     }
 }

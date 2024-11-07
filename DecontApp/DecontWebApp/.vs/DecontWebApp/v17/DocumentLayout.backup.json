@@ -3,27 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|solutionrelative:decontwebapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp.client\\pages\\decontlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|solutionrelative:decontwebapp.client\\pages\\decontlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|solutionrelative:decontwebapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp.client\\pages\\decontdoc.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|solutionrelative:decontwebapp.client\\pages\\decontdoc.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp\\components\\pages\\decontlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|solutionrelative:decontwebapp\\components\\pages\\decontlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ECECDEF-6563-4CFA-974D-15A6974FB7F9}|..\\BusinessModels\\BusinessModels.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\businessmodels\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp\\services\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|solutionrelative:decontwebapp\\services\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{240711FF-C4E0-43E4-9C45-1485364DBA82}|DecontWebApp\\DecontWebApp.csproj|solutionrelative:decontwebapp\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|c:\\users\\tommy\\desktop\\resurse\\practica-vara\\decontapp\\decontwebapp\\decontwebapp.client\\components\\mynumberinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DC14FAA0-6724-4F18-817A-FE8A94F04FB4}|DecontWebApp.Client\\DecontWebApp.Client.csproj|solutionrelative:decontwebapp.client\\components\\mynumberinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 171,
+          "DockedWidth": 205,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -42,80 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "DecontWebApp\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "DecontWebApp\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Title": "DecontList.razor",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Pages\\DecontList.razor",
+              "RelativeDocumentMoniker": "DecontWebApp.Client\\Pages\\DecontList.razor",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Pages\\DecontList.razor*",
+              "RelativeToolTip": "DecontWebApp.Client\\Pages\\DecontList.razor*",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAwEAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T13:05:38.377Z",
+              "WhenOpened": "2024-11-07T10:21:16.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "DecontWebApp\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Routes.razor",
-              "RelativeToolTip": "DecontWebApp\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DecontDoc.razor",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Pages\\DecontDoc.razor",
+              "RelativeDocumentMoniker": "DecontWebApp.Client\\Pages\\DecontDoc.razor",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Pages\\DecontDoc.razor",
+              "RelativeToolTip": "DecontWebApp.Client\\Pages\\DecontDoc.razor",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T13:05:33.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\Status.cs",
-              "RelativeDocumentMoniker": "..\\BusinessModels\\Status.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\Status.cs",
-              "RelativeToolTip": "..\\BusinessModels\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T12:46:04.523Z",
+              "WhenOpened": "2024-11-06T16:25:04.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DecontList.razor",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Pages\\DecontList.razor",
-              "RelativeDocumentMoniker": "DecontWebApp\\Components\\Pages\\DecontList.razor",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Components\\Pages\\DecontList.razor*",
-              "RelativeToolTip": "DecontWebApp\\Components\\Pages\\DecontList.razor*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Title": "MyNumberInput.razor",
+              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Components\\MyNumberInput.razor",
+              "RelativeDocumentMoniker": "DecontWebApp.Client\\Components\\MyNumberInput.razor",
+              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp.Client\\Components\\MyNumberInput.razor",
+              "RelativeToolTip": "DecontWebApp.Client\\Components\\MyNumberInput.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T12:30:53.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IDocumentService.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Services\\IDocumentService.cs",
-              "RelativeDocumentMoniker": "DecontWebApp\\Services\\IDocumentService.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Services\\IDocumentService.cs",
-              "RelativeToolTip": "DecontWebApp\\Services\\IDocumentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T12:30:28.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DocumentService.cs",
-              "DocumentMoniker": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Services\\DocumentService.cs",
-              "RelativeDocumentMoniker": "DecontWebApp\\Services\\DocumentService.cs",
-              "ToolTip": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\DecontWebApp\\Services\\DocumentService.cs",
-              "RelativeToolTip": "DecontWebApp\\Services\\DocumentService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T12:25:35.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T16:23:20.21Z"
             }
           ]
         }

@@ -184,7 +184,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\BusinessModels.csproj": {
+                "projectPath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\BusinessModels\\BusinessModels.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

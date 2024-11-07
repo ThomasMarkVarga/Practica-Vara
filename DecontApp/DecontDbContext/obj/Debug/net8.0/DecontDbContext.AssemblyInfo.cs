@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecontDbContext")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9c1a5d8e78c624ac408470bf5b00be6e5fba249")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9423d964213db06cc4ae76c596e0d79e3d797449")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecontDbContext")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecontDbContext")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

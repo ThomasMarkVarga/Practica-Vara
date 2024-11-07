@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DecontWebApp.Client",
   "resources": {
-    "hash": "sha256-f0nL6InlUw5c0BOzhnbWez2kpiATVEmrcbJHoJbOXAk=",
+    "hash": "sha256-i2k0felAq/L1tELT+KIrSf188DNZvTmPpGJ/6AA9ytM=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.hei8flw7so.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -39,6 +39,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
       "Microsoft.JSInterop.wasm": "sha256-okH//v00d9qA97lMQaTcXOMrfK8IIcOYOfzcEhcQle8=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-FWBbfufvNOmor0iVsxtEPG3l1VI97wMYStE1/bHHo9w=",
+      "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "Microsoft.CSharp.wasm": "sha256-GN0MwA/4MlNKz3Vsxx082ablExUe/q8eec3eRX+NQ20=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-NJUDEhGvk52ZfA9hUjET9z6opkxrepm1OMfzK6VNXJc=",
@@ -208,10 +209,12 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "DecontWebApp.Client.wasm": "sha256-ftX1ZLHLX9rPJ7t6e7rQwCx1lWEnuCgs4aI1vwlm8Fs="
+      "BusinessModels.wasm": "sha256-i9wuZTcdwfJtuUUg/zlHQsry09aPGIqD0p6x6ZhZaKE=",
+      "DecontWebApp.Client.wasm": "sha256-tP5EwooaIFPkFYUxWC8WnHY8WShFG8xGuumJfL3bKiQ="
     },
     "pdb": {
-      "DecontWebApp.Client.pdb": "sha256-KgTdC1AcocKSDeZoQhwHgG6OIAV1YdClOcFMbcHzN30="
+      "BusinessModels.pdb": "sha256-jo0aFsRh3kkrXlqohia+1RYHtFSHcWUsut2JvM5/ohI=",
+      "DecontWebApp.Client.pdb": "sha256-MLe9ALb28xY+8WfO438Lv67dv+mknu0Z41fJqc2tCIo="
     }
   },
   "cacheBootResources": true,

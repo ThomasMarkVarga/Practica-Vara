@@ -49,6 +49,7 @@ namespace RepositoryLayerProject
 
             else
                 documents = _context.Documents
+                                        .Where(d => d.IsActive == IsActive)
                                         .Select(doc => new Document
                                         {
                                             Id = doc.Id,
@@ -75,7 +76,7 @@ namespace RepositoryLayerProject
 
             foreach (var document in documents) {
 
-                decimal totalRand = document.RandDocuments.Select(rd => rd.Valoare).Sum();
+                decimal totalRand = document.RandDocuments.Where(rd => rd.IsActive == true).Select(rd => rd.Valoare).Sum();
 
                 docTotal.Add(new DocumentTotal(document, totalRand));
             }
@@ -110,16 +111,22 @@ namespace RepositoryLayerProject
         }
 
         public async Task DeleteDocument(int ID)
-        {
+        { 
             DecontDbContext.Models.Document doc = await _context.Documents.Where(d => d.Id == ID).FirstOrDefaultAsync();
-            doc.IsActive = false;
+			doc.IsActive = false;
+
+            DecontDbContext.Models.RandDocument[] randDoc = await _context.RandDocuments.Where(r => r.DocumentId == ID).ToArrayAsync();
+            foreach(var rd in randDoc)
+            {
+                rd.IsActive = false;
+            }
+
             await _context.SaveChangesAsync();
         }
 
         public async Task InsertDocument(Document doc)
         {
             var docDB = new DecontDbContext.Models.Document {
-                Id = doc.Id,
                 Numar = doc.Numar,
                 Data = doc.Data,
                 Explicatie = doc.Explicatie,
@@ -129,7 +136,6 @@ namespace RepositoryLayerProject
                 RandDocuments = doc.RandDocuments
                                       .Select(rd => new DecontDbContext.Models.RandDocument
                                       {
-                                          Id = rd.Id,
                                           DocumentId = rd.DocumentId,
                                           CheltuialaId = rd.CheltuialaId,
                                           Explicatie = rd.Explicatie,
@@ -186,6 +192,11 @@ namespace RepositoryLayerProject
                 Id = s.Id,
                 Status1 = s.Status1
             }).ToListAsync();
+        }
+
+        public async Task<int> MaxDocNo()
+        {
+            return await _context.Documents.MaxAsync(d => d.Numar);
         }
     }
 }

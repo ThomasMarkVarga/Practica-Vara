@@ -17,6 +17,42 @@
   },
   {
     "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "DocumentMax",
+    "RelativePath": "Document/DocumentMax",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "GetDocumentById",
+    "RelativePath": "Document/GetDocumentById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusinessModels.Document",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
     "Method": "GetDocuments",
     "RelativePath": "Document/GetDocuments",
     "HttpMethod": "GET",
@@ -99,7 +135,7 @@
     "Parameters": [
       {
         "Name": "tipCheltuiala",
-        "Type": "DecontDbContext.Models.TipCheltuiala[]",
+        "Type": "BusinessModels.TipCheltuiala[]",
         "IsRequired": true
       }
     ],

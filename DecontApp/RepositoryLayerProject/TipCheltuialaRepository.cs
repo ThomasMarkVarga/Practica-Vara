@@ -1,5 +1,6 @@
 ﻿using DecontDbContext;
 using DecontDbContext.Models;
+using BusinessModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLayerProject
@@ -13,38 +14,64 @@ namespace RepositoryLayerProject
             _context = context;
         }
 
-        public async Task<TipCheltuiala[]> GetTipCheltuiala(bool? IsActive)
+        public async Task<BusinessModels.TipCheltuiala[]> GetTipCheltuiala(bool? IsActive)
         {
             if (IsActive == null)
-                return await _context.TipCheltuialas.ToArrayAsync();
+                return await _context.TipCheltuialas.Select(tc => new BusinessModels.TipCheltuiala
+                {
+                    Id = tc.Id,
+                    Denumire = tc.Denumire,
+                    ValoareImplicita = (decimal)tc.ValoareImplicita,
+                    IsActive = tc.IsActive
+                }).ToArrayAsync();
             else
-                return await _context.TipCheltuialas.Where(tc => tc.IsActive == IsActive).ToArrayAsync();
+                return await _context.TipCheltuialas.Select(tc => new BusinessModels.TipCheltuiala
+				{
+					Id = tc.Id,
+					Denumire = tc.Denumire,
+					ValoareImplicita = (decimal)tc.ValoareImplicita,
+					IsActive = tc.IsActive
+				}).Where(tc => tc.IsActive == IsActive).ToArrayAsync();
         }
 
-        public async Task<TipCheltuiala> GetCheltuialaById(int ID)
+        public async Task<BusinessModels.TipCheltuiala> GetCheltuialaById(int ID)
         {
-            return await _context.TipCheltuialas.Where(tc => tc.Id == ID).FirstOrDefaultAsync();
+            return await _context.TipCheltuialas.Select(tc => new BusinessModels.TipCheltuiala
+			{
+				Id = tc.Id,
+				Denumire = tc.Denumire,
+				ValoareImplicita = (decimal)tc.ValoareImplicita,
+				IsActive = tc.IsActive
+			}).Where(tc => tc.Id == ID).FirstOrDefaultAsync();
         }
 
         public async Task DeleteTipCheltuiala(int ID)
         {
-            TipCheltuiala tipCheltuiala = await _context.TipCheltuialas.Where(tc => tc.Id == ID).FirstOrDefaultAsync();
+            DecontDbContext.Models.TipCheltuiala tipCheltuiala = await _context.TipCheltuialas.Where(tc => tc.Id == ID).FirstOrDefaultAsync();
             tipCheltuiala.IsActive = false;
             await _context.SaveChangesAsync();
         }
 
-        public async Task InsertTipCheltuiala(TipCheltuiala tipCheltuiala)
+        public async Task InsertTipCheltuiala(BusinessModels.TipCheltuiala tipCheltuiala)
         {
-            _context.TipCheltuialas.Add(tipCheltuiala);
+            DecontDbContext.Models.TipCheltuiala tp = new DecontDbContext.Models.TipCheltuiala
+            {
+                Id = tipCheltuiala.Id,
+                Denumire = tipCheltuiala.Denumire,
+                ValoareImplicita = tipCheltuiala.ValoareImplicita,
+                IsActive = tipCheltuiala.IsActive
+            };
+            _context.TipCheltuialas.Add(tp);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateTipCheltuiala(TipCheltuiala tipCheltuiala)
+        public async Task UpdateTipCheltuiala(BusinessModels.TipCheltuiala tipCheltuiala)
         {
-            TipCheltuiala tipCheltuialaToUpdate = await _context.TipCheltuialas.Where(tc => tc.Id == tipCheltuiala.Id).FirstOrDefaultAsync();
+            DecontDbContext.Models.TipCheltuiala tipCheltuialaToUpdate = await _context.TipCheltuialas.Where(tc => tc.Id == tipCheltuiala.Id).FirstOrDefaultAsync();
             
             tipCheltuialaToUpdate.Denumire = tipCheltuiala.Denumire;
             tipCheltuialaToUpdate.ValoareImplicita = tipCheltuiala.ValoareImplicita;
+            tipCheltuialaToUpdate.IsActive = tipCheltuiala.IsActive;
 
             await _context.SaveChangesAsync();
         }

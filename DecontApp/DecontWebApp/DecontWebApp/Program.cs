@@ -1,6 +1,6 @@
 using DecontWebApp.Client.Pages;
 using DecontWebApp.Components;
-using DecontWebApp.Services;
+using DecontWebApp.Client.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,7 @@ builder.Services.AddRazorComponents()
 	.AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddSingleton<IDocumentService, DocumentService>();
-
+builder.Services.AddSingleton<ITipCheltuialaService, TipCheltuialaService>();
 
 var app = builder.Build();
 

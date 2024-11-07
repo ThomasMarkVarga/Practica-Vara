@@ -9,7 +9,7 @@ public partial class Document
 
     public int Numar { get; set; }
 
-    public DateOnly Data { get; set; }
+    public DateOnly? Data { get; set; }
 
     public string? Explicatie { get; set; }
 
