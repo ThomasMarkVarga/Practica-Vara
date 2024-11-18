@@ -1,0 +1,72 @@
+﻿@page "/tipcheltuiala"
+@attribute [StreamRendering(true)]
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+
+@inject ITipCheltuialaService CheltuialaService
+@inject NavigationManager NavManager
+
+<style>
+	table, th, td {
+	  border:1px solid black;
+	}
+</style>
+
+<h3>Tip Cheltuiala</h3>
+
+<table width="50%">
+	<tr>
+		<th>Denumire</th>
+		<th>Valoare Implicita</th>
+		<th>Optiuni</th>
+	</tr>
+
+	@foreach(var tc in tipCheltuialas)
+	{
+		@if (tc.IsActive == true)
+		{
+			<tr>
+				<td><input @bind-value="@tc.Denumire" /></td>
+				<td><MyNumberInput @bind-Value="@tc.ValoareImplicita" /></td>
+				<td><button @onclick="() => {DeleteRecord(tc);}">Sterge</button></td>
+			</tr>
+		}
+		@if(tc.IsActive == null)
+		{
+			<tr>
+				<td><input @bind-value="@tc.Denumire" /></td>
+				<td><MyNumberInput @bind-Value="@tc.ValoareImplicita" /></td>
+				<td><button @onclick="() => {DeleteRecord(tc);}">Sterge</button></td>
+			</tr>
+		}
+	}
+</table>
+
+<button @onclick="() => {tipCheltuialas.Add(new TipCheltuiala());}">Adauga Cheltuiala</button>
+<button @onclick = "SaveData">Salveaza</button>
+
+
+@code {
+	public List<BusinessModels.TipCheltuiala> tipCheltuialas = new List<BusinessModels.TipCheltuiala>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		tipCheltuialas = (await CheltuialaService.getTipCheltuiala(true)).OfType<BusinessModels.TipCheltuiala>().ToList();
+	}
+
+	public async Task SaveData()
+	{
+		BusinessModels.TipCheltuiala[] tc = tipCheltuialas.ToArray();
+		await CheltuialaService.saveTipCheltuiala(tc);
+		NavManager.NavigateTo("/decontlist");
+	}
+
+	public void DeleteRecord(TipCheltuiala tc)
+	{
+		int index = tipCheltuialas.IndexOf(tc);
+		if(index > -1)
+		{
+			tipCheltuialas[index].IsActive = false;
+		}
+	}
+}

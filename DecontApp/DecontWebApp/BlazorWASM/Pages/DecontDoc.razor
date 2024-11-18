@@ -1,0 +1,99 @@
+﻿@page "/adddecont"
+@page "/editdecont/{id}"
+
+@inject IDocumentService DocServ
+@inject ITipCheltuialaService CheltuialaService
+@inject NavigationManager NavManager
+
+@* @attribute [StreamRendering(true)]
+@rendermode @(new InteractiveAutoRenderMode(false)) *@
+
+<style>
+	table, th, td {
+	  border:1px solid black;
+	}
+</style>
+
+<label>Numar</label>
+<input @bind = "document.Numar" />
+<br/>
+
+<label>Data</label>
+<input type="date" @bind = "document.Data" />
+<br />
+
+<label>Explicatie</label>
+<input @bind ="document.Explicatie" />
+<br />
+
+<label>Cheltuieli</label>
+@if(document.RandDocuments.Count == 0)
+{
+	<p>Nu s-a inregistrat nicio cheltuiala</p>
+}
+else{
+	<table>
+		<tr>
+			<th>Cheltuiala</th>
+			<th>Suma</th>
+			<th>Explicatie</th>
+			<th>Optiuni</th>
+		</tr>
+		@foreach(var rd in document.RandDocuments)
+		{	
+			@if(rd.IsActive == true || rd.IsActive == null){
+				<tr>
+					<td>
+						<select @bind="@rd.CheltuialaId">
+							@foreach(var cheltuiala in cheltuieli)
+							{
+								<option value="@cheltuiala.Id">@cheltuiala.Denumire</option>
+							}
+						</select>
+					</td>
+					<td><MyNumberInput @bind-Value="rd.Valoare" /></td>
+					<td><input @bind ="rd.Explicatie"/></td>
+					<td><button @onclick ="() =>{ if(rd.IsActive == true) 
+													rd.IsActive = false; 
+												  else 
+													document.RandDocuments.Remove(rd);
+												}">Sterge</button></td>
+				</tr>
+		}
+	}
+	</table>
+}
+<button @onclick ="() => {document.RandDocuments.Add(new RandDocument());}">Adauga cheltuiala</button>
+<button @onclick ="Save">Save Document</button>
+
+@code {
+	[Parameter]
+	public string ID { set; get; }
+
+	public Document document = new Document()
+	{
+		Data = null,
+		StatusId = 1,
+		RandDocuments = new List<RandDocument>()	
+	};
+
+	public List<TipCheltuiala> cheltuieli = new List<TipCheltuiala>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (!string.IsNullOrEmpty(ID)){
+			document = await DocServ.GetDocumentByID(ID);
+			cheltuieli = (await CheltuialaService.getTipCheltuiala(null)).OfType<BusinessModels.TipCheltuiala>().ToList();
+		}
+		else{
+			document.Numar = await DocServ.getMaxDocNo() + 1;
+			cheltuieli = (await CheltuialaService.getTipCheltuiala(true)).OfType<BusinessModels.TipCheltuiala>().ToList();
+		}
+	}
+
+	public async Task Save()
+	{
+		string res = await DocServ.SaveDocument(document);
+		NavManager.NavigateTo("/decontlist");
+	}
+}
