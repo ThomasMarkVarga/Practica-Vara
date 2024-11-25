@@ -72,5 +72,21 @@ namespace DecontWebAPI.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> InsertMultipleDocs([FromBody] BusinessModels.Document[] documents)
+        {
+            foreach(var doc in documents)
+            {
+                try
+                {
+                    await _documentRepo.InsertDocument(doc);
+                }
+                catch (Exception ex) { 
+                    return BadRequest(ex.Message);
+                }
+            }
+            return Ok();
+        }
+
     }
 }

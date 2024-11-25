@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorWASM",
   "resources": {
-    "hash": "sha256-QdXTiyNdGnvU4pi/moVoAEIoi00rk/gt+O0sQuM4joo=",
+    "hash": "sha256-eGxVIvy84f5I4SWo2Y39Yf6TEqmAvVZVGhZpLXAQkZM=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.hei8flw7so.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -40,7 +40,12 @@
       "Microsoft.JSInterop.wasm": "sha256-okH//v00d9qA97lMQaTcXOMrfK8IIcOYOfzcEhcQle8=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-FWBbfufvNOmor0iVsxtEPG3l1VI97wMYStE1/bHHo9w=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
+      "Serialize.Linq.wasm": "sha256-gqlDfjUFaIRhZwP82TgJtXCuO+sD/ZR5bK7wXe0WIuk=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
+      "BlazorWorker.BackgroundServiceFactory.wasm": "sha256-LgZbWOQrhkXMibZ3BdjvD4Z8h/bO9PthMi9XEF4tgkk=",
+      "BlazorWorker.WorkerBackgroundService.wasm": "sha256-FCOlFneFMTmuUEWmu9Zp2Ll7vBww7Kz9adAGFgZpXYc=",
+      "BlazorWorker.Core.wasm": "sha256-LMT3HlT9P0tNKq67ys+8cz7RNyzb9zPadJCGWMyUK5w=",
+      "BlazorWorker.WorkerCore.wasm": "sha256-P2RhpJGvedndAmohzW5Bp+tW/5EROQ+7mSe/3xk9acw=",
       "Microsoft.CSharp.wasm": "sha256-GN0MwA/4MlNKz3Vsxx082ablExUe/q8eec3eRX+NQ20=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-NJUDEhGvk52ZfA9hUjET9z6opkxrepm1OMfzK6VNXJc=",
       "Microsoft.VisualBasic.wasm": "sha256-lhPOT6SgmDH17ac3jzKP0FTQPFn2+3K0ipQa4+qT4Mk=",
@@ -210,11 +215,11 @@
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
       "BusinessModels.wasm": "sha256-i9wuZTcdwfJtuUUg/zlHQsry09aPGIqD0p6x6ZhZaKE=",
-      "BlazorWASM.wasm": "sha256-FklhWFXlcbquNUFXT5BCfAOyYgvyQ6hWZdXNiiWPtEI="
+      "BlazorWASM.wasm": "sha256-tJTTddY+BUJa0p3p988QPyFVBxTyZmzl6ZydhkWlMt4="
     },
     "pdb": {
       "BusinessModels.pdb": "sha256-jo0aFsRh3kkrXlqohia+1RYHtFSHcWUsut2JvM5/ohI=",
-      "BlazorWASM.pdb": "sha256-sciEBPm8sDEP4s+fAy09vQNA04THJkUy4aYEJ+hrGAE="
+      "BlazorWASM.pdb": "sha256-idB/d1PkclXom0DY5UQLeRXuCnbmLZ9m8zClZUN/fwY="
     }
   },
   "cacheBootResources": true,

@@ -145,6 +145,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Tewr.BlazorWorker.BackgroundService": {
+              "target": "Package",
+              "version": "[4.1.2, )"
             }
           },
           "imports": [

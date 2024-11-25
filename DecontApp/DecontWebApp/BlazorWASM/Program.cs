@@ -1,5 +1,6 @@
 using BlazorWASM;
 using BlazorWASM.Services;
+using BlazorWorker.Core;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -11,5 +12,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITipCheltuialaService, TipCheltuialaService>();
+
+builder.Services.AddWorkerFactory();
 
 await builder.Build().RunAsync();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WzrNaZBpJyM=",
+  "dgSpecHash": "6OgjOox7MqQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\Tommy\\Desktop\\resurse\\Practica-Vara\\DecontApp\\DecontWebApp\\BlazorWASM\\BlazorWASM.csproj",
   "expectedPackageFiles": [
@@ -31,9 +31,12 @@
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.8\\microsoft.net.sdk.webassembly.pack.8.0.8.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\serialize.linq\\3.0.152\\serialize.linq.3.0.152.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\tewr.blazorworker.backgroundservice\\4.1.2\\tewr.blazorworker.backgroundservice.4.1.2.nupkg.sha512",
+    "C:\\Users\\Tommy\\.nuget\\packages\\tewr.blazorworker.core\\4.1.2\\tewr.blazorworker.core.4.1.2.nupkg.sha512",
     "C:\\Users\\Tommy\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.8\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.8.nupkg.sha512"
   ],
   "logs": []

@@ -79,6 +79,22 @@
   },
   {
     "ContainingType": "DecontWebAPI.Controllers.DocumentController",
+    "Method": "InsertMultipleDocs",
+    "RelativePath": "Document/InsertMultipleDocs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documents",
+        "Type": "BusinessModels.Document[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DecontWebAPI.Controllers.DocumentController",
     "Method": "SaveDocument",
     "RelativePath": "Document/SaveDocument",
     "HttpMethod": "POST",

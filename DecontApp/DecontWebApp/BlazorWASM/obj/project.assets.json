@@ -448,6 +448,15 @@
           }
         }
       },
+      "Serialize.Linq/3.0.152": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Serialize.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Serialize.Linq.dll": {}
+        }
+      },
       "System.IO.Pipelines/8.0.0": {
         "type": "package",
         "compile": {
@@ -503,6 +512,54 @@
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
+        }
+      },
+      "Tewr.BlazorWorker.BackgroundService/4.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.JSInterop": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Serialize.Linq": "3.0.152",
+          "Tewr.BlazorWorker.Core": "4.1.2"
+        },
+        "compile": {
+          "lib/net8.0/BlazorWorker.BackgroundServiceFactory.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerBackgroundService.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/BlazorWorker.BackgroundServiceFactory.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerBackgroundService.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Tewr.BlazorWorker.Core/4.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.JSInterop": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/BlazorWorker.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/BlazorWorker.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerCore.dll": {
+            "related": ".xml"
+          }
         }
       },
       "BusinessModels/1.0.0": {
@@ -966,6 +1023,15 @@
           }
         }
       },
+      "Serialize.Linq/3.0.152": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Serialize.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Serialize.Linq.dll": {}
+        }
+      },
       "System.IO.Pipelines/8.0.0": {
         "type": "package",
         "compile": {
@@ -1015,6 +1081,54 @@
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
+        }
+      },
+      "Tewr.BlazorWorker.BackgroundService/4.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.JSInterop": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Serialize.Linq": "3.0.152",
+          "Tewr.BlazorWorker.Core": "4.1.2"
+        },
+        "compile": {
+          "lib/net8.0/BlazorWorker.BackgroundServiceFactory.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerBackgroundService.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/BlazorWorker.BackgroundServiceFactory.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerBackgroundService.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Tewr.BlazorWorker.Core/4.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.JSInterop": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/BlazorWorker.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/BlazorWorker.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/BlazorWorker.WorkerCore.dll": {
+            "related": ".xml"
+          }
         }
       },
       "BusinessModels/1.0.0": {
@@ -1994,6 +2108,25 @@
         "packageIcon.png"
       ]
     },
+    "Serialize.Linq/3.0.152": {
+      "sha512": "5c+JRCGLHmCuwBfx8fyoEo7lCnVv3URVFPL6zR7tNH9ZbmfEC3aykkg/DdGs0faEf9LKRAUyisXzh3CXlh/6yw==",
+      "type": "package",
+      "path": "serialize.linq/3.0.152",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "lib/net48/Serialize.Linq.dll",
+        "lib/net5.0/Serialize.Linq.dll",
+        "lib/net6.0/Serialize.Linq.dll",
+        "lib/net7.0/Serialize.Linq.dll",
+        "lib/netstandard2.0/Serialize.Linq.dll",
+        "lib/netstandard2.1/Serialize.Linq.dll",
+        "serialize.linq.3.0.152.nupkg.sha512",
+        "serialize.linq.nuspec"
+      ]
+    },
     "System.IO.Pipelines/8.0.0": {
       "sha512": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
       "type": "package",
@@ -2131,6 +2264,46 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Tewr.BlazorWorker.BackgroundService/4.1.2": {
+      "sha512": "77RX+mVC1wB8ABqy6PNeHMbBoRZThknzsMCuwX5K1zsNuDbZ/wm9GdZ58btd0PB9U5dABrfwCZNnLVbRSMbpBw==",
+      "type": "package",
+      "path": "tewr.blazorworker.backgroundservice/4.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net7.0/BlazorWorker.BackgroundServiceFactory.dll",
+        "lib/net7.0/BlazorWorker.BackgroundServiceFactory.xml",
+        "lib/net7.0/BlazorWorker.WorkerBackgroundService.dll",
+        "lib/net7.0/BlazorWorker.WorkerBackgroundService.xml",
+        "lib/net8.0/BlazorWorker.BackgroundServiceFactory.dll",
+        "lib/net8.0/BlazorWorker.BackgroundServiceFactory.xml",
+        "lib/net8.0/BlazorWorker.WorkerBackgroundService.dll",
+        "lib/net8.0/BlazorWorker.WorkerBackgroundService.xml",
+        "tewr.blazorworker.backgroundservice.4.1.2.nupkg.sha512",
+        "tewr.blazorworker.backgroundservice.nuspec"
+      ]
+    },
+    "Tewr.BlazorWorker.Core/4.1.2": {
+      "sha512": "dc++Zph+YtWXbS/DMP96k0ecYtAzJJaBmdBnhITv6k+GSYSZi0oodwL3BNVTvRqO8sxArSUjmmM2k6plSelAFw==",
+      "type": "package",
+      "path": "tewr.blazorworker.core/4.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net7.0/BlazorWorker.Core.dll",
+        "lib/net7.0/BlazorWorker.Core.xml",
+        "lib/net7.0/BlazorWorker.WorkerCore.dll",
+        "lib/net7.0/BlazorWorker.WorkerCore.xml",
+        "lib/net8.0/BlazorWorker.Core.dll",
+        "lib/net8.0/BlazorWorker.Core.xml",
+        "lib/net8.0/BlazorWorker.WorkerCore.dll",
+        "lib/net8.0/BlazorWorker.WorkerCore.xml",
+        "tewr.blazorworker.core.4.1.2.nupkg.sha512",
+        "tewr.blazorworker.core.nuspec"
+      ]
+    },
     "BusinessModels/1.0.0": {
       "type": "project",
       "path": "../../BusinessModels/BusinessModels.csproj",
@@ -2143,7 +2316,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.8",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.8",
       "Microsoft.NET.ILLink.Tasks >= 8.0.8",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.8"
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.8",
+      "Tewr.BlazorWorker.BackgroundService >= 4.1.2"
     ]
   },
   "packageFolders": {
@@ -2220,6 +2394,10 @@
             "target": "Package",
             "version": "[8.0.8, )",
             "autoReferenced": true
+          },
+          "Tewr.BlazorWorker.BackgroundService": {
+            "target": "Package",
+            "version": "[4.1.2, )"
           }
         },
         "imports": [

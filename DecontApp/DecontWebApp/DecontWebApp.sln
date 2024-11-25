@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecontWebAPI", "..\DecontWe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayerProject", "..\RepositoryLayerProject\RepositoryLayerProject.csproj", "{7AEE05B7-3EAA-45D3-8461-7E3DEDCF4D05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASM", "BlazorWASM\BlazorWASM.csproj", "{1C321ADB-AEBF-433F-B9F1-76C3A8C88F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWASM", "BlazorWASM\BlazorWASM.csproj", "{1C321ADB-AEBF-433F-B9F1-76C3A8C88F6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
