@@ -10,9 +10,9 @@
 <p>Counting 1: @firstCount</p>
 <p>Counting 2: @secondCount</p>
 
-<button @onclick="Cliked">Start counting!</button>
-<button @onclick="First">First</button>
-<button @onclick="Second">Second</button>
+<button @onclick="Cliked">Start counting!</button>		@* la apasarea butonului se executa functiile de numarare simultan *@
+<button @onclick="First">First</button>					@* se executa doar prima numarare *@
+<button @onclick="Second">Second</button>				@* se exetuta doar a doua numarere *@
 <br/>
 <button @onclick="() => {firstCount = 0; secondCount = 0;}">Reset</button>
 
@@ -20,6 +20,8 @@
 	public int firstCount = 0;
 	public int secondCount = 0;
 
+	// functia creeaza 2 web workeri, fiecare pe un thread separat, si executa deodata functiile de numarare
+	// rezultatele functiei vor aparea simultan pe ecran, randarea se face dupa ce termina ambi workeri 
 	public async Task Cliked()
 	{
 		var worker1 = await workerFactory.CreateAsync();
@@ -32,6 +34,9 @@
 		secondCount = await service2.RunAsync(s => s.Method(50));
 	}
 
+	// First si Second creaza fiecare un web worker si apeleaza functia de numarare
+	// Randarea se va face la finalul fiecarei functii
+	// nu depind una de alta
 	public async Task First()
 	{
 		var worker = await workerFactory.CreateAsync();
@@ -39,7 +44,6 @@
 
 		firstCount = await service.RunAsync(s => s.Method(10));
 	}
-
 	public async Task Second()
 	{
 		var worker = await workerFactory.CreateAsync();

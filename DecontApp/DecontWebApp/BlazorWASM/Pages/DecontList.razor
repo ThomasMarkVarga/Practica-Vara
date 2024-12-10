@@ -16,30 +16,30 @@
 	<thead>
 	<td>Numar</td>
 	<td>Data</td>
-	<td>Explicatie</td>
-	<td>Total</td>
+@* 	<td>Explicatie</td>
+ *@	<td>Total</td>
 	<td>Status</td>
 	<td>Data Plata</td>
-	<td>Optiuni</td>
-	</thead>
+@* 	<td>Optiuni</td>
+ *@	</thead>
 
 	@foreach (var document in docs)
 	{
 		<tr>
 			<td>@document.document.Numar</td>
 			<td>@document.document.Data</td>
-			<td>@document.document.Explicatie</td>
-			<td>@document.total</td>
+@* 			<td>@document.document.Explicatie</td>
+ *@			<td>@document.total</td>
 			<td>@statusDict[document.document.StatusId]</td>
 			<td>@document.document.DataPlata</td>
-			<td>
+@* 			<td>
 				<button @onclick = "() => {ShowWarning(document.document);}">Sterge</button>
 				@if (document.document.DataPlata == null)
 				{
 					<button @onclick = "() => {EditDecont(document.document.Id);}">Edit</button>
 					<button @onclick = "() => {ShowDialog(document.document);}">Marcheaza ca platit</button>
 				}
-			</td>
+			</td> *@
 		</tr>
 	}
 
